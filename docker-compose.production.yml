@@ -1,0 +1,113 @@
+version: '3.8'
+
+services:
+  # PostgreSQL with pgvector extension
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: inteam-ai-postgres
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_INITDB_ARGS: "-E UTF8 --locale=en_US.UTF-8"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data:Z
+      - ./scripts/init_pgvector.sql:/docker-entrypoint-initdb.d/01_init_pgvector.sql:Z
+      - ./scripts/init_readonly_user.sql:/docker-entrypoint-initdb.d/02_readonly_user.sql:Z
+    ports:
+      - "127.0.0.1:5433:5432"   # localhost-only
+    networks:
+      - django_ai_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command:
+      - "postgres"
+      - "-c"
+      - "shared_buffers=256MB"
+      - "-c"
+      - "max_connections=100"
+      - "-c"
+      - "effective_cache_size=1GB"
+
+  # Redis for Django caching
+  redis:
+    image: redis:7-alpine
+    container_name: inteam-ai-redis
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    command: >
+      redis-server
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+      --save 60 1000
+      --appendonly yes
+    volumes:
+      - redis_data:/data:Z
+    ports:
+      - "127.0.0.1:6379:6379"   # localhost-only
+    networks:
+      - django_ai_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # Django AI Service
+  django:
+    image: ghcr.io/md-ryhan-uddin/inteam-ai-service:${IMAGE_TAG}
+    container_name: inteam-ai-django
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=config.settings
+    volumes:
+      - ./staticfiles:/app/staticfiles:Z
+      - ./media:/app/media:Z
+      - ./logs:/app/logs:Z
+    ports:
+      - "127.0.0.1:8001:8001"   # localhost-only
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - django_ai_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8001/health/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    stop_signal: SIGTERM
+    stop_grace_period: 30s
+    command: >
+      sh -c "python manage.py migrate --noinput &&
+             python manage.py collectstatic --noinput --clear &&
+             gunicorn config.wsgi:application --bind 0.0.0.0:8001 --workers 3 --worker-class gthread --threads 2 --timeout 120 --graceful-timeout 30 --max-requests 1000 --max-requests-jitter 100 --access-logfile - --error-logfile - --log-level info"
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  django_ai_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
+          gateway: 172.28.0.1

@@ -1,0 +1,21 @@
+# Django and REST Framework
+Django
+djangorestframework
+django-cors-headers
+
+# AI/ML
+openai
+
+# HTTP Client
+requests
+
+# Environment Variables
+python-dotenv
+
+# Testing
+pytest
+pytest-django
+
+# Development only - using SQLite (no PostgreSQL needed)
+# For production with PostgreSQL, use: pip install psycopg2-binary
+# For production with Redis/Celery, use: pip install redis celery gunicorn

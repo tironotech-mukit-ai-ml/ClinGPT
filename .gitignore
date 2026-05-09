@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ML Models
+ml_models/*.pkl
+ml_models/*.h5
+ml_models/*.pth
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+logs/
+*.log
+
+# Spacy models (downloaded at runtime)
+*.whl
+
+# Database migrations (optional - keep migrations/ but ignore cache)
+*/migrations/__pycache__/
+
+# Deployment necessary files
+.env.production
+Dockerfile.production
+scripts/init_readonly_user.sql
