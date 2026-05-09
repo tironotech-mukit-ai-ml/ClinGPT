@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Hypertension Management - Initial Assessment",
+    "content": "For patients presenting with elevated blood pressure (BP ≥140/90 mmHg), perform comprehensive evaluation including: medical history review, physical examination, and laboratory tests (complete blood count, basic metabolic panel, lipid profile, urinalysis, ECG). Assess for target organ damage and cardiovascular risk factors. Lifestyle modifications should be recommended for all patients: DASH diet, sodium restriction (<2.3g/day), regular aerobic exercise (150 min/week), weight loss if overweight, and limited alcohol intake.",
+    "source": "AHA/ACC",
+    "category": "cardiology",
+    "subcategory": "hypertension",
+    "year": 2023,
+    "keywords": ["hypertension", "blood pressure", "cardiovascular risk", "lifestyle modification"]
+  },
+  {
+    "title": "Hypertensive Crisis Management",
+    "content": "Hypertensive crisis is defined as systolic BP >180 mmHg or diastolic BP >120 mmHg. Hypertensive emergency (with end-organ damage) requires immediate treatment in ICU setting with IV antihypertensives to lower BP by no more than 25% in first hour, then to 160/100 mmHg over next 2-6 hours. Hypertensive urgency (without end-organ damage) can be managed with oral antihypertensives and close outpatient follow-up within 24-48 hours. Avoid rapid BP reduction which can cause ischemic complications.",
+    "source": "AHA/ACC",
+    "category": "cardiology",
+    "subcategory": "hypertension",
+    "year": 2023,
+    "keywords": ["hypertensive crisis", "emergency", "blood pressure", "ICU"]
+  },
+  {
+    "title": "Type 2 Diabetes - Initial Diagnosis and Management",
+    "content": "Diagnosis of Type 2 diabetes is confirmed with: fasting plasma glucose ≥126 mg/dL, 2-hour plasma glucose ≥200 mg/dL during OGTT, or HbA1c ≥6.5%. Initial management includes lifestyle interventions (medical nutrition therapy, physical activity, weight loss) and metformin as first-line pharmacotherapy unless contraindicated. Target HbA1c is generally <7% for most patients, with individualization based on patient factors. Monitor for complications including retinopathy, nephropathy, neuropathy, and cardiovascular disease.",
+    "source": "ADA",
+    "category": "endocrinology",
+    "subcategory": "diabetes",
+    "year": 2024,
+    "keywords": ["diabetes", "type 2 diabetes", "HbA1c", "metformin", "glucose"]
+  },
+  {
+    "title": "Hypoglycemia Management in Diabetes",
+    "content": "Hypoglycemia is defined as blood glucose <70 mg/dL. For conscious patients with symptoms, administer 15-20g fast-acting carbohydrates (glucose tablets, juice, regular soda). Recheck glucose in 15 minutes; repeat treatment if still <70 mg/dL. For severe hypoglycemia with altered mental status or unconsciousness, administer glucagon 1mg IM/SC or IV dextrose 25g (50mL of D50W). All patients on insulin or sulfonylureas should have glucagon prescribed. Review medication regimen and adjust to prevent recurrence.",
+    "source": "ADA",
+    "category": "endocrinology",
+    "subcategory": "diabetes",
+    "year": 2024,
+    "keywords": ["hypoglycemia", "diabetes", "glucose", "emergency", "glucagon"]
+  },
+  {
+    "title": "Chest Pain - Acute Coronary Syndrome Evaluation",
+    "content": "Patients presenting with chest pain concerning for acute coronary syndrome (ACS) require immediate evaluation: 12-lead ECG within 10 minutes, serial troponin measurements (at presentation and 3-6 hours), continuous cardiac monitoring. High-risk features include: ongoing chest pain, hemodynamic instability, ST-segment changes, positive troponin. Initiate antiplatelet therapy (aspirin 325mg, P2Y12 inhibitor), anticoagulation, beta-blocker, statin, and nitrates as appropriate. STEMI requires immediate revascularization (PCI or fibrinolysis within 90/120 minutes respectively).",
+    "source": "ACC/AHA",
+    "category": "cardiology",
+    "subcategory": "acute coronary syndrome",
+    "year": 2023,
+    "keywords": ["chest pain", "ACS", "STEMI", "troponin", "ECG", "emergency"]
+  },
+  {
+    "title": "Heart Failure - Chronic Management",
+    "content": "Heart failure with reduced ejection fraction (HFrEF, LVEF ≤40%) should be treated with guideline-directed medical therapy (GDMT): ACE inhibitor or ARB (or ARNI), beta-blocker, mineralocorticoid receptor antagonist, and SGLT2 inhibitor. Optimize doses to evidence-based targets. Monitor symptoms, weight, blood pressure, renal function, and electrolytes. Consider device therapy (ICD, CRT) for appropriate candidates. Diuretics for fluid management. Patients should follow low-sodium diet (<2g/day), daily weights, and fluid restriction if indicated. Regular follow-up essential to prevent decompensation.",
+    "source": "ACC/AHA/HFSA",
+    "category": "cardiology",
+    "subcategory": "heart failure",
+    "year": 2023,
+    "keywords": ["heart failure", "HFrEF", "GDMT", "beta-blocker", "ACE inhibitor"]
+  },
+  {
+    "title": "Hypoxemia and Oxygen Therapy",
+    "content": "Hypoxemia is defined as SpO2 <90% or PaO2 <60 mmHg. Assess underlying cause: pneumonia, COPD exacerbation, pulmonary embolism, heart failure, etc. Initiate supplemental oxygen to maintain SpO2 92-96% (88-92% in COPD patients). Oxygen delivery methods: nasal cannula (1-6 L/min), simple face mask (6-10 L/min), non-rebreather mask (10-15 L/min), high-flow nasal cannula, or mechanical ventilation if indicated. Severe hypoxemia (SpO2 <85%) requires urgent intervention. Monitor response to therapy and treat underlying condition.",
+    "source": "ATS",
+    "category": "pulmonology",
+    "subcategory": "respiratory failure",
+    "year": 2023,
+    "keywords": ["hypoxemia", "oxygen therapy", "SpO2", "respiratory failure"]
+  },
+  {
+    "title": "Tachycardia - Evaluation and Management",
+    "content": "Tachycardia is heart rate >100 bpm. Assess hemodynamic stability first. Unstable patients (hypotension, altered mental status, chest pain, acute heart failure) require immediate synchronized cardioversion. For stable patients, obtain 12-lead ECG to differentiate: sinus tachycardia (treat underlying cause - pain, fever, hypovolemia, anxiety), supraventricular tachycardia (consider adenosine, beta-blocker, or calcium channel blocker), atrial fibrillation (rate vs rhythm control, anticoagulation), or ventricular tachycardia (requires urgent cardiology consultation).",
+    "source": "AHA",
+    "category": "cardiology",
+    "subcategory": "arrhythmia",
+    "year": 2023,
+    "keywords": ["tachycardia", "heart rate", "arrhythmia", "SVT", "atrial fibrillation"]
+  },
+  {
+    "title": "Bradycardia - Assessment and Treatment",
+    "content": "Bradycardia is heart rate <60 bpm. Determine if symptomatic (dizziness, syncope, confusion, chest pain, hypotension, heart failure). Symptomatic bradycardia requires immediate treatment: atropine 0.5-1mg IV (may repeat up to 3mg total), transcutaneous pacing if atropine ineffective, and preparation for transvenous pacing. Common causes include medications (beta-blockers, calcium channel blockers, digoxin), increased vagal tone, hypothyroidism, or conduction system disease. Asymptomatic bradycardia in athletes or during sleep is often physiologic and requires no treatment.",
+    "source": "AHA",
+    "category": "cardiology",
+    "subcategory": "arrhythmia",
+    "year": 2023,
+    "keywords": ["bradycardia", "heart rate", "atropine", "pacing", "arrhythmia"]
+  },
+  {
+    "title": "Fever in Adults - Evaluation",
+    "content": "Fever is temperature ≥38°C (100.4°F). Evaluate for source: focused history (duration, associated symptoms, travel, exposures, immunosuppression) and physical examination (vital signs, general appearance, HEENT, pulmonary, cardiac, abdominal, skin, neurologic exams). Initial workup for unclear source: complete blood count, basic metabolic panel, urinalysis with culture, blood cultures (if sepsis suspected), chest X-ray. Consider influenza and COVID-19 testing during respiratory virus season. Antibiotics only if bacterial infection identified. Antipyretics (acetaminophen, NSAIDs) for symptom relief.",
+    "source": "IDSA",
+    "category": "infectious disease",
+    "subcategory": "fever",
+    "year": 2023,
+    "keywords": ["fever", "infection", "sepsis", "workup"]
+  },
+  {
+    "title": "Community-Acquired Pneumonia - Outpatient Management",
+    "content": "Outpatient treatment appropriate for healthy adults with CAP and no risk factors for drug-resistant pathogens. First-line therapy: amoxicillin 1g TID or doxycycline 100mg BID for 5-7 days. For patients with comorbidities (COPD, diabetes, heart/renal/liver disease, immunosuppression): amoxicillin-clavulanate plus macrolazide or fluoroquinolone monotherapy. Follow-up in 48-72 hours to assess clinical improvement. Chest X-ray for baseline and to assess resolution at 6 weeks if high risk. Ensure appropriate pneumococcal and influenza vaccinations.",
+    "source": "IDSA/ATS",
+    "category": "infectious disease",
+    "subcategory": "pneumonia",
+    "year": 2023,
+    "keywords": ["pneumonia", "CAP", "antibiotics", "respiratory infection"]
+  },
+  {
+    "title": "Sepsis Recognition and Initial Management",
+    "content": "Sepsis is life-threatening organ dysfunction due to dysregulated host response to infection (qSOFA ≥2: altered mental status, SBP ≤100 mmHg, RR ≥22/min). Septic shock is sepsis with persistent hypotension requiring vasopressors to maintain MAP ≥65 mmHg and lactate >2 mmol/L. Immediate management (within 1 hour): obtain blood cultures before antibiotics, administer broad-spectrum IV antibiotics, begin IV fluid resuscitation (30 mL/kg crystalloid), measure lactate, monitor vitals continuously. Early goal-directed therapy improves outcomes. ICU transfer for septic shock or multi-organ dysfunction.",
+    "source": "Surviving Sepsis Campaign",
+    "category": "critical care",
+    "subcategory": "sepsis",
+    "year": 2023,
+    "keywords": ["sepsis", "septic shock", "infection", "emergency", "ICU", "antibiotics"]
+  },
+  {
+    "title": "Acute Kidney Injury - Recognition and Management",
+    "content": "AKI defined by: serum creatinine increase ≥0.3 mg/dL within 48 hours, or ≥1.5x baseline within 7 days, or urine output <0.5 mL/kg/hr for 6 hours. Classify as pre-renal (hypovolemia, hypotension), intrinsic (acute tubular necrosis, glomerulonephritis, interstitial nephritis), or post-renal (obstruction). Immediate management: discontinue nephrotoxic medications (NSAIDs, ACE inhibitors, contrast), optimize volume status and hemodynamics, relieve urinary obstruction if present. Monitor electrolytes (especially potassium), acid-base status. Consider nephrology consultation for severe AKI or unclear etiology.",
+    "source": "KDIGO",
+    "category": "nephrology",
+    "subcategory": "acute kidney injury",
+    "year": 2023,
+    "keywords": ["AKI", "acute kidney injury", "creatinine", "renal failure"]
+  },
+  {
+    "title": "Hyperkalemia - Emergency Management",
+    "content": "Hyperkalemia is serum potassium >5.5 mEq/L; severe is >6.5 mEq/L or any level with ECG changes (peaked T waves, widened QRS, loss of P wave). Emergency treatment sequence: (1) Cardiac membrane stabilization - calcium gluconate 10% 1-2g IV over 2-3 min (repeat if persistent ECG changes), (2) Shift K+ intracellularly - insulin 10 units IV with dextrose 25g, albuterol nebulizer 10-20mg, sodium bicarbonate if acidotic, (3) Remove K+ from body - loop diuretic, sodium polystyrene sulfonate, or hemodialysis for refractory cases. Treat underlying cause. Continuous cardiac monitoring essential.",
+    "source": "AHA/KDIGO",
+    "category": "nephrology",
+    "subcategory": "electrolyte disorders",
+    "year": 2023,
+    "keywords": ["hyperkalemia", "potassium", "emergency", "ECG", "dialysis"]
+  },
+  {
+    "title": "Asthma Exacerbation - Emergency Management",
+    "content": "Assess severity: measure peak flow or FEV1, pulse oximetry, respiratory rate. Immediate treatment: high-dose inhaled short-acting beta-agonist (albuterol 2.5-5mg via nebulizer or 4-8 puffs via MDI with spacer every 20 min x 3 doses), ipratropium bromide 0.5mg nebulized with first 3 albuterol doses, systemic corticosteroids (prednisone 40-60mg PO or methylprednisolone 40-80mg IV). Oxygen to maintain SpO2 >90%. Severe exacerbation or poor response may require ICU admission, magnesium sulfate 2g IV, or non-invasive ventilation. Do not discharge until peak flow >70% predicted and sustained response to bronchodilators.",
+    "source": "NHLBI/GINA",
+    "category": "pulmonology",
+    "subcategory": "asthma",
+    "year": 2023,
+    "keywords": ["asthma", "exacerbation", "bronchodilator", "emergency", "respiratory"]
+  },
+  {
+    "title": "COPD Exacerbation - Management",
+    "content": "COPD exacerbation is acute worsening of respiratory symptoms beyond day-to-day variations. Treatment based on severity: (1) Bronchodilators - increase frequency/dose of short-acting beta-agonists and anticholinergics, (2) Systemic corticosteroids - prednisone 40mg daily x 5 days, (3) Antibiotics if purulent sputum or signs of bacterial infection (amoxicillin-clavulanate, doxycycline, or fluoroquinolone), (4) Supplemental oxygen to maintain SpO2 88-92%, (5) Non-invasive ventilation (BiPAP) for respiratory acidosis or severe dyspnea. Monitor for respiratory failure requiring mechanical ventilation. Smoking cessation counseling essential.",
+    "source": "GOLD",
+    "category": "pulmonology",
+    "subcategory": "COPD",
+    "year": 2023,
+    "keywords": ["COPD", "exacerbation", "bronchodilator", "respiratory failure"]
+  },
+  {
+    "title": "Stroke - Acute Ischemic Stroke Management",
+    "content": "Time-sensitive emergency: 'time is brain'. Immediate evaluation: non-contrast head CT to rule out hemorrhage, NIH Stroke Scale assessment, check glucose. For ischemic stroke within 4.5 hours: consider IV alteplase (tPA) 0.9 mg/kg if no contraindications. Mechanical thrombectomy consideration for large vessel occlusion within 6-24 hours if meets criteria. Admit to stroke unit, maintain normothermia and normoglycemia, treat hypertension cautiously (allow permissive hypertension up to 220/120 mmHg if thrombolysis candidate, <180/105 if not). Aspirin 325mg after tPA eligibility determined. Early rehabilitation and secondary prevention.",
+    "source": "AHA/ASA",
+    "category": "neurology",
+    "subcategory": "stroke",
+    "year": 2023,
+    "keywords": ["stroke", "ischemic stroke", "tPA", "thrombectomy", "emergency"]
+  },
+  {
+    "title": "Acute Abdominal Pain - Initial Evaluation",
+    "content": "Systematic evaluation of acute abdominal pain: detailed history (onset, location, character, radiation, alleviating/aggravating factors, associated symptoms), physical examination (vital signs, abdominal inspection, auscultation, percussion, palpation, rebound tenderness, Murphy's sign, McBurney's point), laboratory tests (CBC, comprehensive metabolic panel, lipase, urinalysis, pregnancy test in women of childbearing age), imaging (abdominal X-ray for obstruction/perforation, ultrasound for biliary/gynecologic pathology, CT with contrast for most other indications). Surgical consultation for peritonitis, obstruction, or ischemia. NPO status until surgical emergency ruled out.",
+    "source": "ACG/SAGES",
+    "category": "gastroenterology",
+    "subcategory": "abdominal pain",
+    "year": 2023,
+    "keywords": ["abdominal pain", "emergency", "appendicitis", "surgical abdomen"]
+  },
+  {
+    "title": "Acute Decompensated Heart Failure - Emergency Management",
+    "content": "ADHF presents with dyspnea, orthopnea, edema, and signs of volume overload. Immediate assessment: vital signs, oxygen saturation, cardiac markers (BNP/NT-proBNP, troponin), ECG, chest X-ray, echocardiogram. Initial management: (1) Oxygen/non-invasive ventilation for hypoxia, (2) IV loop diuretic (furosemide 40-80mg or 1-2x home dose), (3) Vasodilators (nitroglycerin) if SBP >110 mmHg, (4) Inotropes (dobutamine, milrinone) if cardiogenic shock, (5) Treat precipitating factors (ACS, hypertension, arrhythmia, infection). Monitor daily weights, strict I/Os, electrolytes. Cardiology consultation. Transition to oral diuretics before discharge.",
+    "source": "ACC/AHA",
+    "category": "cardiology",
+    "subcategory": "heart failure",
+    "year": 2023,
+    "keywords": ["heart failure", "ADHF", "dyspnea", "edema", "diuretic", "emergency"]
+  },
+  {
+    "title": "Atrial Fibrillation - Rate Control and Anticoagulation",
+    "content": "New-onset AF requires assessment of hemodynamic stability, ventricular rate, and stroke risk (CHA2DS2-VASc score). For stable patients with rapid ventricular response: rate control with beta-blocker (metoprolol 2.5-5mg IV or 25-50mg PO) or calcium channel blocker (diltiazem 0.25 mg/kg IV or 30-60mg PO). Target heart rate <110 bpm for lenient control. Anticoagulation decision based on CHA2DS2-VASc: score ≥2 in men or ≥3 in women warrants anticoagulation (DOACs preferred over warfarin). Consider cardioversion for persistent symptoms despite rate control or if AF <48 hours duration. TEE to rule out left atrial thrombus if cardioversion planned and AF >48 hours.",
+    "source": "AHA/ACC/HRS",
+    "category": "cardiology",
+    "subcategory": "arrhythmia",
+    "year": 2023,
+    "keywords": ["atrial fibrillation", "AF", "rate control", "anticoagulation", "stroke prevention"]
+  }
+]

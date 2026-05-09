@@ -1,0 +1,39 @@
+# Django and REST Framework
+Django
+djangorestframework
+django-cors-headers
+
+# Database
+psycopg2-binary
+pgvector
+
+# Cache and Queue
+redis
+celery
+
+# AI/ML
+openai
+sentence-transformers
+# torch will be installed separately in Dockerfile (CPU version)
+langchain
+langchain-community
+
+# PHI Detection & Guardrails
+presidio-analyzer
+presidio-anonymizer
+spacy
+# Note: Spacy model (en_core_web_lg) must be installed separately
+# Run: python install_spacy.py OR python -m spacy download en_core_web_lg
+
+# HTTP Client
+requests
+
+# Environment Variables
+python-dotenv
+
+# Production Server
+gunicorn
+
+# Testing
+pytest
+pytest-django

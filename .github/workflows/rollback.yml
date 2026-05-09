@@ -1,0 +1,80 @@
+name: Emergency Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Image tag to roll back to (full 40-char SHA or short 7-char SHA)"
+        required: true
+        type: string
+
+jobs:
+  rollback:
+    name: Rollback to Previous Version
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Rollback to commit ${{ github.event.inputs.tag }}
+        uses: appleboy/ssh-action@v1.2.0   # upgrade
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT || 22 }}
+          script: |
+            set -euo pipefail
+            cd ${{ secrets.PROJECT_PATH }}
+
+            IMAGE_REPO="ghcr.io/${{ github.repository }}"
+            IMAGE_TAG="${{ github.event.inputs.tag }}"
+
+            echo "🔄 Rolling back to image: ${IMAGE_REPO}:${IMAGE_TAG}"
+
+            # Login only if package is private (remove if public)
+            if [ -n "${{ secrets.GHCR_PAT || '' }}" ]; then
+              echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u "${{ github.repository_owner }}" --password-stdin
+            fi
+
+            echo "📥 Pulling image..."
+            docker pull "${IMAGE_REPO}:${IMAGE_TAG}"
+
+            echo "🔖 Tagging as :latest for compose"
+            docker tag "${IMAGE_REPO}:${IMAGE_TAG}" "${IMAGE_REPO}:latest"
+
+            echo "Stopping and removing old containers"
+            docker compose -f docker-compose.production.yml down || true
+
+            echo "🚀 Restarting Django..."
+            docker compose -f docker-compose.production.yml up -d django
+
+            echo "🏥 Waiting for health..."
+            for i in {1..12}; do
+              if curl -fsS http://localhost:8001/health/ >/dev/null; then
+                echo "✅ Rollback successful! Service healthy after $i checks. Current tag: ${IMAGE_TAG}"
+                break
+              fi
+              sleep 5
+              if [ "$i" -eq 12 ]; then
+                echo "❌ Health check failed after rollback!"
+                docker compose -f docker-compose.production.yml logs --tail 200 django
+                exit 1
+              fi
+            done
+
+            docker compose -f docker-compose.production.yml ps
+      
+      - name: Rollback summary
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Successfully rolled back to: ${{ github.event.inputs.tag }}"
+            echo ""
+            echo "📋 Next steps:"
+            echo "1. Verify application is working correctly"
+            echo "2. Check logs: docker compose -f docker-compose.production.yml logs -f django"
+            echo "3. Fix the issue in main branch"
+            echo "4. Deploy the fix (will auto-deploy on push to main)"
+          else
+            echo "❌ Rollback failed!"
+            echo "Please check the logs above and try again or investigate manually"
+          fi
