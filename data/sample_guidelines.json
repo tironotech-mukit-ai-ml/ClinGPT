@@ -93,7 +93,7 @@
     "title": "Community-Acquired Pneumonia - Outpatient Management",
     "content": "Outpatient treatment appropriate for healthy adults with CAP and no risk factors for drug-resistant pathogens. First-line therapy: amoxicillin 1g TID or doxycycline 100mg BID for 5-7 days. For patients with comorbidities (COPD, diabetes, heart/renal/liver disease, immunosuppression): amoxicillin-clavulanate plus macrolazide or fluoroquinolone monotherapy. Follow-up in 48-72 hours to assess clinical improvement. Chest X-ray for baseline and to assess resolution at 6 weeks if high risk. Ensure appropriate pneumococcal and influenza vaccinations.",
     "source": "IDSA/ATS",
-    "category": "infectious disease",
+    "category": "infectious disease", 
     "subcategory": "pneumonia",
     "year": 2023,
     "keywords": ["pneumonia", "CAP", "antibiotics", "respiratory infection"]

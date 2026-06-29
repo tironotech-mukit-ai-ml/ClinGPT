@@ -147,20 +147,7 @@ class ClinicalRAGService:
             return []
 
     def _build_search_query(self, patient_data: Dict) -> str:
-        """
-        Build semantic search query from patient data
 
-        Extracts relevant medical information to search for guidelines:
-        - Symptoms
-        - Medical conditions
-        - Abnormal vital signs
-
-        Args:
-            patient_data: Dictionary containing patient information
-
-        Returns:
-            Search query string
-        """
         query_parts = []
 
         # Add symptoms (highest priority)
