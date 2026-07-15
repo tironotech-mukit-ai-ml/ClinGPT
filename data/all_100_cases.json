@@ -1,0 +1,3242 @@
+[
+  {
+    "case_id": "873d8697-7c91-495b-aadf-70c83f9bb018",
+    "recorded_at": "2026-04-26T10:28:45Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "male",
+      "weight_kg": 60.1
+    },
+    "vitals": {
+      "hr_bpm": 79,
+      "oxygen_spo2_pct": 96.1,
+      "glucose_mgdl": 84.6,
+      "cholesterol_mgdl": 160.9,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 15.4,
+      "temperature_f": 98.8,
+      "blood_pressure": {
+        "sbp_mmhg": 107,
+        "dbp_mmhg": 71
+      },
+      "fall_detected": 0,
+      "step_count": 5244,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "38fc36eb-d27f-4a0d-8ff6-31ea32d50098",
+    "recorded_at": "2026-04-16T10:28:45Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "female",
+      "weight_kg": 65.5
+    },
+    "vitals": {
+      "hr_bpm": 63,
+      "oxygen_spo2_pct": 96.6,
+      "glucose_mgdl": 97.7,
+      "cholesterol_mgdl": 176.7,
+      "respiratory_rate_bpm": 13,
+      "hemoglobin_gdl": 14.1,
+      "temperature_f": 98.7,
+      "blood_pressure": {
+        "sbp_mmhg": 105,
+        "dbp_mmhg": 77
+      },
+      "fall_detected": 0,
+      "step_count": 8462,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "e6f2491f-6cc0-41e9-a7a5-c43fdfefb591",
+    "recorded_at": "2026-04-24T10:28:45Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "male",
+      "weight_kg": 59.7
+    },
+    "vitals": {
+      "hr_bpm": 71,
+      "oxygen_spo2_pct": 96.3,
+      "glucose_mgdl": 78.4,
+      "cholesterol_mgdl": 191.5,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 15.8,
+      "temperature_f": 98.6,
+      "blood_pressure": {
+        "sbp_mmhg": 116,
+        "dbp_mmhg": 80
+      },
+      "fall_detected": 0,
+      "step_count": 8100,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Cholesterol is borderline \u2014 recommend dietary review and repeat lipid panel in 6 months. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "38d722a8-d615-4ef2-b554-d64a8cdb2fc8",
+    "recorded_at": "2026-04-11T10:28:45Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "female",
+      "weight_kg": 66.4
+    },
+    "vitals": {
+      "hr_bpm": 78,
+      "oxygen_spo2_pct": 98.6,
+      "glucose_mgdl": 95.2,
+      "cholesterol_mgdl": 184.5,
+      "respiratory_rate_bpm": 12,
+      "hemoglobin_gdl": 12.8,
+      "temperature_f": 97.9,
+      "blood_pressure": {
+        "sbp_mmhg": 107,
+        "dbp_mmhg": 68
+      },
+      "fall_detected": 0,
+      "step_count": 5827,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Cholesterol is borderline \u2014 recommend dietary review and repeat lipid panel in 6 months. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "1ef2d8ba-95ca-48a2-b046-fba588f156a8",
+    "recorded_at": "2026-04-05T10:28:45Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 68.2
+    },
+    "vitals": {
+      "hr_bpm": 71,
+      "oxygen_spo2_pct": 97.1,
+      "glucose_mgdl": 82.3,
+      "cholesterol_mgdl": 163.1,
+      "respiratory_rate_bpm": 18,
+      "hemoglobin_gdl": 15.3,
+      "temperature_f": 98.4,
+      "blood_pressure": {
+        "sbp_mmhg": 108,
+        "dbp_mmhg": 76
+      },
+      "fall_detected": 0,
+      "step_count": 6338,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "3ed9ebaf-1161-4174-8e15-4fc6ec153022",
+    "recorded_at": "2026-05-09T10:28:45Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 98.9
+    },
+    "vitals": {
+      "hr_bpm": 102,
+      "oxygen_spo2_pct": 93.2,
+      "glucose_mgdl": 163.0,
+      "cholesterol_mgdl": 232.9,
+      "respiratory_rate_bpm": 21,
+      "hemoglobin_gdl": 11.0,
+      "temperature_f": 99.5,
+      "blood_pressure": {
+        "sbp_mmhg": 143,
+        "dbp_mmhg": 89
+      },
+      "fall_detected": 0,
+      "step_count": 4740,
+      "ecg": 1,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure elevated at 143/89 mmHg \u2014 initiate lifestyle modifications (DASH diet, sodium restriction <2.3g/day, 150 min/week aerobic exercise). Fasting glucose 163.0 mg/dL meets diabetes threshold \u2014 confirm with repeat fasting glucose or HbA1c. Consider metformin initiation. SpO2 93.2% mildly reduced \u2014 assess for underlying respiratory cause. Consider spirometry. Resting tachycardia (102 BPM) \u2014 evaluate for pain, fever, anaemia, anxiety, or thyroid dysfunction. Low-grade fever (99.5\u00b0F) \u2014 assess for infection source. CBC and urinalysis recommended. Abnormal ECG detected \u2014 cardiology review recommended. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "7e23ac01-4bc1-4b93-8b97-91f7f6282a1e",
+    "recorded_at": "2026-05-31T10:28:45Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 99.9
+    },
+    "vitals": {
+      "hr_bpm": 106,
+      "oxygen_spo2_pct": 93.6,
+      "glucose_mgdl": 133.7,
+      "cholesterol_mgdl": 205.4,
+      "respiratory_rate_bpm": 21,
+      "hemoglobin_gdl": 11.8,
+      "temperature_f": 100.6,
+      "blood_pressure": {
+        "sbp_mmhg": 145,
+        "dbp_mmhg": 93
+      },
+      "fall_detected": 0,
+      "step_count": 1898,
+      "ecg": 0,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure elevated at 145/93 mmHg \u2014 initiate lifestyle modifications (DASH diet, sodium restriction <2.3g/day, 150 min/week aerobic exercise). Fasting glucose 133.7 mg/dL meets diabetes threshold \u2014 confirm with repeat fasting glucose or HbA1c. Consider metformin initiation. SpO2 93.6% mildly reduced \u2014 assess for underlying respiratory cause. Consider spirometry. Resting tachycardia (106 BPM) \u2014 evaluate for pain, fever, anaemia, anxiety, or thyroid dysfunction. Low-grade fever (100.6\u00b0F) \u2014 assess for infection source. CBC and urinalysis recommended. Abnormal auscultation signal \u2014 assess for murmur, wheeze, or crackles. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "25a53354-46e2-47fc-8bb6-b8910661c2ac",
+    "recorded_at": "2026-05-13T10:28:45Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "female",
+      "weight_kg": 98.8
+    },
+    "vitals": {
+      "hr_bpm": 105,
+      "oxygen_spo2_pct": 91.6,
+      "glucose_mgdl": 134.6,
+      "cholesterol_mgdl": 226.5,
+      "respiratory_rate_bpm": 20,
+      "hemoglobin_gdl": 11.4,
+      "temperature_f": 100.4,
+      "blood_pressure": {
+        "sbp_mmhg": 146,
+        "dbp_mmhg": 89
+      },
+      "fall_detected": 1,
+      "step_count": 4525,
+      "ecg": 0,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure elevated at 146/89 mmHg \u2014 initiate lifestyle modifications (DASH diet, sodium restriction <2.3g/day, 150 min/week aerobic exercise). Fasting glucose 134.6 mg/dL meets diabetes threshold \u2014 confirm with repeat fasting glucose or HbA1c. Consider metformin initiation. SpO2 91.6% mildly reduced \u2014 assess for underlying respiratory cause. Consider spirometry. Resting tachycardia (105 BPM) \u2014 evaluate for pain, fever, anaemia, anxiety, or thyroid dysfunction. Low-grade fever (100.4\u00b0F) \u2014 assess for infection source. CBC and urinalysis recommended. Abnormal auscultation signal \u2014 assess for murmur, wheeze, or crackles. Fall event detected \u2014 review medications for fall risk. Physiotherapy assessment recommended. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "901bd1a3-3188-495e-9b09-10225aef4550",
+    "recorded_at": "2026-05-24T10:28:45Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 96.8
+    },
+    "vitals": {
+      "hr_bpm": 92,
+      "oxygen_spo2_pct": 92.7,
+      "glucose_mgdl": 150.5,
+      "cholesterol_mgdl": 237.2,
+      "respiratory_rate_bpm": 22,
+      "hemoglobin_gdl": 11.1,
+      "temperature_f": 100.3,
+      "blood_pressure": {
+        "sbp_mmhg": 139,
+        "dbp_mmhg": 98
+      },
+      "fall_detected": 1,
+      "step_count": 2222,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Blood pressure elevated at 139/98 mmHg \u2014 initiate lifestyle modifications (DASH diet, sodium restriction <2.3g/day, 150 min/week aerobic exercise). Fasting glucose 150.5 mg/dL meets diabetes threshold \u2014 confirm with repeat fasting glucose or HbA1c. Consider metformin initiation. SpO2 92.7% mildly reduced \u2014 assess for underlying respiratory cause. Consider spirometry. Low-grade fever (100.3\u00b0F) \u2014 assess for infection source. CBC and urinalysis recommended. Fall event detected \u2014 review medications for fall risk. Physiotherapy assessment recommended. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "34e044ce-10da-47b0-be89-05b71d68df99",
+    "recorded_at": "2026-04-12T10:28:45Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 81.2
+    },
+    "vitals": {
+      "hr_bpm": 100,
+      "oxygen_spo2_pct": 94.1,
+      "glucose_mgdl": 154.6,
+      "cholesterol_mgdl": 200.0,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 10.5,
+      "temperature_f": 100.9,
+      "blood_pressure": {
+        "sbp_mmhg": 156,
+        "dbp_mmhg": 97
+      },
+      "fall_detected": 0,
+      "step_count": 1980,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure elevated at 156/97 mmHg \u2014 initiate lifestyle modifications (DASH diet, sodium restriction <2.3g/day, 150 min/week aerobic exercise). Fasting glucose 154.6 mg/dL meets diabetes threshold \u2014 confirm with repeat fasting glucose or HbA1c. Consider metformin initiation. Resting tachycardia (100 BPM) \u2014 evaluate for pain, fever, anaemia, anxiety, or thyroid dysfunction. Low-grade fever (100.9\u00b0F) \u2014 assess for infection source. CBC and urinalysis recommended. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "0ca68e19-832b-4eb7-92c8-49a5cff7fb99",
+    "recorded_at": "2026-05-15T10:28:45Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "male",
+      "weight_kg": 55.8
+    },
+    "vitals": {
+      "hr_bpm": 117,
+      "oxygen_spo2_pct": 87.3,
+      "glucose_mgdl": 292.8,
+      "cholesterol_mgdl": 263.8,
+      "respiratory_rate_bpm": 28,
+      "hemoglobin_gdl": 7.9,
+      "temperature_f": 103.2,
+      "blood_pressure": {
+        "sbp_mmhg": 181,
+        "dbp_mmhg": 109
+      },
+      "fall_detected": 1,
+      "step_count": 773,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 181 mmHg. Immediate evaluation for end-organ damage. IV antihypertensive therapy if emergency confirmed. Severe hypoxemia \u2014 SpO2 87.3%. Supplemental oxygen immediately. Assess for pneumonia, PE, or acute respiratory failure. Hyperglycaemic crisis \u2014 glucose 292.8 mg/dL. Urgent insulin therapy and IV fluids. Significant tachycardia (117 BPM) \u2014 12-lead ECG required urgently. Elevated respiratory rate (28 breaths/min) \u2014 consider sepsis. Blood cultures and broad-spectrum antibiotics if suspected. Anaemia \u2014 Hgb 7.9 g/dL. Transfusion if symptomatic. Abnormal ECG \u2014 urgent cardiology review. Abnormal auscultation \u2014 assess for murmur, wheeze, or crackles immediately. Fall detected \u2014 urgent assessment for injury. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "a5043c02-1f26-430b-b12c-a0664c3489d9",
+    "recorded_at": "2026-05-30T10:28:45Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "female",
+      "weight_kg": 55.7
+    },
+    "vitals": {
+      "hr_bpm": 127,
+      "oxygen_spo2_pct": 86.7,
+      "glucose_mgdl": 63.0,
+      "cholesterol_mgdl": 262.6,
+      "respiratory_rate_bpm": 26,
+      "hemoglobin_gdl": 7.2,
+      "temperature_f": 101.5,
+      "blood_pressure": {
+        "sbp_mmhg": 184,
+        "dbp_mmhg": 117
+      },
+      "fall_detected": 0,
+      "step_count": 72,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 184 mmHg. Immediate evaluation for end-organ damage. IV antihypertensive therapy if emergency confirmed. Severe hypoxemia \u2014 SpO2 86.7%. Supplemental oxygen immediately. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 63.0 mg/dL. Administer 15\u201320g fast-acting carbohydrates. IV dextrose if unconscious. Significant tachycardia (127 BPM) \u2014 12-lead ECG required urgently. Elevated respiratory rate (26 breaths/min) \u2014 consider sepsis. Blood cultures and broad-spectrum antibiotics if suspected. Anaemia \u2014 Hgb 7.2 g/dL. Transfusion if symptomatic. Abnormal ECG \u2014 urgent cardiology review. Abnormal auscultation \u2014 assess for murmur, wheeze, or crackles immediately. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "fa7c3250-2199-4fc0-862f-aa8e02da031b",
+    "recorded_at": "2026-04-22T10:28:45Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 53.3
+    },
+    "vitals": {
+      "hr_bpm": 142,
+      "oxygen_spo2_pct": 88.0,
+      "glucose_mgdl": 49.8,
+      "cholesterol_mgdl": 273.4,
+      "respiratory_rate_bpm": 26,
+      "hemoglobin_gdl": 7.4,
+      "temperature_f": 103.4,
+      "blood_pressure": {
+        "sbp_mmhg": 184,
+        "dbp_mmhg": 114
+      },
+      "fall_detected": 1,
+      "step_count": 826,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "hypertensive_crisis",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 184 mmHg. Immediate evaluation for end-organ damage. IV antihypertensive therapy if emergency confirmed. Severe hypoxemia \u2014 SpO2 88.0%. Supplemental oxygen immediately. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 49.8 mg/dL. Administer 15\u201320g fast-acting carbohydrates. IV dextrose if unconscious. Significant tachycardia (142 BPM) \u2014 12-lead ECG required urgently. Elevated respiratory rate (26 breaths/min) \u2014 consider sepsis. Blood cultures and broad-spectrum antibiotics if suspected. Anaemia \u2014 Hgb 7.4 g/dL. Transfusion if symptomatic. Abnormal ECG \u2014 urgent cardiology review. Abnormal auscultation \u2014 assess for murmur, wheeze, or crackles immediately. Fall detected \u2014 urgent assessment for injury. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "cc166757-f25c-47b7-8a10-f99c70d5305c",
+    "recorded_at": "2026-05-07T10:28:45Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 51.5
+    },
+    "vitals": {
+      "hr_bpm": 128,
+      "oxygen_spo2_pct": 85.0,
+      "glucose_mgdl": 59.6,
+      "cholesterol_mgdl": 273.7,
+      "respiratory_rate_bpm": 32,
+      "hemoglobin_gdl": 7.3,
+      "temperature_f": 102.3,
+      "blood_pressure": {
+        "sbp_mmhg": 178,
+        "dbp_mmhg": 122
+      },
+      "fall_detected": 0,
+      "step_count": 196,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 178 mmHg. Immediate evaluation for end-organ damage. IV antihypertensive therapy if emergency confirmed. Severe hypoxemia \u2014 SpO2 85.0%. Supplemental oxygen immediately. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 59.6 mg/dL. Administer 15\u201320g fast-acting carbohydrates. IV dextrose if unconscious. Significant tachycardia (128 BPM) \u2014 12-lead ECG required urgently. Elevated respiratory rate (32 breaths/min) \u2014 consider sepsis. Blood cultures and broad-spectrum antibiotics if suspected. Anaemia \u2014 Hgb 7.3 g/dL. Transfusion if symptomatic. Abnormal ECG \u2014 urgent cardiology review. Abnormal auscultation \u2014 assess for murmur, wheeze, or crackles immediately. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "8e8b492f-2200-4014-8603-102f5a304e3c",
+    "recorded_at": "2026-05-08T10:28:45Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 56.0
+    },
+    "vitals": {
+      "hr_bpm": 121,
+      "oxygen_spo2_pct": 85.2,
+      "glucose_mgdl": 287.5,
+      "cholesterol_mgdl": 280.4,
+      "respiratory_rate_bpm": 31,
+      "hemoglobin_gdl": 7.3,
+      "temperature_f": 102.8,
+      "blood_pressure": {
+        "sbp_mmhg": 184,
+        "dbp_mmhg": 105
+      },
+      "fall_detected": 0,
+      "step_count": 948,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 184 mmHg. Immediate evaluation for end-organ damage. IV antihypertensive therapy if emergency confirmed. Severe hypoxemia \u2014 SpO2 85.2%. Supplemental oxygen immediately. Assess for pneumonia, PE, or acute respiratory failure. Hyperglycaemic crisis \u2014 glucose 287.5 mg/dL. Urgent insulin therapy and IV fluids. Significant tachycardia (121 BPM) \u2014 12-lead ECG required urgently. Elevated respiratory rate (31 breaths/min) \u2014 consider sepsis. Blood cultures and broad-spectrum antibiotics if suspected. Anaemia \u2014 Hgb 7.3 g/dL. Transfusion if symptomatic. Abnormal ECG \u2014 urgent cardiology review. Abnormal auscultation \u2014 assess for murmur, wheeze, or crackles immediately. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "fd297aed-c481-48a6-8fc1-a3e04c03e0c2",
+    "recorded_at": "2026-04-13T06:43:47Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "male",
+      "weight_kg": 68.1
+    },
+    "vitals": {
+      "hr_bpm": 72,
+      "oxygen_spo2_pct": 96.6,
+      "glucose_mgdl": 79.7,
+      "cholesterol_mgdl": 154.7,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 14.0,
+      "temperature_f": 97.9,
+      "blood_pressure": {
+        "sbp_mmhg": 120,
+        "dbp_mmhg": 73
+      },
+      "fall_detected": 0,
+      "step_count": 9611,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "ca6b9cc3-0d72-4fd7-9723-7deab5d607c6",
+    "recorded_at": "2026-03-30T08:43:47Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "female",
+      "weight_kg": 54.7
+    },
+    "vitals": {
+      "hr_bpm": 78,
+      "oxygen_spo2_pct": 96.7,
+      "glucose_mgdl": 110.8,
+      "cholesterol_mgdl": 162.1,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 14.2,
+      "temperature_f": 97.5,
+      "blood_pressure": {
+        "sbp_mmhg": 119,
+        "dbp_mmhg": 79
+      },
+      "fall_detected": 0,
+      "step_count": 7275,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "11b5a231-c157-4d66-b408-596ca237ff2d",
+    "recorded_at": "2026-04-08T04:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "male",
+      "weight_kg": 58.5
+    },
+    "vitals": {
+      "hr_bpm": 83,
+      "oxygen_spo2_pct": 97.4,
+      "glucose_mgdl": 89.3,
+      "cholesterol_mgdl": 155.9,
+      "respiratory_rate_bpm": 12,
+      "hemoglobin_gdl": 13.8,
+      "temperature_f": 99.0,
+      "blood_pressure": {
+        "sbp_mmhg": 115,
+        "dbp_mmhg": 71
+      },
+      "fall_detected": 0,
+      "step_count": 11874,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "c0315e38-60b0-4e14-8858-285a5e5ada1f",
+    "recorded_at": "2026-05-15T14:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "female",
+      "weight_kg": 55.6
+    },
+    "vitals": {
+      "hr_bpm": 71,
+      "oxygen_spo2_pct": 96.6,
+      "glucose_mgdl": 111.6,
+      "cholesterol_mgdl": 149.5,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 13.9,
+      "temperature_f": 99.0,
+      "blood_pressure": {
+        "sbp_mmhg": 127,
+        "dbp_mmhg": 75
+      },
+      "fall_detected": 0,
+      "step_count": 4803,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "ce2a1998-a8ba-474a-ab92-eb8b8e19d799",
+    "recorded_at": "2026-05-29T09:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "male",
+      "weight_kg": 78.0
+    },
+    "vitals": {
+      "hr_bpm": 81,
+      "oxygen_spo2_pct": 97.3,
+      "glucose_mgdl": 112.3,
+      "cholesterol_mgdl": 177.3,
+      "respiratory_rate_bpm": 13,
+      "hemoglobin_gdl": 15.5,
+      "temperature_f": 97.9,
+      "blood_pressure": {
+        "sbp_mmhg": 104,
+        "dbp_mmhg": 70
+      },
+      "fall_detected": 0,
+      "step_count": 11872,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "e371cb5f-52b9-4d11-a579-b4cf0e16e6af",
+    "recorded_at": "2026-05-17T10:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 77.7
+    },
+    "vitals": {
+      "hr_bpm": 66,
+      "oxygen_spo2_pct": 96.8,
+      "glucose_mgdl": 89.4,
+      "cholesterol_mgdl": 185.1,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 14.3,
+      "temperature_f": 98.9,
+      "blood_pressure": {
+        "sbp_mmhg": 104,
+        "dbp_mmhg": 79
+      },
+      "fall_detected": 0,
+      "step_count": 9412,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Cholesterol borderline elevated \u2014 dietary review and repeat lipid panel in 6 months. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "32834041-6302-4275-a953-76fd5a5430c9",
+    "recorded_at": "2026-05-05T02:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 78.3
+    },
+    "vitals": {
+      "hr_bpm": 88,
+      "oxygen_spo2_pct": 96.4,
+      "glucose_mgdl": 77.1,
+      "cholesterol_mgdl": 157.5,
+      "respiratory_rate_bpm": 18,
+      "hemoglobin_gdl": 14.6,
+      "temperature_f": 98.9,
+      "blood_pressure": {
+        "sbp_mmhg": 126,
+        "dbp_mmhg": 68
+      },
+      "fall_detected": 0,
+      "step_count": 8588,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "6193286a-6902-41b4-85d8-35f13325bb69",
+    "recorded_at": "2026-04-13T18:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 65.2
+    },
+    "vitals": {
+      "hr_bpm": 86,
+      "oxygen_spo2_pct": 97.1,
+      "glucose_mgdl": 101.2,
+      "cholesterol_mgdl": 169.6,
+      "respiratory_rate_bpm": 12,
+      "hemoglobin_gdl": 14.8,
+      "temperature_f": 97.8,
+      "blood_pressure": {
+        "sbp_mmhg": 111,
+        "dbp_mmhg": 69
+      },
+      "fall_detected": 0,
+      "step_count": 11154,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "7b98de6a-7073-423d-8ab0-0412b50e8951",
+    "recorded_at": "2026-03-09T06:43:47Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "male",
+      "weight_kg": 62.3
+    },
+    "vitals": {
+      "hr_bpm": 76,
+      "oxygen_spo2_pct": 96.5,
+      "glucose_mgdl": 73.6,
+      "cholesterol_mgdl": 162.0,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 16.1,
+      "temperature_f": 97.6,
+      "blood_pressure": {
+        "sbp_mmhg": 125,
+        "dbp_mmhg": 67
+      },
+      "fall_detected": 0,
+      "step_count": 10397,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "045611e2-5a4a-441b-9fe7-39b05a86e56b",
+    "recorded_at": "2026-04-02T20:43:47Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "female",
+      "weight_kg": 60.5
+    },
+    "vitals": {
+      "hr_bpm": 69,
+      "oxygen_spo2_pct": 98.3,
+      "glucose_mgdl": 102.6,
+      "cholesterol_mgdl": 182.0,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 13.3,
+      "temperature_f": 98.9,
+      "blood_pressure": {
+        "sbp_mmhg": 126,
+        "dbp_mmhg": 70
+      },
+      "fall_detected": 0,
+      "step_count": 11935,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Cholesterol borderline elevated \u2014 dietary review and repeat lipid panel in 6 months. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "f87ece1b-0770-4462-b81c-eb260519a292",
+    "recorded_at": "2026-04-18T08:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "female",
+      "weight_kg": 57.3
+    },
+    "vitals": {
+      "hr_bpm": 87,
+      "oxygen_spo2_pct": 98.6,
+      "glucose_mgdl": 105.9,
+      "cholesterol_mgdl": 171.5,
+      "respiratory_rate_bpm": 18,
+      "hemoglobin_gdl": 12.5,
+      "temperature_f": 98.8,
+      "blood_pressure": {
+        "sbp_mmhg": 112,
+        "dbp_mmhg": 75
+      },
+      "fall_detected": 0,
+      "step_count": 9505,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "6506fa04-4bcc-4e12-bce9-c9fd6087458c",
+    "recorded_at": "2026-05-12T08:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 83.8
+    },
+    "vitals": {
+      "hr_bpm": 80,
+      "oxygen_spo2_pct": 98.6,
+      "glucose_mgdl": 98.6,
+      "cholesterol_mgdl": 182.2,
+      "respiratory_rate_bpm": 13,
+      "hemoglobin_gdl": 14.3,
+      "temperature_f": 97.6,
+      "blood_pressure": {
+        "sbp_mmhg": 100,
+        "dbp_mmhg": 69
+      },
+      "fall_detected": 0,
+      "step_count": 6919,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Cholesterol borderline elevated \u2014 dietary review and repeat lipid panel in 6 months. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "0ad11869-8127-4424-9748-24adf73e2e77",
+    "recorded_at": "2026-03-29T23:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 55.7
+    },
+    "vitals": {
+      "hr_bpm": 80,
+      "oxygen_spo2_pct": 98.4,
+      "glucose_mgdl": 83.2,
+      "cholesterol_mgdl": 164.6,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 15.8,
+      "temperature_f": 97.9,
+      "blood_pressure": {
+        "sbp_mmhg": 125,
+        "dbp_mmhg": 75
+      },
+      "fall_detected": 0,
+      "step_count": 4529,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "539cb094-bd81-478e-8e7f-34f4f963d003",
+    "recorded_at": "2026-03-26T13:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "female",
+      "weight_kg": 65.8
+    },
+    "vitals": {
+      "hr_bpm": 60,
+      "oxygen_spo2_pct": 96.9,
+      "glucose_mgdl": 100.9,
+      "cholesterol_mgdl": 184.1,
+      "respiratory_rate_bpm": 13,
+      "hemoglobin_gdl": 14.6,
+      "temperature_f": 98.0,
+      "blood_pressure": {
+        "sbp_mmhg": 106,
+        "dbp_mmhg": 77
+      },
+      "fall_detected": 0,
+      "step_count": 10553,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Cholesterol borderline elevated \u2014 dietary review and repeat lipid panel in 6 months. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "3030b009-daef-4477-8b2c-b8f419ff9128",
+    "recorded_at": "2026-04-13T20:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "male",
+      "weight_kg": 83.7
+    },
+    "vitals": {
+      "hr_bpm": 79,
+      "oxygen_spo2_pct": 98.3,
+      "glucose_mgdl": 107.7,
+      "cholesterol_mgdl": 175.8,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 16.0,
+      "temperature_f": 99.0,
+      "blood_pressure": {
+        "sbp_mmhg": 123,
+        "dbp_mmhg": 64
+      },
+      "fall_detected": 0,
+      "step_count": 4761,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "e5125b98-7ec6-479d-8d54-42d9b5443d87",
+    "recorded_at": "2026-04-25T01:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 60.7
+    },
+    "vitals": {
+      "hr_bpm": 71,
+      "oxygen_spo2_pct": 97.7,
+      "glucose_mgdl": 112.8,
+      "cholesterol_mgdl": 174.7,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 14.5,
+      "temperature_f": 99.0,
+      "blood_pressure": {
+        "sbp_mmhg": 123,
+        "dbp_mmhg": 70
+      },
+      "fall_detected": 0,
+      "step_count": 5911,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "f8bb0051-8431-4794-afd2-a8fe1ae50d48",
+    "recorded_at": "2026-03-08T17:43:47Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "female",
+      "weight_kg": 70.9
+    },
+    "vitals": {
+      "hr_bpm": 86,
+      "oxygen_spo2_pct": 98.7,
+      "glucose_mgdl": 109.3,
+      "cholesterol_mgdl": 181.0,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 13.7,
+      "temperature_f": 98.5,
+      "blood_pressure": {
+        "sbp_mmhg": 110,
+        "dbp_mmhg": 66
+      },
+      "fall_detected": 0,
+      "step_count": 8294,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Cholesterol borderline elevated \u2014 dietary review and repeat lipid panel in 6 months. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "a982bd63-4015-4838-a246-4044dc4be00f",
+    "recorded_at": "2026-05-22T19:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "male",
+      "weight_kg": 69.3
+    },
+    "vitals": {
+      "hr_bpm": 66,
+      "oxygen_spo2_pct": 98.7,
+      "glucose_mgdl": 114.9,
+      "cholesterol_mgdl": 173.8,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 16.7,
+      "temperature_f": 98.4,
+      "blood_pressure": {
+        "sbp_mmhg": 128,
+        "dbp_mmhg": 73
+      },
+      "fall_detected": 0,
+      "step_count": 8267,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "50e9576b-5ad8-4db5-a7b1-08a291b2de98",
+    "recorded_at": "2026-04-01T22:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 88.7
+    },
+    "vitals": {
+      "hr_bpm": 106,
+      "oxygen_spo2_pct": 90.4,
+      "glucose_mgdl": 162.6,
+      "cholesterol_mgdl": 200.2,
+      "respiratory_rate_bpm": 21,
+      "hemoglobin_gdl": 10.8,
+      "temperature_f": 99.2,
+      "blood_pressure": {
+        "sbp_mmhg": 142,
+        "dbp_mmhg": 88
+      },
+      "fall_detected": 0,
+      "step_count": 1189,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 142/88 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 162.6 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 90.4% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Resting tachycardia 106 BPM \u2014 evaluate for anaemia, fever, anxiety, or thyroid dysfunction. Haemoglobin 10.8 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 200.2 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Respiratory rate 21 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "293b588e-ae7f-4219-b256-83fbe58eec52",
+    "recorded_at": "2026-05-14T07:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 93.1
+    },
+    "vitals": {
+      "hr_bpm": 100,
+      "oxygen_spo2_pct": 91.5,
+      "glucose_mgdl": 174.5,
+      "cholesterol_mgdl": 202.2,
+      "respiratory_rate_bpm": 22,
+      "hemoglobin_gdl": 10.7,
+      "temperature_f": 99.6,
+      "blood_pressure": {
+        "sbp_mmhg": 147,
+        "dbp_mmhg": 88
+      },
+      "fall_detected": 0,
+      "step_count": 1378,
+      "ecg": 0,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 147/88 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 174.5 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 91.5% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Resting tachycardia 100 BPM \u2014 evaluate for anaemia, fever, anxiety, or thyroid dysfunction. Low-grade fever 99.6\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 10.7 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 202.2 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Abnormal auscultation \u2014 assess for murmur, wheeze, or early crackles. Respiratory rate 22 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "258bf4b2-0bc3-45b0-86f8-262194079e59",
+    "recorded_at": "2026-03-19T10:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "female",
+      "weight_kg": 87.6
+    },
+    "vitals": {
+      "hr_bpm": 96,
+      "oxygen_spo2_pct": 94.8,
+      "glucose_mgdl": 154.8,
+      "cholesterol_mgdl": 229.0,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 10.4,
+      "temperature_f": 99.5,
+      "blood_pressure": {
+        "sbp_mmhg": 148,
+        "dbp_mmhg": 85
+      },
+      "fall_detected": 1,
+      "step_count": 2164,
+      "ecg": 1,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 148/85 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 154.8 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. Low-grade fever 99.5\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 10.4 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 229.0 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Abnormal ECG \u2014 cardiology referral recommended for further evaluation. Fall detected \u2014 medication review for fall risk. Physiotherapy assessment. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "d457bf3a-7641-4468-b353-37cefbacf5a4",
+    "recorded_at": "2026-05-06T11:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 84.2
+    },
+    "vitals": {
+      "hr_bpm": 105,
+      "oxygen_spo2_pct": 93.1,
+      "glucose_mgdl": 142.1,
+      "cholesterol_mgdl": 202.1,
+      "respiratory_rate_bpm": 20,
+      "hemoglobin_gdl": 11.8,
+      "temperature_f": 99.6,
+      "blood_pressure": {
+        "sbp_mmhg": 137,
+        "dbp_mmhg": 86
+      },
+      "fall_detected": 1,
+      "step_count": 902,
+      "ecg": 1,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_hr",
+      "doctor_suggestion": "Blood pressure 137/86 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 142.1 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. Resting tachycardia 105 BPM \u2014 evaluate for anaemia, fever, anxiety, or thyroid dysfunction. Low-grade fever 99.6\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Total cholesterol 202.1 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Abnormal ECG \u2014 cardiology referral recommended for further evaluation. Fall detected \u2014 medication review for fall risk. Physiotherapy assessment. Respiratory rate 20 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "31bc4da6-86ce-4482-a54b-0f301612b9db",
+    "recorded_at": "2026-05-17T01:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 93.8
+    },
+    "vitals": {
+      "hr_bpm": 98,
+      "oxygen_spo2_pct": 94.0,
+      "glucose_mgdl": 176.8,
+      "cholesterol_mgdl": 203.1,
+      "respiratory_rate_bpm": 22,
+      "hemoglobin_gdl": 12.5,
+      "temperature_f": 100.9,
+      "blood_pressure": {
+        "sbp_mmhg": 155,
+        "dbp_mmhg": 90
+      },
+      "fall_detected": 0,
+      "step_count": 1173,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 155/90 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 176.8 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. Low-grade fever 100.9\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Total cholesterol 203.1 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Respiratory rate 22 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "908240e0-d3c9-4490-9c30-39d2ef69efd3",
+    "recorded_at": "2026-05-02T10:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "male",
+      "weight_kg": 95.9
+    },
+    "vitals": {
+      "hr_bpm": 109,
+      "oxygen_spo2_pct": 94.4,
+      "glucose_mgdl": 172.6,
+      "cholesterol_mgdl": 211.5,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 11.2,
+      "temperature_f": 99.3,
+      "blood_pressure": {
+        "sbp_mmhg": 143,
+        "dbp_mmhg": 94
+      },
+      "fall_detected": 0,
+      "step_count": 3540,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 143/94 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 172.6 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. Resting tachycardia 109 BPM \u2014 evaluate for anaemia, fever, anxiety, or thyroid dysfunction. Haemoglobin 11.2 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 211.5 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "2599e46c-7194-4aaf-8603-1064d6f45d7d",
+    "recorded_at": "2026-03-15T21:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 104.8
+    },
+    "vitals": {
+      "hr_bpm": 93,
+      "oxygen_spo2_pct": 90.8,
+      "glucose_mgdl": 163.8,
+      "cholesterol_mgdl": 229.8,
+      "respiratory_rate_bpm": 23,
+      "hemoglobin_gdl": 12.1,
+      "temperature_f": 100.0,
+      "blood_pressure": {
+        "sbp_mmhg": 153,
+        "dbp_mmhg": 96
+      },
+      "fall_detected": 0,
+      "step_count": 4128,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 153/96 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 163.8 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 90.8% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Low-grade fever 100.0\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Total cholesterol 229.8 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Respiratory rate 23 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "ab1eaa16-90ba-4c7f-87f7-f0ea03554f3f",
+    "recorded_at": "2026-06-05T09:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "female",
+      "weight_kg": 93.7
+    },
+    "vitals": {
+      "hr_bpm": 92,
+      "oxygen_spo2_pct": 92.8,
+      "glucose_mgdl": 148.3,
+      "cholesterol_mgdl": 222.1,
+      "respiratory_rate_bpm": 18,
+      "hemoglobin_gdl": 10.6,
+      "temperature_f": 101.0,
+      "blood_pressure": {
+        "sbp_mmhg": 137,
+        "dbp_mmhg": 89
+      },
+      "fall_detected": 0,
+      "step_count": 2301,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Blood pressure 137/89 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 148.3 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 92.8% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Low-grade fever 101.0\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 10.6 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 222.1 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "beb98ec7-7327-4c29-821e-d32d117c1e20",
+    "recorded_at": "2026-04-04T23:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "female",
+      "weight_kg": 82.3
+    },
+    "vitals": {
+      "hr_bpm": 89,
+      "oxygen_spo2_pct": 92.0,
+      "glucose_mgdl": 184.5,
+      "cholesterol_mgdl": 217.4,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 10.7,
+      "temperature_f": 100.1,
+      "blood_pressure": {
+        "sbp_mmhg": 146,
+        "dbp_mmhg": 94
+      },
+      "fall_detected": 0,
+      "step_count": 4912,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 146/94 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 184.5 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 92.0% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Low-grade fever 100.1\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 10.7 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 217.4 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Abnormal ECG \u2014 cardiology referral recommended for further evaluation. Abnormal auscultation \u2014 assess for murmur, wheeze, or early crackles. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "415b4560-976b-4615-9f1f-30ec081bc981",
+    "recorded_at": "2026-05-06T22:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 102.8
+    },
+    "vitals": {
+      "hr_bpm": 104,
+      "oxygen_spo2_pct": 90.5,
+      "glucose_mgdl": 159.7,
+      "cholesterol_mgdl": 235.3,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 11.4,
+      "temperature_f": 101.0,
+      "blood_pressure": {
+        "sbp_mmhg": 137,
+        "dbp_mmhg": 95
+      },
+      "fall_detected": 0,
+      "step_count": 4932,
+      "ecg": 1,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_hr",
+      "doctor_suggestion": "Blood pressure 137/95 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 159.7 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 90.5% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Resting tachycardia 104 BPM \u2014 evaluate for anaemia, fever, anxiety, or thyroid dysfunction. Low-grade fever 101.0\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 11.4 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 235.3 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Abnormal ECG \u2014 cardiology referral recommended for further evaluation. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "5b9bad1c-27fd-46c8-a5ac-f0098b6125a6",
+    "recorded_at": "2026-05-30T08:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 89.8
+    },
+    "vitals": {
+      "hr_bpm": 100,
+      "oxygen_spo2_pct": 93.4,
+      "glucose_mgdl": 147.4,
+      "cholesterol_mgdl": 220.5,
+      "respiratory_rate_bpm": 18,
+      "hemoglobin_gdl": 10.7,
+      "temperature_f": 100.7,
+      "blood_pressure": {
+        "sbp_mmhg": 142,
+        "dbp_mmhg": 87
+      },
+      "fall_detected": 0,
+      "step_count": 1113,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 142/87 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 147.4 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. Resting tachycardia 100 BPM \u2014 evaluate for anaemia, fever, anxiety, or thyroid dysfunction. Low-grade fever 100.7\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 10.7 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 220.5 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "0bd9e307-0975-4765-9bf8-de891a0a60c7",
+    "recorded_at": "2026-05-30T05:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 92.3
+    },
+    "vitals": {
+      "hr_bpm": 94,
+      "oxygen_spo2_pct": 91.3,
+      "glucose_mgdl": 180.0,
+      "cholesterol_mgdl": 209.9,
+      "respiratory_rate_bpm": 21,
+      "hemoglobin_gdl": 10.9,
+      "temperature_f": 100.7,
+      "blood_pressure": {
+        "sbp_mmhg": 135,
+        "dbp_mmhg": 90
+      },
+      "fall_detected": 0,
+      "step_count": 3299,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Blood pressure 135/90 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 180.0 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 91.3% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Low-grade fever 100.7\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 10.9 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 209.9 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Respiratory rate 21 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "9898a8e5-0bf6-420b-846c-154bf187c2c8",
+    "recorded_at": "2026-04-23T10:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "male",
+      "weight_kg": 78.8
+    },
+    "vitals": {
+      "hr_bpm": 96,
+      "oxygen_spo2_pct": 90.7,
+      "glucose_mgdl": 125.1,
+      "cholesterol_mgdl": 233.6,
+      "respiratory_rate_bpm": 18,
+      "hemoglobin_gdl": 12.7,
+      "temperature_f": 101.0,
+      "blood_pressure": {
+        "sbp_mmhg": 139,
+        "dbp_mmhg": 86
+      },
+      "fall_detected": 0,
+      "step_count": 976,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Blood pressure 139/86 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. SpO2 90.7% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Low-grade fever 101.0\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Total cholesterol 233.6 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "2c8f3653-874e-4431-8bbd-b80e6e86c43d",
+    "recorded_at": "2026-05-02T13:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 86.8
+    },
+    "vitals": {
+      "hr_bpm": 94,
+      "oxygen_spo2_pct": 94.7,
+      "glucose_mgdl": 161.9,
+      "cholesterol_mgdl": 216.9,
+      "respiratory_rate_bpm": 21,
+      "hemoglobin_gdl": 10.2,
+      "temperature_f": 100.9,
+      "blood_pressure": {
+        "sbp_mmhg": 154,
+        "dbp_mmhg": 92
+      },
+      "fall_detected": 1,
+      "step_count": 2953,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 154/92 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 161.9 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. Low-grade fever 100.9\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 10.2 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 216.9 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Fall detected \u2014 medication review for fall risk. Physiotherapy assessment. Respiratory rate 21 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "4bda3ae5-3e94-4009-975b-b6eae937fa76",
+    "recorded_at": "2026-04-18T02:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 94.3
+    },
+    "vitals": {
+      "hr_bpm": 93,
+      "oxygen_spo2_pct": 94.7,
+      "glucose_mgdl": 134.3,
+      "cholesterol_mgdl": 212.7,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 12.5,
+      "temperature_f": 100.4,
+      "blood_pressure": {
+        "sbp_mmhg": 139,
+        "dbp_mmhg": 91
+      },
+      "fall_detected": 1,
+      "step_count": 938,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Blood pressure 139/91 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 134.3 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. Low-grade fever 100.4\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Total cholesterol 212.7 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Fall detected \u2014 medication review for fall risk. Physiotherapy assessment. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "73ede22f-89fb-4916-8b45-9d4534919450",
+    "recorded_at": "2026-03-22T21:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 88.8
+    },
+    "vitals": {
+      "hr_bpm": 104,
+      "oxygen_spo2_pct": 91.4,
+      "glucose_mgdl": 169.7,
+      "cholesterol_mgdl": 235.2,
+      "respiratory_rate_bpm": 22,
+      "hemoglobin_gdl": 11.2,
+      "temperature_f": 101.1,
+      "blood_pressure": {
+        "sbp_mmhg": 142,
+        "dbp_mmhg": 100
+      },
+      "fall_detected": 0,
+      "step_count": 3147,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 142/100 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 169.7 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 91.4% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Resting tachycardia 104 BPM \u2014 evaluate for anaemia, fever, anxiety, or thyroid dysfunction. Low-grade fever 101.1\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 11.2 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 235.2 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Respiratory rate 22 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "7c813f38-8dcf-4ae7-87bb-9d66d3cea61e",
+    "recorded_at": "2026-05-10T08:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 81.3
+    },
+    "vitals": {
+      "hr_bpm": 98,
+      "oxygen_spo2_pct": 92.5,
+      "glucose_mgdl": 184.7,
+      "cholesterol_mgdl": 203.3,
+      "respiratory_rate_bpm": 18,
+      "hemoglobin_gdl": 11.6,
+      "temperature_f": 100.5,
+      "blood_pressure": {
+        "sbp_mmhg": 158,
+        "dbp_mmhg": 87
+      },
+      "fall_detected": 0,
+      "step_count": 960,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 158/87 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 184.7 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 92.5% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Low-grade fever 100.5\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Total cholesterol 203.3 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "c90ca5ac-fa2a-4252-b7d4-5fea73750b1a",
+    "recorded_at": "2026-04-17T09:43:47Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "female",
+      "weight_kg": 80.8
+    },
+    "vitals": {
+      "hr_bpm": 102,
+      "oxygen_spo2_pct": 90.5,
+      "glucose_mgdl": 184.8,
+      "cholesterol_mgdl": 232.4,
+      "respiratory_rate_bpm": 22,
+      "hemoglobin_gdl": 10.5,
+      "temperature_f": 99.5,
+      "blood_pressure": {
+        "sbp_mmhg": 155,
+        "dbp_mmhg": 89
+      },
+      "fall_detected": 0,
+      "step_count": 4202,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "high_bp",
+      "doctor_suggestion": "Blood pressure 155/89 mmHg \u2014 lifestyle modifications recommended: DASH diet, sodium restriction <2.3 g/day, 150 min/week aerobic exercise. Consider antihypertensive if sustained. Fasting glucose 184.8 mg/dL \u2014 confirm diabetes diagnosis with repeat fasting glucose or HbA1c. Consider metformin initiation if confirmed. SpO2 90.5% mildly reduced \u2014 assess for respiratory cause. Spirometry recommended. Resting tachycardia 102 BPM \u2014 evaluate for anaemia, fever, anxiety, or thyroid dysfunction. Low-grade fever 99.5\u00b0F \u2014 assess for infection source. CBC and urinalysis recommended. Haemoglobin 10.5 g/dL \u2014 evaluate for iron deficiency. Iron studies and dietary review. Total cholesterol 232.4 mg/dL \u2014 initiate statin therapy discussion. Repeat fasting lipid panel. Respiratory rate 22 breaths/min slightly elevated \u2014 monitor for progression. Follow-up in 2\u20134 weeks with repeat vitals and labs.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "dd523d22-76a2-445a-8896-6f1963543fcb",
+    "recorded_at": "2026-04-29T10:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "male",
+      "weight_kg": 50.3
+    },
+    "vitals": {
+      "hr_bpm": 115,
+      "oxygen_spo2_pct": 82.2,
+      "glucose_mgdl": 300.0,
+      "cholesterol_mgdl": 294.3,
+      "respiratory_rate_bpm": 26,
+      "hemoglobin_gdl": 7.5,
+      "temperature_f": 101.6,
+      "blood_pressure": {
+        "sbp_mmhg": 190,
+        "dbp_mmhg": 124
+      },
+      "fall_detected": 1,
+      "step_count": 484,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 190 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 82.2%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Hyperglycaemic crisis \u2014 glucose 300.0 mg/dL. Urgent insulin therapy and IV fluid resuscitation. Rule out DKA. Tachycardia 115 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 26 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 7.5 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "ddf0d781-f325-4980-8327-d6f08608d8b2",
+    "recorded_at": "2026-05-07T10:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "female",
+      "weight_kg": 56.8
+    },
+    "vitals": {
+      "hr_bpm": 129,
+      "oxygen_spo2_pct": 86.8,
+      "glucose_mgdl": 330.2,
+      "cholesterol_mgdl": 285.9,
+      "respiratory_rate_bpm": 27,
+      "hemoglobin_gdl": 7.4,
+      "temperature_f": 101.8,
+      "blood_pressure": {
+        "sbp_mmhg": 176,
+        "dbp_mmhg": 109
+      },
+      "fall_detected": 1,
+      "step_count": 131,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "hypertensive_crisis",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 176 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Critical SpO2 86.8% \u2014 high-flow oxygen required. Urgent respiratory assessment. Hyperglycaemic crisis \u2014 glucose 330.2 mg/dL. Urgent insulin therapy and IV fluid resuscitation. Rule out DKA. Tachycardia 129 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 27 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 7.4 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "2d021caa-9108-4f36-9a98-440ff6fe8865",
+    "recorded_at": "2026-05-24T03:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 50.8
+    },
+    "vitals": {
+      "hr_bpm": 125,
+      "oxygen_spo2_pct": 84.1,
+      "glucose_mgdl": 50.7,
+      "cholesterol_mgdl": 249.7,
+      "respiratory_rate_bpm": 24,
+      "hemoglobin_gdl": 9.2,
+      "temperature_f": 103.3,
+      "blood_pressure": {
+        "sbp_mmhg": 185,
+        "dbp_mmhg": 106
+      },
+      "fall_detected": 1,
+      "step_count": 90,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 185 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 84.1%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 50.7 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Tachycardia 125 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 24 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. High fever 103.3\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "01aa8522-bb2c-4308-925b-c01724739b99",
+    "recorded_at": "2026-04-26T05:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 53.9
+    },
+    "vitals": {
+      "hr_bpm": 112,
+      "oxygen_spo2_pct": 87.0,
+      "glucose_mgdl": 46.8,
+      "cholesterol_mgdl": 252.2,
+      "respiratory_rate_bpm": 25,
+      "hemoglobin_gdl": 7.5,
+      "temperature_f": 102.1,
+      "blood_pressure": {
+        "sbp_mmhg": 193,
+        "dbp_mmhg": 120
+      },
+      "fall_detected": 0,
+      "step_count": 91,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "hypertensive_crisis",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 193 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Critical SpO2 87.0% \u2014 high-flow oxygen required. Urgent respiratory assessment. Critical hypoglycemia \u2014 glucose 46.8 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Respiratory rate 25 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 7.5 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. High fever 102.1\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "1d04374c-aa75-46d7-89eb-0234a6cdcd47",
+    "recorded_at": "2026-03-27T08:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 55.1
+    },
+    "vitals": {
+      "hr_bpm": 147,
+      "oxygen_spo2_pct": 81.7,
+      "glucose_mgdl": 52.1,
+      "cholesterol_mgdl": 265.5,
+      "respiratory_rate_bpm": 34,
+      "hemoglobin_gdl": 8.3,
+      "temperature_f": 103.0,
+      "blood_pressure": {
+        "sbp_mmhg": 175,
+        "dbp_mmhg": 107
+      },
+      "fall_detected": 1,
+      "step_count": 332,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 175 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 81.7%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 52.1 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Tachycardia 147 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 34 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 8.3 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. High fever 103.0\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "6db08f9e-ef68-43ef-90af-56077cd000d3",
+    "recorded_at": "2026-03-20T11:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "male",
+      "weight_kg": 44.3
+    },
+    "vitals": {
+      "hr_bpm": 145,
+      "oxygen_spo2_pct": 86.8,
+      "glucose_mgdl": 345.4,
+      "cholesterol_mgdl": 274.1,
+      "respiratory_rate_bpm": 31,
+      "hemoglobin_gdl": 10.1,
+      "temperature_f": 102.9,
+      "blood_pressure": {
+        "sbp_mmhg": 185,
+        "dbp_mmhg": 121
+      },
+      "fall_detected": 1,
+      "step_count": 314,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "hypertensive_crisis",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 185 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Critical SpO2 86.8% \u2014 high-flow oxygen required. Urgent respiratory assessment. Hyperglycaemic crisis \u2014 glucose 345.4 mg/dL. Urgent insulin therapy and IV fluid resuscitation. Rule out DKA. Tachycardia 145 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 31 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. High fever 102.9\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "588e3b33-8ebf-46e9-a0f2-60c0448fbf50",
+    "recorded_at": "2026-04-30T04:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "female",
+      "weight_kg": 55.6
+    },
+    "vitals": {
+      "hr_bpm": 124,
+      "oxygen_spo2_pct": 81.0,
+      "glucose_mgdl": 52.7,
+      "cholesterol_mgdl": 292.6,
+      "respiratory_rate_bpm": 30,
+      "hemoglobin_gdl": 9.6,
+      "temperature_f": 101.8,
+      "blood_pressure": {
+        "sbp_mmhg": 178,
+        "dbp_mmhg": 127
+      },
+      "fall_detected": 1,
+      "step_count": 102,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 178 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 81.0%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 52.7 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Tachycardia 124 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 30 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "f1b42ee4-278e-48c5-b36d-f4feac6be82f",
+    "recorded_at": "2026-05-10T18:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 48.1
+    },
+    "vitals": {
+      "hr_bpm": 136,
+      "oxygen_spo2_pct": 82.7,
+      "glucose_mgdl": 45.2,
+      "cholesterol_mgdl": 251.3,
+      "respiratory_rate_bpm": 25,
+      "hemoglobin_gdl": 7.9,
+      "temperature_f": 103.6,
+      "blood_pressure": {
+        "sbp_mmhg": 184,
+        "dbp_mmhg": 113
+      },
+      "fall_detected": 1,
+      "step_count": 386,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 184 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 82.7%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 45.2 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Tachycardia 136 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 25 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 7.9 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. High fever 103.6\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "6c8b86a1-3c31-43d3-86f4-66165f7281b8",
+    "recorded_at": "2026-05-19T08:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 58.3
+    },
+    "vitals": {
+      "hr_bpm": 117,
+      "oxygen_spo2_pct": 82.1,
+      "glucose_mgdl": 42.1,
+      "cholesterol_mgdl": 262.7,
+      "respiratory_rate_bpm": 30,
+      "hemoglobin_gdl": 8.7,
+      "temperature_f": 102.9,
+      "blood_pressure": {
+        "sbp_mmhg": 197,
+        "dbp_mmhg": 128
+      },
+      "fall_detected": 1,
+      "step_count": 417,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 197 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 82.1%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 42.1 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Tachycardia 117 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 30 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 8.7 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. High fever 102.9\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "79a94063-d8e6-43d9-a58b-ff1be8aff03c",
+    "recorded_at": "2026-04-28T16:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 46.1
+    },
+    "vitals": {
+      "hr_bpm": 144,
+      "oxygen_spo2_pct": 86.7,
+      "glucose_mgdl": 56.0,
+      "cholesterol_mgdl": 283.5,
+      "respiratory_rate_bpm": 33,
+      "hemoglobin_gdl": 6.6,
+      "temperature_f": 102.7,
+      "blood_pressure": {
+        "sbp_mmhg": 176,
+        "dbp_mmhg": 110
+      },
+      "fall_detected": 1,
+      "step_count": 565,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "hypertensive_crisis",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 176 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Critical SpO2 86.7% \u2014 high-flow oxygen required. Urgent respiratory assessment. Critical hypoglycemia \u2014 glucose 56.0 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Tachycardia 144 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 33 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 6.6 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. High fever 102.7\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "9b7de66d-8cf3-47d5-bb7d-6869bd91060d",
+    "recorded_at": "2026-05-28T18:43:47Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 51.3
+    },
+    "vitals": {
+      "hr_bpm": 139,
+      "oxygen_spo2_pct": 80.7,
+      "glucose_mgdl": 273.5,
+      "cholesterol_mgdl": 268.1,
+      "respiratory_rate_bpm": 29,
+      "hemoglobin_gdl": 6.7,
+      "temperature_f": 103.7,
+      "blood_pressure": {
+        "sbp_mmhg": 175,
+        "dbp_mmhg": 116
+      },
+      "fall_detected": 0,
+      "step_count": 129,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 175 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 80.7%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Hyperglycaemic crisis \u2014 glucose 273.5 mg/dL. Urgent insulin therapy and IV fluid resuscitation. Rule out DKA. Tachycardia 139 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 29 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 6.7 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. High fever 103.7\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "c55f36c1-0f5e-4014-bfe6-b81df594a200",
+    "recorded_at": "2026-03-30T15:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 47.2
+    },
+    "vitals": {
+      "hr_bpm": 132,
+      "oxygen_spo2_pct": 81.0,
+      "glucose_mgdl": 389.0,
+      "cholesterol_mgdl": 283.1,
+      "respiratory_rate_bpm": 29,
+      "hemoglobin_gdl": 6.6,
+      "temperature_f": 101.3,
+      "blood_pressure": {
+        "sbp_mmhg": 174,
+        "dbp_mmhg": 122
+      },
+      "fall_detected": 0,
+      "step_count": 461,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 174 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 81.0%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Hyperglycaemic crisis \u2014 glucose 389.0 mg/dL. Urgent insulin therapy and IV fluid resuscitation. Rule out DKA. Tachycardia 132 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 29 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 6.6 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "5dad5d06-1e6e-4eac-8d24-451a69faa081",
+    "recorded_at": "2026-03-21T05:43:47Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 48.6
+    },
+    "vitals": {
+      "hr_bpm": 130,
+      "oxygen_spo2_pct": 85.7,
+      "glucose_mgdl": 42.9,
+      "cholesterol_mgdl": 253.7,
+      "respiratory_rate_bpm": 34,
+      "hemoglobin_gdl": 8.1,
+      "temperature_f": 103.7,
+      "blood_pressure": {
+        "sbp_mmhg": 197,
+        "dbp_mmhg": 126
+      },
+      "fall_detected": 1,
+      "step_count": 468,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 197 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 85.7%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 42.9 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Tachycardia 130 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 34 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 8.1 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. High fever 103.7\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "9c4406e5-d145-4bed-ae17-c68642487d6d",
+    "recorded_at": "2026-05-17T07:43:47Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 49.6
+    },
+    "vitals": {
+      "hr_bpm": 140,
+      "oxygen_spo2_pct": 85.8,
+      "glucose_mgdl": 43.1,
+      "cholesterol_mgdl": 243.7,
+      "respiratory_rate_bpm": 26,
+      "hemoglobin_gdl": 8.0,
+      "temperature_f": 102.3,
+      "blood_pressure": {
+        "sbp_mmhg": 191,
+        "dbp_mmhg": 122
+      },
+      "fall_detected": 1,
+      "step_count": 587,
+      "ecg": 1,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": "low_spo2",
+      "doctor_suggestion": "Hypertensive crisis \u2014 SBP 191 mmHg. Immediate end-organ damage evaluation. IV antihypertensive if emergency confirmed. Severe hypoxemia \u2014 SpO2 85.8%. Immediate supplemental oxygen. Assess for pneumonia, PE, or acute respiratory failure. Critical hypoglycemia \u2014 glucose 43.1 mg/dL. 15\u201320 g fast-acting carbohydrates immediately. IV dextrose if unconscious. Tachycardia 140 BPM \u2014 assess haemodynamic stability. Urgent 12-lead ECG. Respiratory rate 26 breaths/min \u2014 sepsis qSOFA criteria met. Blood cultures and broad-spectrum IV antibiotics. Severe anaemia \u2014 Hgb 8.0 g/dL. Blood transfusion if symptomatic or haemodynamically unstable. High fever 102.3\u00b0F \u2014 sepsis workup required. Blood and urine cultures, chest X-ray. Abnormal ECG \u2014 urgent cardiology review. Rule out ACS, arrhythmia, or conduction defect. Abnormal auscultation \u2014 immediate assessment for acute murmur, pulmonary oedema, or pneumonia. Fall detected \u2014 urgent injury assessment. Neurological and musculoskeletal evaluation. Urgent clinical review required. Consider emergency department transfer.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "0168fbe2-91b3-493c-856b-b9f107c32d16",
+    "recorded_at": "2026-07-15T08:51:00Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 56.0
+    },
+    "vitals": {
+      "hr_bpm": 25,
+      "oxygen_spo2_pct": 98.3,
+      "glucose_mgdl": 100.8,
+      "cholesterol_mgdl": 173.8,
+      "respiratory_rate_bpm": 15,
+      "hemoglobin_gdl": 16.1,
+      "temperature_f": 97.4,
+      "blood_pressure": {
+        "sbp_mmhg": 112,
+        "dbp_mmhg": 72
+      },
+      "fall_detected": 0,
+      "step_count": 8479,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "hr_bpm"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "d744dab2-01d4-4056-97e5-0de0584a4a2a",
+    "recorded_at": "2026-06-18T02:35:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 93.7
+    },
+    "vitals": {
+      "hr_bpm": 84,
+      "oxygen_spo2_pct": 96.5,
+      "glucose_mgdl": 86.8,
+      "cholesterol_mgdl": 144.6,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 12.9,
+      "temperature_f": 98.7,
+      "blood_pressure": {
+        "sbp_mmhg": 111,
+        "dbp_mmhg": 82
+      },
+      "fall_detected": 0,
+      "step_count": 10091,
+      "ecg": 0,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "dbp_mmhg"
+      ],
+      "doctor_suggestion": "Borderline reading observed. Advise patient to rest and re-check vitals within 24 hours; schedule follow-up if persists.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "53c32c8b-9869-42bc-98ca-cb763859d211",
+    "recorded_at": "2026-07-27T20:04:00Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 80.1
+    },
+    "vitals": {
+      "hr_bpm": 82,
+      "oxygen_spo2_pct": 98.9,
+      "glucose_mgdl": 98.1,
+      "cholesterol_mgdl": 178.7,
+      "respiratory_rate_bpm": 15,
+      "hemoglobin_gdl": 16.4,
+      "temperature_f": 98.7,
+      "blood_pressure": {
+        "sbp_mmhg": 198,
+        "dbp_mmhg": 70
+      },
+      "fall_detected": 0,
+      "step_count": 6177,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "sbp_mmhg"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "42a1d425-73ba-417c-bacd-3d25568b2011",
+    "recorded_at": "2026-07-03T12:56:00Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "female",
+      "weight_kg": 55.6
+    },
+    "vitals": {
+      "hr_bpm": 86,
+      "oxygen_spo2_pct": 95.7,
+      "glucose_mgdl": 99.1,
+      "cholesterol_mgdl": 151.0,
+      "respiratory_rate_bpm": 4,
+      "hemoglobin_gdl": 13.8,
+      "temperature_f": 98.6,
+      "blood_pressure": {
+        "sbp_mmhg": 113,
+        "dbp_mmhg": 80
+      },
+      "fall_detected": 0,
+      "step_count": 6772,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "dbp_mmhg",
+        "respiratory_rate_bpm"
+      ],
+      "doctor_suggestion": "Severe abnormality flagged across monitored parameters. Escalate to on-call physician and notify guardians immediately.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "08f7dd8e-4272-44b1-af49-6f2731c62416",
+    "recorded_at": "2026-08-10T21:27:00Z",
+    "demographics": {
+      "age_group": "0-15",
+      "biological_sex": "male",
+      "weight_kg": 40.1
+    },
+    "vitals": {
+      "hr_bpm": 69,
+      "oxygen_spo2_pct": 96.1,
+      "glucose_mgdl": 106.4,
+      "cholesterol_mgdl": 160.0,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 13.4,
+      "temperature_f": 99.0,
+      "blood_pressure": {
+        "sbp_mmhg": 123,
+        "dbp_mmhg": 76
+      },
+      "fall_detected": 0,
+      "step_count": 8548,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "338fbdf5-38a9-4036-bb7e-8547dadcfcbf",
+    "recorded_at": "2026-08-06T05:32:00Z",
+    "demographics": {
+      "age_group": "0-15",
+      "biological_sex": "female",
+      "weight_kg": 53.9
+    },
+    "vitals": {
+      "hr_bpm": 73,
+      "oxygen_spo2_pct": 99.5,
+      "glucose_mgdl": 98.8,
+      "cholesterol_mgdl": 145.7,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 16.0,
+      "temperature_f": 98.6,
+      "blood_pressure": {
+        "sbp_mmhg": 122,
+        "dbp_mmhg": 102
+      },
+      "fall_detected": 0,
+      "step_count": 2027,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "dbp_mmhg"
+      ],
+      "doctor_suggestion": "Mild deviation detected in monitored vitals. Recommend increased monitoring frequency and follow-up within 2 weeks.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "a6ab68dc-ffb3-463e-b02c-ab854e98103e",
+    "recorded_at": "2026-08-21T18:05:00Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "male",
+      "weight_kg": 47.9
+    },
+    "vitals": {
+      "hr_bpm": 90,
+      "oxygen_spo2_pct": 97.3,
+      "glucose_mgdl": 101.7,
+      "cholesterol_mgdl": 167.0,
+      "respiratory_rate_bpm": 15,
+      "hemoglobin_gdl": 15.6,
+      "temperature_f": 98.2,
+      "blood_pressure": {
+        "sbp_mmhg": 86,
+        "dbp_mmhg": 75
+      },
+      "fall_detected": 1,
+      "step_count": 6147,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "sbp_mmhg"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "8b261ceb-1a21-4451-8433-5847e7a03851",
+    "recorded_at": "2026-05-29T02:21:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 51.1
+    },
+    "vitals": {
+      "hr_bpm": 89,
+      "oxygen_spo2_pct": 99.4,
+      "glucose_mgdl": 91.6,
+      "cholesterol_mgdl": 167.5,
+      "respiratory_rate_bpm": 5,
+      "hemoglobin_gdl": 13.6,
+      "temperature_f": 98.8,
+      "blood_pressure": {
+        "sbp_mmhg": 109,
+        "dbp_mmhg": 80
+      },
+      "fall_detected": 0,
+      "step_count": 6737,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "dbp_mmhg",
+        "respiratory_rate_bpm"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "35639af5-187d-4b0b-8723-68c33b968a61",
+    "recorded_at": "2026-06-30T13:12:00Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 57.1
+    },
+    "vitals": {
+      "hr_bpm": 81,
+      "oxygen_spo2_pct": 95.0,
+      "glucose_mgdl": 106.7,
+      "cholesterol_mgdl": 183.0,
+      "respiratory_rate_bpm": 12,
+      "hemoglobin_gdl": 12.8,
+      "temperature_f": 97.6,
+      "blood_pressure": {
+        "sbp_mmhg": 112,
+        "dbp_mmhg": 71
+      },
+      "fall_detected": 0,
+      "step_count": 11160,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "b629d323-8a77-4375-8192-69bc8360b661",
+    "recorded_at": "2026-08-09T14:18:00Z",
+    "demographics": {
+      "age_group": "0-15",
+      "biological_sex": "female",
+      "weight_kg": 25.6
+    },
+    "vitals": {
+      "hr_bpm": 69,
+      "oxygen_spo2_pct": 77.1,
+      "glucose_mgdl": 76.8,
+      "cholesterol_mgdl": 190.0,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 15.8,
+      "temperature_f": 98.9,
+      "blood_pressure": {
+        "sbp_mmhg": 122,
+        "dbp_mmhg": 71
+      },
+      "fall_detected": 0,
+      "step_count": 6770,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "oxygen_spo2_pct"
+      ],
+      "doctor_suggestion": "Severe abnormality flagged across monitored parameters. Escalate to on-call physician and notify guardians immediately.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "be25d2a4-0ca8-4a47-af5f-fd65da1a2749",
+    "recorded_at": "2026-07-12T07:37:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 92.1
+    },
+    "vitals": {
+      "hr_bpm": 26,
+      "oxygen_spo2_pct": 86.8,
+      "glucose_mgdl": 94.0,
+      "cholesterol_mgdl": 177.4,
+      "respiratory_rate_bpm": 12,
+      "hemoglobin_gdl": 12.7,
+      "temperature_f": 98.3,
+      "blood_pressure": {
+        "sbp_mmhg": 123,
+        "dbp_mmhg": 81
+      },
+      "fall_detected": 0,
+      "step_count": 9949,
+      "ecg": 1,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "dbp_mmhg",
+        "hr_bpm",
+        "oxygen_spo2_pct"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "92857478-3e1b-4f85-a8d1-a5b07a17ff68",
+    "recorded_at": "2026-07-12T03:04:00Z",
+    "demographics": {
+      "age_group": "0-15",
+      "biological_sex": "male",
+      "weight_kg": 33.3
+    },
+    "vitals": {
+      "hr_bpm": 75,
+      "oxygen_spo2_pct": 97.6,
+      "glucose_mgdl": 98.4,
+      "cholesterol_mgdl": 155.7,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 13.6,
+      "temperature_f": 97.4,
+      "blood_pressure": {
+        "sbp_mmhg": 113,
+        "dbp_mmhg": 73
+      },
+      "fall_detected": 0,
+      "step_count": 10775,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "772b1453-e090-4266-917a-bc5992e95950",
+    "recorded_at": "2026-05-20T08:18:00Z",
+    "demographics": {
+      "age_group": "0-15",
+      "biological_sex": "male",
+      "weight_kg": 44.7
+    },
+    "vitals": {
+      "hr_bpm": 37,
+      "oxygen_spo2_pct": 96.6,
+      "glucose_mgdl": 85.0,
+      "cholesterol_mgdl": 161.9,
+      "respiratory_rate_bpm": 13,
+      "hemoglobin_gdl": 14.7,
+      "temperature_f": 97.7,
+      "blood_pressure": {
+        "sbp_mmhg": 74,
+        "dbp_mmhg": 75
+      },
+      "fall_detected": 0,
+      "step_count": 1897,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "hr_bpm",
+        "sbp_mmhg"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "ad346892-4f18-435b-a3bc-427a6d158c34",
+    "recorded_at": "2026-05-15T02:56:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 73.0
+    },
+    "vitals": {
+      "hr_bpm": 25,
+      "oxygen_spo2_pct": 97.9,
+      "glucose_mgdl": 83.8,
+      "cholesterol_mgdl": 185.4,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 12.7,
+      "temperature_f": 98.3,
+      "blood_pressure": {
+        "sbp_mmhg": 121,
+        "dbp_mmhg": 77
+      },
+      "fall_detected": 0,
+      "step_count": 10638,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "hr_bpm"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "a36214ab-f606-41cd-97bb-eb5f1bc8651b",
+    "recorded_at": "2026-07-11T13:39:00Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "male",
+      "weight_kg": 62.7
+    },
+    "vitals": {
+      "hr_bpm": 89,
+      "oxygen_spo2_pct": 97.6,
+      "glucose_mgdl": 76.5,
+      "cholesterol_mgdl": 158.2,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 16.2,
+      "temperature_f": 98.9,
+      "blood_pressure": {
+        "sbp_mmhg": 118,
+        "dbp_mmhg": 72
+      },
+      "fall_detected": 0,
+      "step_count": 853,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "922012a5-cec4-46b9-ab3e-9a9e6b11b0c9",
+    "recorded_at": "2026-05-14T12:55:00Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "male",
+      "weight_kg": 84.4
+    },
+    "vitals": {
+      "hr_bpm": 90,
+      "oxygen_spo2_pct": 99.4,
+      "glucose_mgdl": 81.3,
+      "cholesterol_mgdl": 186.2,
+      "respiratory_rate_bpm": 14,
+      "hemoglobin_gdl": 15.6,
+      "temperature_f": 97.9,
+      "blood_pressure": {
+        "sbp_mmhg": 118,
+        "dbp_mmhg": 70
+      },
+      "fall_detected": 0,
+      "step_count": 11175,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "ed0ce136-9b88-49b9-b6b2-8eb8907221ab",
+    "recorded_at": "2026-05-15T08:11:00Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 92.0
+    },
+    "vitals": {
+      "hr_bpm": 68,
+      "oxygen_spo2_pct": 98.7,
+      "glucose_mgdl": 103.7,
+      "cholesterol_mgdl": 183.6,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 13.4,
+      "temperature_f": 98.4,
+      "blood_pressure": {
+        "sbp_mmhg": 72,
+        "dbp_mmhg": 74
+      },
+      "fall_detected": 0,
+      "step_count": 4773,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "sbp_mmhg"
+      ],
+      "doctor_suggestion": "Severe abnormality flagged across monitored parameters. Escalate to on-call physician and notify guardians immediately.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "7c2935d5-79bf-4a63-b071-f3d348ba9b47",
+    "recorded_at": "2026-05-09T21:58:00Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "male",
+      "weight_kg": 63.2
+    },
+    "vitals": {
+      "hr_bpm": 64,
+      "oxygen_spo2_pct": 97.0,
+      "glucose_mgdl": 109.4,
+      "cholesterol_mgdl": 145.8,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 16.1,
+      "temperature_f": 97.5,
+      "blood_pressure": {
+        "sbp_mmhg": 118,
+        "dbp_mmhg": 79
+      },
+      "fall_detected": 0,
+      "step_count": 927,
+      "ecg": 0,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "All readings within expected range. No intervention needed at this time. Continue routine monitoring.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "b7689688-f1e9-463e-88e2-ec1c91fb1dc6",
+    "recorded_at": "2026-08-15T00:19:00Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "female",
+      "weight_kg": 65.3
+    },
+    "vitals": {
+      "hr_bpm": 83,
+      "oxygen_spo2_pct": 95.6,
+      "glucose_mgdl": 98.3,
+      "cholesterol_mgdl": 156.3,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 15.3,
+      "temperature_f": 98.2,
+      "blood_pressure": {
+        "sbp_mmhg": 223,
+        "dbp_mmhg": 74
+      },
+      "fall_detected": 0,
+      "step_count": 11297,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "sbp_mmhg"
+      ],
+      "doctor_suggestion": "Severe abnormality flagged across monitored parameters. Escalate to on-call physician and notify guardians immediately.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "f4d317dc-8d96-4a57-90c7-86ddf25d7604",
+    "recorded_at": "2026-08-05T07:43:00Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 49.7
+    },
+    "vitals": {
+      "hr_bpm": 75,
+      "oxygen_spo2_pct": 97.6,
+      "glucose_mgdl": 90.5,
+      "cholesterol_mgdl": 150.7,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 14.4,
+      "temperature_f": 98.8,
+      "blood_pressure": {
+        "sbp_mmhg": 119,
+        "dbp_mmhg": 77
+      },
+      "fall_detected": 0,
+      "step_count": 2980,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "All readings within expected range. No intervention needed at this time. Continue routine monitoring.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "d84df5df-fba6-42d9-8f91-04a134ea93e1",
+    "recorded_at": "2026-07-23T22:00:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 57.2
+    },
+    "vitals": {
+      "hr_bpm": 88,
+      "oxygen_spo2_pct": 95.7,
+      "glucose_mgdl": 96.4,
+      "cholesterol_mgdl": 178.4,
+      "respiratory_rate_bpm": 12,
+      "hemoglobin_gdl": 14.3,
+      "temperature_f": 98.8,
+      "blood_pressure": {
+        "sbp_mmhg": 112,
+        "dbp_mmhg": 77
+      },
+      "fall_detected": 0,
+      "step_count": 9631,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "87aea054-0e77-4f02-9c81-14a4f9c070a0",
+    "recorded_at": "2026-06-30T14:16:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 82.2
+    },
+    "vitals": {
+      "hr_bpm": 68,
+      "oxygen_spo2_pct": 98.6,
+      "glucose_mgdl": 83.7,
+      "cholesterol_mgdl": 182.4,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 14.3,
+      "temperature_f": 98.6,
+      "blood_pressure": {
+        "sbp_mmhg": 220,
+        "dbp_mmhg": 78
+      },
+      "fall_detected": 0,
+      "step_count": 8470,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "sbp_mmhg"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "35e4f25c-e7b8-4602-807f-cb64a2722405",
+    "recorded_at": "2026-05-27T13:24:00Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "female",
+      "weight_kg": 65.8
+    },
+    "vitals": {
+      "hr_bpm": 161,
+      "oxygen_spo2_pct": 97.3,
+      "glucose_mgdl": 77.7,
+      "cholesterol_mgdl": 154.3,
+      "respiratory_rate_bpm": 15,
+      "hemoglobin_gdl": 13.6,
+      "temperature_f": 97.8,
+      "blood_pressure": {
+        "sbp_mmhg": 113,
+        "dbp_mmhg": 133
+      },
+      "fall_detected": 0,
+      "step_count": 11773,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "dbp_mmhg",
+        "hr_bpm"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "e1c28288-5348-442d-8018-728d9f98a0b3",
+    "recorded_at": "2026-08-26T04:39:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 87.0
+    },
+    "vitals": {
+      "hr_bpm": 77,
+      "oxygen_spo2_pct": 99.2,
+      "glucose_mgdl": 93.8,
+      "cholesterol_mgdl": 176.7,
+      "respiratory_rate_bpm": 6,
+      "hemoglobin_gdl": 15.7,
+      "temperature_f": 98.8,
+      "blood_pressure": {
+        "sbp_mmhg": 117,
+        "dbp_mmhg": 76
+      },
+      "fall_detected": 0,
+      "step_count": 675,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "respiratory_rate_bpm"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "590dbf5d-389f-4086-b350-787694bd6f41",
+    "recorded_at": "2026-06-30T00:47:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 86.7
+    },
+    "vitals": {
+      "hr_bpm": 81,
+      "oxygen_spo2_pct": 98.0,
+      "glucose_mgdl": 79.7,
+      "cholesterol_mgdl": 163.1,
+      "respiratory_rate_bpm": 13,
+      "hemoglobin_gdl": 12.7,
+      "temperature_f": 97.9,
+      "blood_pressure": {
+        "sbp_mmhg": 125,
+        "dbp_mmhg": 131
+      },
+      "fall_detected": 0,
+      "step_count": 6411,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": true,
+      "alert_type": [
+        "dbp_mmhg"
+      ],
+      "doctor_suggestion": "Critical vital sign deviation detected. Immediate clinical review recommended; consider urgent in-person evaluation.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "559b8d8e-f1fe-4ce1-99f3-bf1eb8e251ac",
+    "recorded_at": "2026-05-22T19:38:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "female",
+      "weight_kg": 83.3
+    },
+    "vitals": {
+      "hr_bpm": 68,
+      "oxygen_spo2_pct": 95.3,
+      "glucose_mgdl": 82.0,
+      "cholesterol_mgdl": 141.0,
+      "respiratory_rate_bpm": 12,
+      "hemoglobin_gdl": 13.1,
+      "temperature_f": 97.4,
+      "blood_pressure": {
+        "sbp_mmhg": 105,
+        "dbp_mmhg": 73
+      },
+      "fall_detected": 0,
+      "step_count": 11168,
+      "ecg": 1,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "9620f4b3-1c2f-47c6-a17f-af0e0473f6bc",
+    "recorded_at": "2026-06-08T21:38:00Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "male",
+      "weight_kg": 79.9
+    },
+    "vitals": {
+      "hr_bpm": 94,
+      "oxygen_spo2_pct": 95.5,
+      "glucose_mgdl": 98.7,
+      "cholesterol_mgdl": 187.9,
+      "respiratory_rate_bpm": 12,
+      "hemoglobin_gdl": 14.1,
+      "temperature_f": 98.5,
+      "blood_pressure": {
+        "sbp_mmhg": 114,
+        "dbp_mmhg": 79
+      },
+      "fall_detected": 0,
+      "step_count": 1445,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "d74c0b71-c96b-4ff0-827d-33a95cef4549",
+    "recorded_at": "2026-08-02T16:41:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 66.8
+    },
+    "vitals": {
+      "hr_bpm": 72,
+      "oxygen_spo2_pct": 96.9,
+      "glucose_mgdl": 97.7,
+      "cholesterol_mgdl": 140.6,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 14.2,
+      "temperature_f": 98.1,
+      "blood_pressure": {
+        "sbp_mmhg": 107,
+        "dbp_mmhg": 78
+      },
+      "fall_detected": 0,
+      "step_count": 7302,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "All readings within expected range. No intervention needed at this time. Continue routine monitoring.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "778e4812-4bb5-4c1c-ab3c-859acba9c5a8",
+    "recorded_at": "2026-06-11T05:31:00Z",
+    "demographics": {
+      "age_group": "31-45",
+      "biological_sex": "male",
+      "weight_kg": 69.7
+    },
+    "vitals": {
+      "hr_bpm": 76,
+      "oxygen_spo2_pct": 98.7,
+      "glucose_mgdl": 104.1,
+      "cholesterol_mgdl": 144.3,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 16.0,
+      "temperature_f": 97.6,
+      "blood_pressure": {
+        "sbp_mmhg": 115,
+        "dbp_mmhg": 73
+      },
+      "fall_detected": 0,
+      "step_count": 7813,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "1b9b24d5-2add-478a-a9b6-7100989c4358",
+    "recorded_at": "2026-05-03T02:18:00Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "female",
+      "weight_kg": 67.4
+    },
+    "vitals": {
+      "hr_bpm": 88,
+      "oxygen_spo2_pct": 96.5,
+      "glucose_mgdl": 93.1,
+      "cholesterol_mgdl": 149.6,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 13.5,
+      "temperature_f": 97.9,
+      "blood_pressure": {
+        "sbp_mmhg": 122,
+        "dbp_mmhg": 70
+      },
+      "fall_detected": 0,
+      "step_count": 9296,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "a7acb74b-3072-420c-8fa0-edf949b1a7db",
+    "recorded_at": "2026-06-10T03:47:00Z",
+    "demographics": {
+      "age_group": "18-30",
+      "biological_sex": "male",
+      "weight_kg": 81.1
+    },
+    "vitals": {
+      "hr_bpm": 84,
+      "oxygen_spo2_pct": 96.4,
+      "glucose_mgdl": 93.6,
+      "cholesterol_mgdl": 161.3,
+      "respiratory_rate_bpm": 17,
+      "hemoglobin_gdl": 15.5,
+      "temperature_f": 97.8,
+      "blood_pressure": {
+        "sbp_mmhg": 120,
+        "dbp_mmhg": 78
+      },
+      "fall_detected": 0,
+      "step_count": 11715,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "249147c6-b25e-480f-8236-9a3ffe5d88c9",
+    "recorded_at": "2026-05-17T20:55:00Z",
+    "demographics": {
+      "age_group": "61-75",
+      "biological_sex": "female",
+      "weight_kg": 79.9
+    },
+    "vitals": {
+      "hr_bpm": 68,
+      "oxygen_spo2_pct": 97.2,
+      "glucose_mgdl": 85.4,
+      "cholesterol_mgdl": 158.0,
+      "respiratory_rate_bpm": 16,
+      "hemoglobin_gdl": 13.7,
+      "temperature_f": 98.5,
+      "blood_pressure": {
+        "sbp_mmhg": 108,
+        "dbp_mmhg": 73
+      },
+      "fall_detected": 0,
+      "step_count": 2273,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "All readings within expected range. No intervention needed at this time. Continue routine monitoring.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "128c7f1b-b3fb-4eff-8d16-48f3b763853b",
+    "recorded_at": "2026-08-12T18:19:00Z",
+    "demographics": {
+      "age_group": "0-15",
+      "biological_sex": "male",
+      "weight_kg": 21.1
+    },
+    "vitals": {
+      "hr_bpm": 90,
+      "oxygen_spo2_pct": 97.6,
+      "glucose_mgdl": 86.9,
+      "cholesterol_mgdl": 188.3,
+      "respiratory_rate_bpm": 19,
+      "hemoglobin_gdl": 13.5,
+      "temperature_f": 98.8,
+      "blood_pressure": {
+        "sbp_mmhg": 120,
+        "dbp_mmhg": 77
+      },
+      "fall_detected": 0,
+      "step_count": 2069,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "1c4bfd72-39bb-4e6b-8ae1-9a8d7d53fb73",
+    "recorded_at": "2026-05-27T20:13:00Z",
+    "demographics": {
+      "age_group": "75+",
+      "biological_sex": "male",
+      "weight_kg": 92.4
+    },
+    "vitals": {
+      "hr_bpm": 64,
+      "oxygen_spo2_pct": 98.4,
+      "glucose_mgdl": 90.8,
+      "cholesterol_mgdl": 162.1,
+      "respiratory_rate_bpm": 15,
+      "hemoglobin_gdl": 15.9,
+      "temperature_f": 99.0,
+      "blood_pressure": {
+        "sbp_mmhg": 121,
+        "dbp_mmhg": 76
+      },
+      "fall_detected": 0,
+      "step_count": 5203,
+      "ecg": 0,
+      "stethoscope": 1
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "All readings within expected range. No intervention needed at this time. Continue routine monitoring.",
+      "doctor_approved": false
+    }
+  },
+  {
+    "case_id": "8e203efc-2df7-4501-adca-6b82cb171333",
+    "recorded_at": "2026-08-27T08:50:00Z",
+    "demographics": {
+      "age_group": "46-60",
+      "biological_sex": "male",
+      "weight_kg": 79.4
+    },
+    "vitals": {
+      "hr_bpm": 66,
+      "oxygen_spo2_pct": 95.8,
+      "glucose_mgdl": 89.3,
+      "cholesterol_mgdl": 174.5,
+      "respiratory_rate_bpm": 13,
+      "hemoglobin_gdl": 14.4,
+      "temperature_f": 97.3,
+      "blood_pressure": {
+        "sbp_mmhg": 110,
+        "dbp_mmhg": 70
+      },
+      "fall_detected": 0,
+      "step_count": 4920,
+      "ecg": 0,
+      "stethoscope": 0
+    },
+    "clinical": {
+      "alert_triggered": false,
+      "alert_type": null,
+      "doctor_suggestion": "Patient vitals are within normal limits. Continue current lifestyle. Routine follow-up in 12 months.",
+      "doctor_approved": false
+    }
+  }
+]
