@@ -1,172 +1,129 @@
 """
-Django Models for Clinical GPT Application
+Django Models — Patient & VitalReading (ClinGPT vitals pipeline)
+
+Feeds: ValidationService -> RuleEngineService -> FeatureNormalizationService
+                                                        -> FAISSRetrievalService
 """
 
 from django.db import models
-from pgvector.django import VectorField
 
 
-class ClinicalGuideline(models.Model):
-    """
-    Clinical guidelines with vector embeddings for RAG (Retrieval-Augmented Generation)
+class Patient(models.Model):
 
-    Stores medical guidelines, protocols, and reference materials that can be
-    retrieved based on semantic similarity to provide context for AI responses.
-    """
+    AGE_GROUP_CHOICES = [
+        ("0-15",  "0-15"),
+        ("18-30", "18-30"),
+        ("31-45", "31-45"),
+        ("46-60", "46-60"),
+        ("61-75", "61-75"),
+        ("75+",   "75+"),
+    ]
+    SEX_CHOICES = [
+        ("male",   "Male"),
+        ("female", "Female"),
+        ("other",  "Other"),
+    ]
 
-    # Core fields
-    title = models.CharField(
-        max_length=500,
-        help_text="Title or summary of the clinical guideline"
-    )
+    age_group = models.CharField(max_length=10, choices=AGE_GROUP_CHOICES, db_index=True)
+    biological_sex = models.CharField(max_length=10, choices=SEX_CHOICES)
+    weight_kg = models.FloatField(help_text="Most recent known weight in kg")
 
-    content = models.TextField(
-        help_text="Full text content of the clinical guideline"
-    )
-
-    source = models.CharField(
-        max_length=255,
-        db_index=True,
-        help_text="Source organization (e.g., 'AHA', 'ACC', 'WHO', 'UpToDate')"
-    )
-
-    category = models.CharField(
-        max_length=100,
-        db_index=True,
-        help_text="Medical category (e.g., 'cardiology', 'diabetes', 'hypertension')"
-    )
-
-    subcategory = models.CharField(
-        max_length=100,
-        blank=True,
-        null=True,
-        help_text="More specific subcategory"
-    )
-
-    # Vector embedding for semantic search
-    embedding = VectorField(
-        dimensions=384,  # Matches all-MiniLM-L6-v2 output dimension
-        help_text="Vector embedding for semantic similarity search"
-    )
-
-    # Metadata
-    year = models.IntegerField(
-        blank=True,
-        null=True,
-        help_text="Publication year"
-    )
-
-    url = models.URLField(
-        blank=True,
-        null=True,
-        help_text="URL to original source"
-    )
-
-    keywords = models.JSONField(
-        default=list,
-        blank=True,
-        help_text="List of keywords for filtering"
-    )
-
-    # Timestamps
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # Usage tracking
-    usage_count = models.IntegerField(
-        default=0,
-        help_text="Number of times this guideline was retrieved"
-    )
-    last_used_at = models.DateTimeField(
-        blank=True,
-        null=True,
-        help_text="Last time this guideline was retrieved"
-    )
-
     class Meta:
-        db_table = 'clinical_guidelines'
-        verbose_name = 'Clinical Guideline'
-        verbose_name_plural = 'Clinical Guidelines'
-        indexes = [
-            models.Index(fields=['category', 'source']),
-            models.Index(fields=['-created_at']),
-            models.Index(fields=['-usage_count']),
-        ]
-        ordering = ['-created_at']
+        db_table = "patients"
+        verbose_name = "Patient"
+        verbose_name_plural = "Patients"
 
     def __str__(self):
-        return f"{self.title} ({self.source})"
-
-    def increment_usage(self):
-        """Increment usage counter and update last used timestamp"""
-        from django.utils import timezone
-        self.usage_count += 1
-        self.last_used_at = timezone.now()
-        self.save(update_fields=['usage_count', 'last_used_at'])
+        return f"Patient #{self.pk} ({self.age_group}, {self.biological_sex})"
 
 
-class PHIDetectionLog(models.Model):
-    """
-    Audit log for PHI detections by Guardrails
+class VitalReading(models.Model):
 
-    Tracks when and where PHI was detected (but not the actual PHI content)
-    for compliance and monitoring purposes.
-    """
+    RISK_LABEL_CHOICES = [
+        ("low",    "Low"),
+        ("medium", "Medium"),
+        ("high",   "High"),
+    ]
+    SEVERITY_CHOICES = [
+        ("none",     "None"),
+        ("warning",  "Warning"),
+        ("critical", "Critical"),
+    ]
 
-    # Detection metadata
-    timestamp = models.DateTimeField(auto_now_add=True, db_index=True)
+    patient = models.ForeignKey(
+        Patient, on_delete=models.CASCADE, related_name="vital_readings"
+    )
+    recorded_at = models.DateTimeField(db_index=True)
 
-    entity_type = models.CharField(
-        max_length=50,
-        help_text="Type of PHI detected (e.g., 'PERSON', 'PHONE_NUMBER')"
+    source_case_id = models.UUIDField(
+        null=True, blank=True, unique=True, db_index=True,
+        help_text="case_id from the authored seed JSON (all_100_cases.json). "
+                   "Null for real live readings. Lets the seed command be "
+                   "re-run safely without creating duplicates.",
     )
 
-    field_name = models.CharField(
-        max_length=100,
-        help_text="Field where PHI was detected (e.g., 'symptoms', 'medical_history')"
+    # ── Two-tier alertable vitals (RuleEngineService PARAM_THRESHOLDS) ──────
+    hr_bpm = models.IntegerField()
+    oxygen_spo2_pct = models.FloatField()
+    respiratory_rate_bpm = models.IntegerField()
+
+    # ── Blood pressure — flat columns, independently alertable ──────────────
+    sbp_mmhg = models.IntegerField()
+    dbp_mmhg = models.IntegerField()
+
+    # ── Non-alerting vitals (still feed FeatureNormalizationService) ────────
+    glucose_mgdl = models.FloatField(null=True, blank=True)
+    cholesterol_mgdl = models.FloatField(null=True, blank=True)
+    hemoglobin_gdl = models.FloatField(null=True, blank=True)
+    temperature_f = models.FloatField(null=True, blank=True)
+    weight_kg = models.FloatField(
+        null=True, blank=True,
+        help_text="Device-measured weight at time of reading (distinct from Patient.weight_kg)"
+    )
+    step_count = models.IntegerField(null=True, blank=True)
+
+    # ── Binary flags ──────────────────────────────────────────────────────
+    ecg = models.BooleanField(default=False)
+    stethoscope = models.BooleanField(default=False)
+    fall_detected = models.BooleanField(default=False)
+
+    # ── RuleEngineService output, computed at write time ─────────────────────
+    alert_count = models.IntegerField(default=0)
+    highest_severity = models.CharField(
+        max_length=10, choices=SEVERITY_CHOICES, default="none", db_index=True
+    )
+    has_alert = models.BooleanField(
+        default=False, db_index=True,
+        help_text="alert_count > 0 — used to exclude abnormal readings from "
+                   "the Historical SD baseline calculation",
+    )
+    alerts = models.JSONField(
+        default=list, blank=True,
+        help_text="Full alerts list from RuleEngineService.evaluate() — "
+                   "messages, severity, threshold_basis per parameter",
     )
 
-    is_output_leak = models.BooleanField(
-        default=False,
-        help_text="Whether PHI was detected in AI output (concerning!)"
+    # ── XGBoost output (populated once the model is trained/run) ────────────
+    risk_label = models.CharField(
+        max_length=10, choices=RISK_LABEL_CHOICES, null=True, blank=True, db_index=True,
+        help_text="Derived 1:1 from highest_severity for seed/training data; "
+                   "ML-predicted for live readings once XGBoost is wired in",
     )
 
-    confidence_score = models.FloatField(
-        help_text="Confidence score of detection (0-1)"
-    )
-
-    # Context (no actual PHI stored)
-    text_length = models.IntegerField(
-        help_text="Length of text that was scanned"
-    )
-
-    position_start = models.IntegerField(
-        help_text="Start position of detected entity"
-    )
-
-    position_end = models.IntegerField(
-        help_text="End position of detected entity"
-    )
-
-    # Session tracking
-    session_id = models.CharField(
-        max_length=100,
-        blank=True,
-        null=True,
-        help_text="Session or request ID for grouping detections"
-    )
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        db_table = 'phi_detection_logs'
-        verbose_name = 'PHI Detection Log'
-        verbose_name_plural = 'PHI Detection Logs'
+        db_table = "vital_readings"
+        verbose_name = "Vital Reading"
+        verbose_name_plural = "Vital Readings"
         indexes = [
-            models.Index(fields=['-timestamp']),
-            models.Index(fields=['entity_type']),
-            models.Index(fields=['is_output_leak']),
+            models.Index(fields=["patient", "-recorded_at"]),
+            models.Index(fields=["patient", "has_alert", "-recorded_at"]),
         ]
-        ordering = ['-timestamp']
+        ordering = ["-recorded_at"]
 
     def __str__(self):
-        leak_indicator = " [OUTPUT LEAK!]" if self.is_output_leak else ""
-        return f"{self.entity_type} in {self.field_name} at {self.timestamp}{leak_indicator}"
+        return f"Reading #{self.pk} for Patient #{self.patient_id} @ {self.recorded_at}"

@@ -3,11 +3,17 @@ test_rule_engine_service.py
 ────────────────────────────
 Unit tests for RuleEngineService.
 
+SCOPE: HR, SpO2, Respiratory, BP only.
+Covers all three threshold tiers:
+  - Population default (Tier 3)
+  - Historical SD — 2σ warning / 3σ critical (Tier 2)
+  - Doctor-set override (Tier 1)
+
 Run with:
     py test_modules/test_rule_engine_service.py
 """
 
-import sys, os
+import sys, os, statistics
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from apps.clin_gpt.services.rule_engine_service import RuleEngineService
 
@@ -27,7 +33,6 @@ def run(name, fn):
 
 
 def alert_for(alerts, parameter):
-    """Helper: find the alert dict for a given parameter, or None."""
     return next((a for a in alerts if a["parameter"] == parameter), None)
 
 
@@ -40,10 +45,30 @@ NORMAL_VITALS = {
     "blood_pressure": {"sbp_mmhg": 118, "dbp_mmhg": 76},
 }
 
+OUT_OF_SCOPE_VITALS = {
+    "glucose_mgdl": 45.0,
+    "cholesterol_mgdl": 280.0,
+    "hemoglobin_gdl": 5.0,
+    "temperature_f": 105.0,
+    "fall_detected": 1,
+    "ecg": 1,
+    "stethoscope": 1,
+}
 
-# ── HR ────────────────────────────────────────────────────────────────────────
+# Clean 30-day HR history: mean≈75, sd≈3
+HR_HISTORY = [72, 75, 78, 74, 76, 73, 77, 75, 74, 76,
+              78, 72, 75, 74, 76, 75, 73, 77, 74, 75,
+              76, 73, 75, 78, 74, 76, 72, 75, 74, 77]
 
-print("\n── Heart rate (hr_bpm) ─────────────────────────────────────────────")
+# Clean 30-day SpO2 history: mean≈97, sd≈1
+SPO2_HISTORY = [97, 98, 97, 96, 97, 98, 97, 97, 96, 98,
+                97, 97, 98, 96, 97, 97, 98, 97, 96, 97,
+                97, 98, 97, 97, 96, 98, 97, 97, 98, 97]
+
+
+# ── TIER 3: Population default ─────────────────────────────────────────────
+
+print("\n── TIER 3 — Population default: Heart rate (hr_bpm) ────────────────")
 
 def test_hr_normal():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 78})
@@ -53,32 +78,35 @@ def test_hr_critical_low():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 35})
     a = alert_for(r["alerts"], "hr_bpm")
     assert a and a["severity"] == "critical"
+    assert a["threshold_basis"] == "default"
+    assert a["notify"] == ["patient", "guardians", "doctor"]
 
 def test_hr_warning_low():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 45})
     a = alert_for(r["alerts"], "hr_bpm")
     assert a and a["severity"] == "warning"
+    assert a["notify"] == ["patient"]
 
 def test_hr_warning_high():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 120})
     a = alert_for(r["alerts"], "hr_bpm")
     assert a and a["severity"] == "warning"
+    assert a["notify"] == ["patient"]
 
 def test_hr_critical_high():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 155})
     a = alert_for(r["alerts"], "hr_bpm")
     assert a and a["severity"] == "critical"
+    assert a["notify"] == ["patient", "guardians", "doctor"]
 
 run("HR=78 → no alert", test_hr_normal)
-run("HR=35 → critical low", test_hr_critical_low)
-run("HR=45 → warning low", test_hr_warning_low)
-run("HR=120 → warning high", test_hr_warning_high)
-run("HR=155 → critical high", test_hr_critical_high)
+run("HR=35 → critical low, notify=everyone, basis=default", test_hr_critical_low)
+run("HR=45 → warning low, notify=patient only", test_hr_warning_low)
+run("HR=120 → warning high, notify=patient only", test_hr_warning_high)
+run("HR=155 → critical high, notify=everyone", test_hr_critical_high)
 
 
-# ── SpO2 ──────────────────────────────────────────────────────────────────────
-
-print("\n── Oxygen saturation (oxygen_spo2_pct) ──────────────────────────────")
+print("\n── TIER 3 — Population default: SpO2 (oxygen_spo2_pct) ─────────────")
 
 def test_spo2_normal():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "oxygen_spo2_pct": 97.0})
@@ -87,15 +115,14 @@ def test_spo2_normal():
 def test_spo2_warning():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "oxygen_spo2_pct": 90.0})
     a = alert_for(r["alerts"], "oxygen_spo2_pct")
-    assert a and a["severity"] == "warning"
+    assert a and a["severity"] == "warning" and a["notify"] == ["patient"]
 
 def test_spo2_critical():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "oxygen_spo2_pct": 80.0})
     a = alert_for(r["alerts"], "oxygen_spo2_pct")
-    assert a and a["severity"] == "critical"
+    assert a and a["severity"] == "critical" and a["notify"] == ["patient", "guardians", "doctor"]
 
 def test_spo2_critical_boundary():
-    # 87 is critical (<88), 88 is warning (88-91), 92 is normal
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "oxygen_spo2_pct": 87.0})
     a = alert_for(r["alerts"], "oxygen_spo2_pct")
     assert a and a["severity"] == "critical"
@@ -114,17 +141,15 @@ def test_spo2_no_high_alert():
     assert alert_for(r["alerts"], "oxygen_spo2_pct") is None
 
 run("SpO2=97% → no alert", test_spo2_normal)
-run("SpO2=90% → warning", test_spo2_warning)
-run("SpO2=80% → critical", test_spo2_critical)
-run("SpO2=87% → critical (boundary, <88)", test_spo2_critical_boundary)
-run("SpO2=88% → warning (boundary, 88-91)", test_spo2_warning_boundary)
-run("SpO2=92% → no alert (boundary, normal floor)", test_spo2_normal_boundary)
-run("SpO2=100% → no high-side alert (none defined, cannot exceed 100%)", test_spo2_no_high_alert)
+run("SpO2=90% → warning, notify=patient only", test_spo2_warning)
+run("SpO2=80% → critical, notify=everyone", test_spo2_critical)
+run("SpO2=87% → critical (boundary <88)", test_spo2_critical_boundary)
+run("SpO2=88% → warning (boundary 88-91)", test_spo2_warning_boundary)
+run("SpO2=92% → no alert (normal floor)", test_spo2_normal_boundary)
+run("SpO2=100% → no high-side alert", test_spo2_no_high_alert)
 
 
-# ── Respiratory rate ──────────────────────────────────────────────────────────
-
-print("\n── Respiratory rate (respiratory_rate_bpm) ──────────────────────────")
+print("\n── TIER 3 — Population default: Respiratory (respiratory_rate_bpm) ──")
 
 def test_resp_normal():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "respiratory_rate_bpm": 15})
@@ -141,8 +166,6 @@ def test_resp_warning_low():
     assert a and a["severity"] == "warning"
 
 def test_resp_warning_high():
-    # 25-29 is warning (instantaneous) per current scope — sustained-duration
-    # escalation to critical is not yet implemented (needs reading history)
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "respiratory_rate_bpm": 27})
     a = alert_for(r["alerts"], "respiratory_rate_bpm")
     assert a and a["severity"] == "warning"
@@ -156,12 +179,10 @@ run("Respiratory=15 → no alert", test_resp_normal)
 run("Respiratory=6 → critical low", test_resp_critical_low)
 run("Respiratory=9 → warning low", test_resp_warning_low)
 run("Respiratory=27 → warning high (25-29 band)", test_resp_warning_high)
-run("Respiratory=30 → critical high (\u226530)", test_resp_critical_high)
+run("Respiratory=30 → critical high (≥30)", test_resp_critical_high)
 
 
-# ── Blood pressure ────────────────────────────────────────────────────────────
-
-print("\n── Blood pressure (sbp_mmhg / dbp_mmhg) ──────────────────────────────")
+print("\n── TIER 3 — Population default: Blood pressure ──────────────────────")
 
 def test_bp_normal():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 118, "dbp_mmhg": 76}})
@@ -170,229 +191,212 @@ def test_bp_normal():
 
 def test_bp_crisis_critical():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 185, "dbp_mmhg": 125}})
-    sbp_alert = alert_for(r["alerts"], "sbp_mmhg")
-    dbp_alert = alert_for(r["alerts"], "dbp_mmhg")
-    assert sbp_alert and sbp_alert["severity"] == "critical"
-    assert dbp_alert and dbp_alert["severity"] == "critical"
+    assert alert_for(r["alerts"], "sbp_mmhg")["severity"] == "critical"
+    assert alert_for(r["alerts"], "dbp_mmhg")["severity"] == "critical"
 
 def test_bp_hypotension_critical():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 85, "dbp_mmhg": 55}})
-    sbp_alert = alert_for(r["alerts"], "sbp_mmhg")
-    dbp_alert = alert_for(r["alerts"], "dbp_mmhg")
-    assert sbp_alert and sbp_alert["severity"] == "critical"
-    assert dbp_alert and dbp_alert["severity"] == "critical"
+    assert alert_for(r["alerts"], "sbp_mmhg")["severity"] == "critical"
+    assert alert_for(r["alerts"], "dbp_mmhg")["severity"] == "critical"
 
 def test_bp_warning_high():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 150, "dbp_mmhg": 95}})
-    sbp_alert = alert_for(r["alerts"], "sbp_mmhg")
-    dbp_alert = alert_for(r["alerts"], "dbp_mmhg")
-    assert sbp_alert and sbp_alert["severity"] == "warning"
-    assert dbp_alert and dbp_alert["severity"] == "warning"
+    assert alert_for(r["alerts"], "sbp_mmhg")["severity"] == "warning"
+    assert alert_for(r["alerts"], "dbp_mmhg")["severity"] == "warning"
 
 def test_sbp_normal_ceiling():
-    # Normal band is now 100-129 (tightened from 100-139)
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 129, "dbp_mmhg": 76}})
     assert alert_for(r["alerts"], "sbp_mmhg") is None
 
-def test_sbp_warning_at_new_boundary():
+def test_sbp_warning_at_boundary():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 130, "dbp_mmhg": 76}})
-    a = alert_for(r["alerts"], "sbp_mmhg")
-    assert a and a["severity"] == "warning"
+    assert alert_for(r["alerts"], "sbp_mmhg")["severity"] == "warning"
 
 def test_dbp_normal_ceiling():
-    # Normal band is now 70-79 (tightened from 70-89)
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 118, "dbp_mmhg": 79}})
     assert alert_for(r["alerts"], "dbp_mmhg") is None
 
-def test_dbp_warning_at_new_boundary():
+def test_dbp_warning_at_boundary():
     r = RuleEngineService.evaluate({**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 118, "dbp_mmhg": 80}})
-    a = alert_for(r["alerts"], "dbp_mmhg")
-    assert a and a["severity"] == "warning"
+    assert alert_for(r["alerts"], "dbp_mmhg")["severity"] == "warning"
 
 run("BP=118/76 → no alerts", test_bp_normal)
-run("BP=185/125 → both critical (hypertensive crisis)", test_bp_crisis_critical)
+run("BP=185/125 → both critical", test_bp_crisis_critical)
 run("BP=85/55 → both critical (hypotension)", test_bp_hypotension_critical)
 run("BP=150/95 → both warning", test_bp_warning_high)
-run("SBP=129 → no alert (new normal ceiling)", test_sbp_normal_ceiling)
-run("SBP=130 → warning (new boundary)", test_sbp_warning_at_new_boundary)
-run("DBP=79 → no alert (new normal ceiling)", test_dbp_normal_ceiling)
-run("DBP=80 → warning (new boundary)", test_dbp_warning_at_new_boundary)
+run("SBP=129 → no alert (normal ceiling)", test_sbp_normal_ceiling)
+run("SBP=130 → warning (boundary)", test_sbp_warning_at_boundary)
+run("DBP=79 → no alert (normal ceiling)", test_dbp_normal_ceiling)
+run("DBP=80 → warning (boundary)", test_dbp_warning_at_boundary)
 
 
-# ── Excluded fields ───────────────────────────────────────────────────────────
-# Critical alerting is now scoped to HR / SpO2 / respiratory / BP only.
-# Glucose, temperature, cholesterol, hemoglobin, and the binary flags
-# (fall_detected, ecg, stethoscope) were dropped from the alert system —
-# if present in the payload they must be ignored, not alerted on.
+# ── TIER 2: Historical SD ──────────────────────────────────────────────────
 
-print("\n── Excluded fields (out-of-scope parameters) ──────────────────────────")
+print("\n── TIER 2 — Historical SD: basics ──────────────────────────────────")
 
-def test_weight_never_alerts():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "weight_kg": 250.0})
-    assert alert_for(r["alerts"], "weight_kg") is None
+# HR_HISTORY: mean≈75.1, sd≈1.8 → 2sd≈71.5/78.7, 3sd≈69.7/80.5
+_hr_mean = statistics.mean(HR_HISTORY)
+_hr_sd   = statistics.stdev(HR_HISTORY)
 
-def test_step_count_never_alerts():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "step_count": 0})
-    assert alert_for(r["alerts"], "step_count") is None
+def test_sd_normal_within_2sd():
+    # Value inside 2sd band → no alert (uses SD tier, not default)
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": round(_hr_mean)},
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    assert alert_for(r["alerts"], "hr_bpm") is None
 
-def test_glucose_never_alerts():
-    # Even a wildly abnormal glucose reading must not produce an alert now
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "glucose_mgdl": 30.0})
-    assert alert_for(r["alerts"], "glucose_mgdl") is None
+def test_sd_warning_beyond_2sd_high():
+    # Value >2sd above mean → warning, patient only
+    trigger = _hr_mean + 2.5 * _hr_sd
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": round(trigger)},
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["severity"] == "warning"
+    assert a["threshold_basis"] == "historical_sd"
+    assert a["notify"] == ["patient"]
+    assert "baseline_mean" in a and "baseline_sd" in a
 
-def test_temperature_never_alerts():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "temperature_f": 105.0})
-    assert alert_for(r["alerts"], "temperature_f") is None
+def test_sd_critical_beyond_3sd_high():
+    # Value >3sd above mean → critical, everyone notified
+    trigger = _hr_mean + 3.5 * _hr_sd
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": round(trigger)},
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["severity"] == "critical"
+    assert a["threshold_basis"] == "historical_sd"
+    assert a["notify"] == ["patient", "guardians", "doctor"]
 
-def test_cholesterol_never_alerts():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "cholesterol_mgdl": 300.0})
-    assert alert_for(r["alerts"], "cholesterol_mgdl") is None
+def test_sd_warning_beyond_2sd_low():
+    # Value >2sd below mean → warning
+    trigger = _hr_mean - 2.5 * _hr_sd
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": max(20, round(trigger))},
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["severity"] == "warning"
+    assert a["threshold_basis"] == "historical_sd"
 
-def test_hemoglobin_never_alerts():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "hemoglobin_gdl": 5.0})
-    assert alert_for(r["alerts"], "hemoglobin_gdl") is None
+def test_sd_critical_beyond_3sd_low():
+    # Value >3sd below mean → critical
+    trigger = _hr_mean - 3.5 * _hr_sd
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": max(20, round(trigger))},
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["severity"] == "critical"
+    assert a["threshold_basis"] == "historical_sd"
 
-def test_fall_detected_never_alerts():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "fall_detected": 1})
-    assert alert_for(r["alerts"], "fall_detected") is None
+def test_sd_message_contains_baseline_info():
+    trigger = _hr_mean + 2.5 * _hr_sd
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": round(trigger)},
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and "personal baseline" in a["message"]
+    assert "μ=" in a["message"] and "σ=" in a["message"]
 
-def test_ecg_never_alerts():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "ecg": 1})
-    assert alert_for(r["alerts"], "ecg") is None
-
-def test_stethoscope_never_alerts():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "stethoscope": 1})
-    assert alert_for(r["alerts"], "stethoscope") is None
-
-def test_dropped_params_dont_affect_alert_count():
-    # alert_count should reflect only HR/SpO2/Respiratory/BP, even with every
-    # dropped parameter present and abnormal
-    r = RuleEngineService.evaluate({
-        **NORMAL_VITALS,
-        "glucose_mgdl": 30.0,
-        "temperature_f": 105.0,
-        "cholesterol_mgdl": 300.0,
-        "hemoglobin_gdl": 5.0,
-        "fall_detected": 1,
-        "ecg": 1,
-        "stethoscope": 1,
-    })
-    assert r["alert_count"] == 0
-    assert r["highest_severity"] == "none"
-
-run("weight_kg=250.0 → no alert (excluded)", test_weight_never_alerts)
-run("step_count=0 → no alert (excluded)", test_step_count_never_alerts)
-run("glucose_mgdl=30 → no alert (removed from scope)", test_glucose_never_alerts)
-run("temperature_f=105 → no alert (removed from scope)", test_temperature_never_alerts)
-run("cholesterol_mgdl=300 → no alert (removed from scope)", test_cholesterol_never_alerts)
-run("hemoglobin_gdl=5.0 → no alert (removed from scope)", test_hemoglobin_never_alerts)
-run("fall_detected=1 → no alert (removed from scope)", test_fall_detected_never_alerts)
-run("ecg=1 → no alert (removed from scope)", test_ecg_never_alerts)
-run("stethoscope=1 → no alert (removed from scope)", test_stethoscope_never_alerts)
-run("All dropped params abnormal at once → alert_count=0, highest_severity=none", test_dropped_params_dont_affect_alert_count)
-
-
-# ── Multi-alert behaviour (no single winner) ──────────────────────────────────
-
-print("\n── Multi-alert behaviour ──────────────────────────────────────────────")
-
-def test_multiple_simultaneous_alerts_all_returned():
-    r = RuleEngineService.evaluate({
-        **NORMAL_VITALS,
-        "oxygen_spo2_pct": 80.0,         # critical
-        "respiratory_rate_bpm": 32,      # critical
-        "hr_bpm": 45,                     # warning
-    })
-    params = {a["parameter"] for a in r["alerts"]}
-    assert "oxygen_spo2_pct" in params
-    assert "respiratory_rate_bpm" in params
-    assert "hr_bpm" in params
-    assert r["alert_count"] == 3
-
-def test_highest_severity_critical_when_mixed():
-    r = RuleEngineService.evaluate({
-        **NORMAL_VITALS,
-        "oxygen_spo2_pct": 80.0,   # critical
-        "hr_bpm": 45,               # warning
-    })
-    assert r["highest_severity"] == "critical"
-
-def test_highest_severity_warning_when_no_critical():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 45})
-    assert r["highest_severity"] == "warning"
-
-def test_highest_severity_none_when_clean():
-    r = RuleEngineService.evaluate(NORMAL_VITALS)
-    assert r["highest_severity"] == "none"
-    assert r["alert_count"] == 0
-
-run("Multiple simultaneous alerts → all returned, none suppressed", test_multiple_simultaneous_alerts_all_returned)
-run("Mixed critical+warning → highest_severity=critical", test_highest_severity_critical_when_mixed)
-run("Only warning present → highest_severity=warning", test_highest_severity_warning_when_no_critical)
-run("Fully normal payload → highest_severity=none, alert_count=0", test_highest_severity_none_when_clean)
+run(f"HR=mean({round(_hr_mean)}) → no alert (within 2σ)", test_sd_normal_within_2sd)
+run("HR>2σ above mean → warning, basis=historical_sd, notify=patient", test_sd_warning_beyond_2sd_high)
+run("HR>3σ above mean → critical, notify=everyone", test_sd_critical_beyond_3sd_high)
+run("HR>2σ below mean → warning", test_sd_warning_beyond_2sd_low)
+run("HR>3σ below mean → critical", test_sd_critical_beyond_3sd_low)
+run("SD alert message contains μ, σ, 'personal baseline'", test_sd_message_contains_baseline_info)
 
 
-# ── Doctor-set threshold overrides ────────────────────────────────────────────
+print("\n── TIER 2 — Historical SD: fallback conditions ──────────────────────")
 
-print("\n── Doctor-set threshold overrides ─────────────────────────────────────")
+def test_sd_fallback_insufficient_readings():
+    # Fewer than HISTORY_MIN_READINGS → falls through to default
+    short_history = {"hr_bpm": [72, 75, 78, 74, 76]}  # only 5 readings
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": 155},
+        patient_history=short_history
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["threshold_basis"] == "default"
 
-def test_doctor_override_replaces_default_for_overridden_param():
-    # COPD patient: doctor sets SpO2 critical at <85 instead of default <88
+def test_sd_fallback_zero_variance():
+    # All identical readings → SD=0, falls through to default
+    flat_history = {"hr_bpm": [75] * 20}
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": 155},
+        patient_history=flat_history
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["threshold_basis"] == "default"
+
+def test_sd_no_history_uses_default():
+    # No patient_history at all → default
+    r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 155})
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["threshold_basis"] == "default"
+
+def test_sd_history_for_one_param_default_for_others():
+    # History only for hr_bpm — SpO2 should still use default
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": round(_hr_mean), "oxygen_spo2_pct": 80.0},
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    spo2_alert = alert_for(r["alerts"], "oxygen_spo2_pct")
+    assert spo2_alert and spo2_alert["threshold_basis"] == "default"
+
+run("< min readings → falls through to default", test_sd_fallback_insufficient_readings)
+run("SD=0 (all identical) → falls through to default", test_sd_fallback_zero_variance)
+run("No patient_history passed → default used", test_sd_no_history_uses_default)
+run("History for HR only → SpO2 still uses default", test_sd_history_for_one_param_default_for_others)
+
+
+# ── TIER 1: Doctor-set overrides ───────────────────────────────────────────
+
+print("\n── TIER 1 — Doctor-set overrides ────────────────────────────────────")
+
+def test_doctor_override_beats_sd_and_default():
+    # Doctor override wins even when history is also available
+    doctor_thresholds = {
+        "hr_bpm": {
+            "critical_low": 45, "warning_low": 55,
+            "warning_high": 110, "critical_high": 140,
+        }
+    }
+    # 142 BPM — would be critical under default (≥150 is default critical,
+    # but 142 is warning 101-149 under default). Under doctor override it IS critical (≥140).
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": 142},
+        doctor_thresholds=doctor_thresholds,
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["severity"] == "critical"
+    assert a["threshold_basis"] == "doctor_set"
+
+def test_doctor_override_spo2_cobd_patient():
+    # COPD patient: doctor lowers critical threshold to 85
     doctor_thresholds = {
         "oxygen_spo2_pct": {
             "critical_low": 85, "warning_low": 88,
             "warning_high": None, "critical_high": None,
         }
     }
-    # 86% would be critical under the population default (<88) but should be
-    # only a warning under this doctor's override (critical is <85)
+    # 86% is critical under default (<88), warning under doctor override (<85 is critical)
     r = RuleEngineService.evaluate(
         {**NORMAL_VITALS, "oxygen_spo2_pct": 86.0},
         doctor_thresholds=doctor_thresholds
     )
     a = alert_for(r["alerts"], "oxygen_spo2_pct")
-    assert a and a["severity"] == "warning", a
+    assert a and a["severity"] == "warning"
     assert a["threshold_basis"] == "doctor_set"
+    assert a["notify"] == ["patient"]
 
-def test_doctor_override_critical_at_new_threshold():
-    doctor_thresholds = {
-        "oxygen_spo2_pct": {
-            "critical_low": 85, "warning_low": 88,
-            "warning_high": None, "critical_high": None,
-        }
-    }
-    r = RuleEngineService.evaluate(
-        {**NORMAL_VITALS, "oxygen_spo2_pct": 84.0},
-        doctor_thresholds=doctor_thresholds
-    )
-    a = alert_for(r["alerts"], "oxygen_spo2_pct")
-    assert a and a["severity"] == "critical"
-    assert a["threshold_basis"] == "doctor_set"
-
-def test_unoverridden_param_still_uses_default():
-    # Doctor only overrides SpO2 — HR should still use the population default
-    doctor_thresholds = {
-        "oxygen_spo2_pct": {
-            "critical_low": 85, "warning_low": 88,
-            "warning_high": None, "critical_high": None,
-        }
-    }
-    r = RuleEngineService.evaluate(
-        {**NORMAL_VITALS, "hr_bpm": 155},
-        doctor_thresholds=doctor_thresholds
-    )
-    a = alert_for(r["alerts"], "hr_bpm")
-    assert a and a["severity"] == "critical"
-    assert a["threshold_basis"] == "default"
-
-def test_no_doctor_thresholds_uses_default():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "oxygen_spo2_pct": 87.0})
-    a = alert_for(r["alerts"], "oxygen_spo2_pct")
-    assert a and a["severity"] == "critical"
-    assert a["threshold_basis"] == "default"
-
-def test_doctor_override_on_blood_pressure():
-    # CHF patient: doctor sets a lower SBP baseline so 85 isn't flagged critical
+def test_doctor_override_chf_sbp():
+    # CHF patient: lower SBP baseline — 85 mmHg should not be critical for them
     doctor_thresholds = {
         "sbp_mmhg": {
             "critical_low": 75, "warning_low": 80,
@@ -403,20 +407,105 @@ def test_doctor_override_on_blood_pressure():
         {**NORMAL_VITALS, "blood_pressure": {"sbp_mmhg": 85, "dbp_mmhg": 76}},
         doctor_thresholds=doctor_thresholds
     )
-    a = alert_for(r["alerts"], "sbp_mmhg")
-    assert a is None  # 85 is within this patient's doctor-set normal range now
+    assert alert_for(r["alerts"], "sbp_mmhg") is None
 
-def test_doctor_thresholds_empty_dict_uses_default():
-    r = RuleEngineService.evaluate({**NORMAL_VITALS, "oxygen_spo2_pct": 87.0}, doctor_thresholds={})
-    a = alert_for(r["alerts"], "oxygen_spo2_pct")
+def test_unoverridden_param_uses_next_tier():
+    # Doctor overrides SpO2, but HR has history → HR uses SD tier
+    doctor_thresholds = {
+        "oxygen_spo2_pct": {
+            "critical_low": 85, "warning_low": 88,
+            "warning_high": None, "critical_high": None,
+        }
+    }
+    trigger = _hr_mean + 2.5 * _hr_sd
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": round(trigger)},
+        doctor_thresholds=doctor_thresholds,
+        patient_history={"hr_bpm": HR_HISTORY}
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a and a["threshold_basis"] == "historical_sd"
+
+def test_empty_doctor_thresholds_falls_through():
+    r = RuleEngineService.evaluate(
+        {**NORMAL_VITALS, "hr_bpm": 155},
+        doctor_thresholds={}
+    )
+    a = alert_for(r["alerts"], "hr_bpm")
     assert a and a["threshold_basis"] == "default"
 
-run("Doctor override (SpO2 critical<85) → 86% is warning, not critical", test_doctor_override_replaces_default_for_overridden_param)
-run("Doctor override (SpO2 critical<85) → 84% is critical, basis=doctor_set", test_doctor_override_critical_at_new_threshold)
-run("Doctor overrides SpO2 only → HR still uses default, basis=default", test_unoverridden_param_still_uses_default)
-run("No doctor_thresholds passed → default used, basis=default", test_no_doctor_thresholds_uses_default)
-run("Doctor override on SBP (CHF baseline) → no false alert at 85 mmHg", test_doctor_override_on_blood_pressure)
-run("Empty doctor_thresholds dict → falls through to default", test_doctor_thresholds_empty_dict_uses_default)
+run("Doctor override wins even when history also available", test_doctor_override_beats_sd_and_default)
+run("Doctor override (SpO2 COPD) → 86% is warning, not critical", test_doctor_override_spo2_cobd_patient)
+run("Doctor override (SBP CHF) → 85 mmHg not flagged", test_doctor_override_chf_sbp)
+run("Doctor overrides SpO2 → HR falls through to SD tier", test_unoverridden_param_uses_next_tier)
+run("Empty doctor_thresholds → falls through to next tier", test_empty_doctor_thresholds_falls_through)
+
+
+# ── Out-of-scope parameters ────────────────────────────────────────────────
+
+print("\n── Out-of-scope parameters (ignored entirely) ─────────────────────")
+
+def test_out_of_scope_produce_no_alerts():
+    r = RuleEngineService.evaluate({**NORMAL_VITALS, **OUT_OF_SCOPE_VITALS})
+    out_of_scope = {"glucose_mgdl","cholesterol_mgdl","hemoglobin_gdl",
+                    "temperature_f","fall_detected","ecg","stethoscope"}
+    alerted = {a["parameter"] for a in r["alerts"]}
+    assert not (alerted & out_of_scope), f"leaked: {alerted & out_of_scope}"
+
+def test_out_of_scope_dont_affect_severity():
+    r = RuleEngineService.evaluate({**NORMAL_VITALS, **OUT_OF_SCOPE_VITALS})
+    assert r["highest_severity"] == "none"
+    assert r["alert_count"] == 0
+
+run("All out-of-scope critical values → none in alerts", test_out_of_scope_produce_no_alerts)
+run("Out-of-scope fields → highest_severity=none, alert_count=0", test_out_of_scope_dont_affect_severity)
+
+
+# ── Multi-alert / notify routing ────────────────────────────────────────────
+
+print("\n── Multi-alert behaviour & notify routing ───────────────────────────")
+
+def test_multiple_alerts_all_returned():
+    r = RuleEngineService.evaluate({
+        **NORMAL_VITALS,
+        "oxygen_spo2_pct": 80.0,
+        "respiratory_rate_bpm": 30,
+        "hr_bpm": 45,
+    })
+    params = {a["parameter"] for a in r["alerts"]}
+    assert "oxygen_spo2_pct" in params
+    assert "respiratory_rate_bpm" in params
+    assert "hr_bpm" in params
+    assert r["alert_count"] == 3
+
+def test_highest_severity_critical_when_mixed():
+    r = RuleEngineService.evaluate({
+        **NORMAL_VITALS,
+        "oxygen_spo2_pct": 80.0,
+        "hr_bpm": 45,
+    })
+    assert r["highest_severity"] == "critical"
+
+def test_clean_payload_no_alerts():
+    r = RuleEngineService.evaluate(NORMAL_VITALS)
+    assert r["alert_count"] == 0
+    assert r["highest_severity"] == "none"
+
+def test_warning_notify_patient_only():
+    r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 45})
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a["notify"] == ["patient"]
+
+def test_critical_notify_everyone():
+    r = RuleEngineService.evaluate({**NORMAL_VITALS, "hr_bpm": 35})
+    a = alert_for(r["alerts"], "hr_bpm")
+    assert a["notify"] == ["patient", "guardians", "doctor"]
+
+run("Multiple simultaneous alerts → all returned", test_multiple_alerts_all_returned)
+run("Mixed critical+warning → highest_severity=critical", test_highest_severity_critical_when_mixed)
+run("Clean payload → alert_count=0, highest_severity=none", test_clean_payload_no_alerts)
+run("Warning alert → notify=['patient'] only", test_warning_notify_patient_only)
+run("Critical alert → notify=['patient','guardians','doctor']", test_critical_notify_everyone)
 
 
 # ── Summary ───────────────────────────────────────────────────────────────────
