@@ -28,6 +28,13 @@ class Patient(models.Model):
     biological_sex = models.CharField(max_length=10, choices=SEX_CHOICES)
     weight_kg = models.FloatField(help_text="Most recent known weight in kg")
 
+    external_patient_ref = models.CharField(
+        max_length=100, null=True, blank=True, unique=True, db_index=True,
+        help_text="Identifier from the external device_vitals_raw source "
+                   "(watch/app team's patient ID). Null for seed-only patients. "
+                   "Lets repeat live readings resolve to the same Patient row.",
+    )
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -301,6 +301,281 @@
   },
   {
     "faiss_row": 12,
+    "vital_reading_id": 112,
+    "patient_id": 12,
+    "source_case_id": null,
+    "recorded_at": "2026-07-19T19:34:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 89,
+      "oxygen_spo2_pct": 98.9,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 118,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 98.9,
+      "cholesterol_mgdl": 159.0,
+      "hemoglobin_gdl": 13.4,
+      "temperature_f": 97.3,
+      "weight_kg": 58.1,
+      "step_count": 2678
+    }
+  },
+  {
+    "faiss_row": 13,
+    "vital_reading_id": 167,
+    "patient_id": 67,
+    "source_case_id": null,
+    "recorded_at": "2026-07-18T18:44:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "18-30",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 64,
+      "oxygen_spo2_pct": 99.0,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 106,
+      "dbp_mmhg": 74,
+      "glucose_mgdl": 97.3,
+      "cholesterol_mgdl": 174.0,
+      "hemoglobin_gdl": 15.2,
+      "temperature_f": 98.9,
+      "weight_kg": 89.0,
+      "step_count": 4546
+    }
+  },
+  {
+    "faiss_row": 14,
+    "vital_reading_id": 183,
+    "patient_id": 83,
+    "source_case_id": null,
+    "recorded_at": "2026-07-18T03:00:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "18-30",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 72,
+      "oxygen_spo2_pct": 97.9,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 184,
+      "dbp_mmhg": 77,
+      "glucose_mgdl": 90.0,
+      "cholesterol_mgdl": 171.9,
+      "hemoglobin_gdl": 15.1,
+      "temperature_f": 97.9,
+      "weight_kg": 76.7,
+      "step_count": 9450
+    }
+  },
+  {
+    "faiss_row": 15,
+    "vital_reading_id": 178,
+    "patient_id": 78,
+    "source_case_id": null,
+    "recorded_at": "2026-07-17T04:06:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "31-45",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 84,
+      "oxygen_spo2_pct": 97.9,
+      "respiratory_rate_bpm": 19,
+      "sbp_mmhg": 118,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 84.1,
+      "cholesterol_mgdl": 175.0,
+      "hemoglobin_gdl": 16.1,
+      "temperature_f": 97.6,
+      "weight_kg": 69.1,
+      "step_count": 6755
+    }
+  },
+  {
+    "faiss_row": 16,
+    "vital_reading_id": 116,
+    "patient_id": 16,
+    "source_case_id": null,
+    "recorded_at": "2026-07-16T23:10:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 140,
+      "oxygen_spo2_pct": 99.1,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 112,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 94.0,
+      "cholesterol_mgdl": 165.1,
+      "hemoglobin_gdl": 15.0,
+      "temperature_f": 98.3,
+      "weight_kg": 62.8,
+      "step_count": 6764
+    }
+  },
+  {
+    "faiss_row": 17,
+    "vital_reading_id": 106,
+    "patient_id": 6,
+    "source_case_id": null,
+    "recorded_at": "2026-07-15T17:57:17+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 5,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 150,
+      "oxygen_spo2_pct": 82.0,
+      "respiratory_rate_bpm": 32,
+      "sbp_mmhg": 195,
+      "dbp_mmhg": 128,
+      "glucose_mgdl": 300.0,
+      "cholesterol_mgdl": 250.0,
+      "hemoglobin_gdl": 10.5,
+      "temperature_f": 101.5,
+      "weight_kg": 90.0,
+      "step_count": 50
+    }
+  },
+  {
+    "faiss_row": 18,
+    "vital_reading_id": 101,
+    "patient_id": 1,
+    "source_case_id": null,
+    "recorded_at": "2026-07-15T13:57:39+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "31-45",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 72,
+      "oxygen_spo2_pct": 98.0,
+      "respiratory_rate_bpm": 15,
+      "sbp_mmhg": 118,
+      "dbp_mmhg": 76,
+      "glucose_mgdl": 92.0,
+      "cholesterol_mgdl": 175.0,
+      "hemoglobin_gdl": 14.2,
+      "temperature_f": 98.4,
+      "weight_kg": 68.5,
+      "step_count": 4200
+    }
+  },
+  {
+    "faiss_row": 19,
+    "vital_reading_id": 105,
+    "patient_id": 5,
+    "source_case_id": null,
+    "recorded_at": "2026-07-15T13:57:39+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 4,
+    "age_group": "18-30",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 38,
+      "oxygen_spo2_pct": 91.0,
+      "respiratory_rate_bpm": 7,
+      "sbp_mmhg": 100,
+      "dbp_mmhg": 65,
+      "glucose_mgdl": 95.0,
+      "cholesterol_mgdl": 180.0,
+      "hemoglobin_gdl": 12.5,
+      "temperature_f": 96.8,
+      "weight_kg": 70.0,
+      "step_count": 100
+    }
+  },
+  {
+    "faiss_row": 20,
+    "vital_reading_id": 104,
+    "patient_id": 4,
+    "source_case_id": null,
+    "recorded_at": "2026-07-15T13:57:39+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 65,
+      "oxygen_spo2_pct": 97.5,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 122,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 88.0,
+      "cholesterol_mgdl": 160.0,
+      "hemoglobin_gdl": 13.8,
+      "temperature_f": 97.9,
+      "weight_kg": 60.0,
+      "step_count": 6000
+    }
+  },
+  {
+    "faiss_row": 21,
+    "vital_reading_id": 102,
+    "patient_id": 2,
+    "source_case_id": null,
+    "recorded_at": "2026-07-15T13:57:39+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 4,
+    "age_group": "46-60",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 108,
+      "oxygen_spo2_pct": 93.5,
+      "respiratory_rate_bpm": 23,
+      "sbp_mmhg": 135,
+      "dbp_mmhg": 85,
+      "glucose_mgdl": 110.0,
+      "cholesterol_mgdl": 190.0,
+      "hemoglobin_gdl": 13.1,
+      "temperature_f": 99.0,
+      "weight_kg": 74.0,
+      "step_count": 1800
+    }
+  },
+  {
+    "faiss_row": 22,
+    "vital_reading_id": 103,
+    "patient_id": 3,
+    "source_case_id": null,
+    "recorded_at": "2026-07-15T13:57:39+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 5,
+    "age_group": "61-75",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 130,
+      "oxygen_spo2_pct": 86.0,
+      "respiratory_rate_bpm": 27,
+      "sbp_mmhg": 190,
+      "dbp_mmhg": 122,
+      "glucose_mgdl": 210.0,
+      "cholesterol_mgdl": 240.0,
+      "hemoglobin_gdl": 11.0,
+      "temperature_f": 100.2,
+      "weight_kg": 81.0,
+      "step_count": 500
+    }
+  },
+  {
+    "faiss_row": 23,
     "vital_reading_id": 66,
     "patient_id": 1689232638,
     "source_case_id": "0168fbe2-91b3-493c-856b-b9f107c32d16",
@@ -325,7 +600,82 @@
     }
   },
   {
-    "faiss_row": 13,
+    "faiss_row": 24,
+    "vital_reading_id": 139,
+    "patient_id": 39,
+    "source_case_id": null,
+    "recorded_at": "2026-07-14T23:10:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 49,
+      "oxygen_spo2_pct": 96.8,
+      "respiratory_rate_bpm": 19,
+      "sbp_mmhg": 119,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 102.4,
+      "cholesterol_mgdl": 151.2,
+      "hemoglobin_gdl": 13.1,
+      "temperature_f": 98.9,
+      "weight_kg": 72.6,
+      "step_count": 11685
+    }
+  },
+  {
+    "faiss_row": 25,
+    "vital_reading_id": 135,
+    "patient_id": 35,
+    "source_case_id": null,
+    "recorded_at": "2026-07-13T00:34:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "61-75",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 69,
+      "oxygen_spo2_pct": 96.2,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 111,
+      "dbp_mmhg": 82,
+      "glucose_mgdl": 88.1,
+      "cholesterol_mgdl": 187.8,
+      "hemoglobin_gdl": 16.0,
+      "temperature_f": 98.7,
+      "weight_kg": 81.0,
+      "step_count": 10536
+    }
+  },
+  {
+    "faiss_row": 26,
+    "vital_reading_id": 127,
+    "patient_id": 27,
+    "source_case_id": null,
+    "recorded_at": "2026-07-12T21:18:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 89,
+      "oxygen_spo2_pct": 77.1,
+      "respiratory_rate_bpm": 19,
+      "sbp_mmhg": 122,
+      "dbp_mmhg": 76,
+      "glucose_mgdl": 109.0,
+      "cholesterol_mgdl": 155.4,
+      "hemoglobin_gdl": 13.4,
+      "temperature_f": 97.6,
+      "weight_kg": 66.5,
+      "step_count": 1091
+    }
+  },
+  {
+    "faiss_row": 27,
     "vital_reading_id": 76,
     "patient_id": 1554636895,
     "source_case_id": "be25d2a4-0ca8-4a47-af5f-fd65da1a2749",
@@ -350,7 +700,7 @@
     }
   },
   {
-    "faiss_row": 14,
+    "faiss_row": 28,
     "vital_reading_id": 77,
     "patient_id": 1481911466,
     "source_case_id": "92857478-3e1b-4f85-a8d1-a5b07a17ff68",
@@ -375,7 +725,7 @@
     }
   },
   {
-    "faiss_row": 15,
+    "faiss_row": 29,
     "vital_reading_id": 80,
     "patient_id": 1047128185,
     "source_case_id": "a36214ab-f606-41cd-97bb-eb5f1bc8651b",
@@ -400,7 +750,157 @@
     }
   },
   {
-    "faiss_row": 16,
+    "faiss_row": 30,
+    "vital_reading_id": 121,
+    "patient_id": 21,
+    "source_case_id": null,
+    "recorded_at": "2026-07-11T09:40:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 2,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 82,
+      "oxygen_spo2_pct": 95.5,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 134,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 93.1,
+      "cholesterol_mgdl": 167.8,
+      "hemoglobin_gdl": 15.6,
+      "temperature_f": 97.4,
+      "weight_kg": 37.5,
+      "step_count": 4271
+    }
+  },
+  {
+    "faiss_row": 31,
+    "vital_reading_id": 194,
+    "patient_id": 94,
+    "source_case_id": null,
+    "recorded_at": "2026-07-09T19:40:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 67,
+      "oxygen_spo2_pct": 95.8,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 116,
+      "dbp_mmhg": 79,
+      "glucose_mgdl": 94.8,
+      "cholesterol_mgdl": 160.1,
+      "hemoglobin_gdl": 14.6,
+      "temperature_f": 97.5,
+      "weight_kg": 40.3,
+      "step_count": 930
+    }
+  },
+  {
+    "faiss_row": 32,
+    "vital_reading_id": 144,
+    "patient_id": 44,
+    "source_case_id": null,
+    "recorded_at": "2026-07-09T12:34:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 93,
+      "oxygen_spo2_pct": 96.5,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 101.1,
+      "cholesterol_mgdl": 141.6,
+      "hemoglobin_gdl": 15.2,
+      "temperature_f": 97.9,
+      "weight_kg": 18.1,
+      "step_count": 6325
+    }
+  },
+  {
+    "faiss_row": 33,
+    "vital_reading_id": 174,
+    "patient_id": 74,
+    "source_case_id": null,
+    "recorded_at": "2026-07-08T10:04:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "46-60",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 93,
+      "oxygen_spo2_pct": 96.0,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 108,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 101.8,
+      "cholesterol_mgdl": 164.5,
+      "hemoglobin_gdl": 16.5,
+      "temperature_f": 98.2,
+      "weight_kg": 89.6,
+      "step_count": 1913
+    }
+  },
+  {
+    "faiss_row": 34,
+    "vital_reading_id": 115,
+    "patient_id": 15,
+    "source_case_id": null,
+    "recorded_at": "2026-07-08T01:06:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 71,
+      "oxygen_spo2_pct": 95.6,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 154,
+      "dbp_mmhg": 77,
+      "glucose_mgdl": 104.0,
+      "cholesterol_mgdl": 148.1,
+      "hemoglobin_gdl": 12.6,
+      "temperature_f": 98.9,
+      "weight_kg": 93.9,
+      "step_count": 2601
+    }
+  },
+  {
+    "faiss_row": 35,
+    "vital_reading_id": 187,
+    "patient_id": 87,
+    "source_case_id": null,
+    "recorded_at": "2026-07-04T13:48:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "31-45",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 70,
+      "oxygen_spo2_pct": 96.5,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 122,
+      "dbp_mmhg": 70,
+      "glucose_mgdl": 103.9,
+      "cholesterol_mgdl": 154.6,
+      "hemoglobin_gdl": 15.8,
+      "temperature_f": 97.9,
+      "weight_kg": 77.7,
+      "step_count": 8453
+    }
+  },
+  {
+    "faiss_row": 36,
     "vital_reading_id": 69,
     "patient_id": 807223678,
     "source_case_id": "42a1d425-73ba-417c-bacd-3d25568b2011",
@@ -425,7 +925,132 @@
     }
   },
   {
-    "faiss_row": 17,
+    "faiss_row": 37,
+    "vital_reading_id": 131,
+    "patient_id": 31,
+    "source_case_id": null,
+    "recorded_at": "2026-07-01T13:44:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 2,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 69,
+      "oxygen_spo2_pct": 95.3,
+      "respiratory_rate_bpm": 23,
+      "sbp_mmhg": 112,
+      "dbp_mmhg": 81,
+      "glucose_mgdl": 101.5,
+      "cholesterol_mgdl": 151.5,
+      "hemoglobin_gdl": 15.1,
+      "temperature_f": 98.0,
+      "weight_kg": 18.1,
+      "step_count": 8048
+    }
+  },
+  {
+    "faiss_row": 38,
+    "vital_reading_id": 197,
+    "patient_id": 97,
+    "source_case_id": null,
+    "recorded_at": "2026-07-01T13:12:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 76,
+      "oxygen_spo2_pct": 95.7,
+      "respiratory_rate_bpm": 15,
+      "sbp_mmhg": 112,
+      "dbp_mmhg": 72,
+      "glucose_mgdl": 76.4,
+      "cholesterol_mgdl": 152.8,
+      "hemoglobin_gdl": 13.9,
+      "temperature_f": 98.8,
+      "weight_kg": 47.8,
+      "step_count": 655
+    }
+  },
+  {
+    "faiss_row": 39,
+    "vital_reading_id": 118,
+    "patient_id": 18,
+    "source_case_id": null,
+    "recorded_at": "2026-07-01T04:08:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 63,
+      "oxygen_spo2_pct": 98.0,
+      "respiratory_rate_bpm": 4,
+      "sbp_mmhg": 206,
+      "dbp_mmhg": 77,
+      "glucose_mgdl": 106.1,
+      "cholesterol_mgdl": 161.7,
+      "hemoglobin_gdl": 15.0,
+      "temperature_f": 97.4,
+      "weight_kg": 85.3,
+      "step_count": 2985
+    }
+  },
+  {
+    "faiss_row": 40,
+    "vital_reading_id": 198,
+    "patient_id": 98,
+    "source_case_id": null,
+    "recorded_at": "2026-07-01T02:03:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "18-30",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 93,
+      "oxygen_spo2_pct": 98.0,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 123,
+      "dbp_mmhg": 79,
+      "glucose_mgdl": 90.4,
+      "cholesterol_mgdl": 172.6,
+      "hemoglobin_gdl": 14.4,
+      "temperature_f": 97.9,
+      "weight_kg": 56.9,
+      "step_count": 6590
+    }
+  },
+  {
+    "faiss_row": 41,
+    "vital_reading_id": 120,
+    "patient_id": 20,
+    "source_case_id": null,
+    "recorded_at": "2026-06-30T18:51:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 2,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 89,
+      "oxygen_spo2_pct": 95.3,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 139,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 95.4,
+      "cholesterol_mgdl": 185.2,
+      "hemoglobin_gdl": 14.2,
+      "temperature_f": 98.9,
+      "weight_kg": 75.4,
+      "step_count": 8913
+    }
+  },
+  {
+    "faiss_row": 42,
     "vital_reading_id": 87,
     "patient_id": 706009245,
     "source_case_id": "87aea054-0e77-4f02-9c81-14a4f9c070a0",
@@ -450,7 +1075,7 @@
     }
   },
   {
-    "faiss_row": 18,
+    "faiss_row": 43,
     "vital_reading_id": 74,
     "patient_id": 1458528193,
     "source_case_id": "35639af5-187d-4b0b-8723-68c33b968a61",
@@ -475,7 +1100,32 @@
     }
   },
   {
-    "faiss_row": 19,
+    "faiss_row": 44,
+    "vital_reading_id": 147,
+    "patient_id": 47,
+    "source_case_id": null,
+    "recorded_at": "2026-06-30T04:45:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 70,
+      "oxygen_spo2_pct": 91.5,
+      "respiratory_rate_bpm": 13,
+      "sbp_mmhg": 105,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 78.8,
+      "cholesterol_mgdl": 175.8,
+      "hemoglobin_gdl": 14.4,
+      "temperature_f": 98.6,
+      "weight_kg": 47.9,
+      "step_count": 8285
+    }
+  },
+  {
+    "faiss_row": 45,
     "vital_reading_id": 90,
     "patient_id": 642342200,
     "source_case_id": "590dbf5d-389f-4086-b350-787694bd6f41",
@@ -500,7 +1150,332 @@
     }
   },
   {
-    "faiss_row": 20,
+    "faiss_row": 46,
+    "vital_reading_id": 154,
+    "patient_id": 54,
+    "source_case_id": null,
+    "recorded_at": "2026-06-29T20:00:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "46-60",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 90,
+      "oxygen_spo2_pct": 99.5,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 88.7,
+      "cholesterol_mgdl": 160.2,
+      "hemoglobin_gdl": 16.3,
+      "temperature_f": 98.0,
+      "weight_kg": 68.0,
+      "step_count": 2765
+    }
+  },
+  {
+    "faiss_row": 47,
+    "vital_reading_id": 125,
+    "patient_id": 25,
+    "source_case_id": null,
+    "recorded_at": "2026-06-29T15:57:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "75+",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 88,
+      "oxygen_spo2_pct": 95.4,
+      "respiratory_rate_bpm": 15,
+      "sbp_mmhg": 107,
+      "dbp_mmhg": 74,
+      "glucose_mgdl": 105.2,
+      "cholesterol_mgdl": 162.7,
+      "hemoglobin_gdl": 13.9,
+      "temperature_f": 98.2,
+      "weight_kg": 91.9,
+      "step_count": 4588
+    }
+  },
+  {
+    "faiss_row": 48,
+    "vital_reading_id": 173,
+    "patient_id": 73,
+    "source_case_id": null,
+    "recorded_at": "2026-06-29T14:08:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 78,
+      "oxygen_spo2_pct": 96.3,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 105,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 92.2,
+      "cholesterol_mgdl": 164.6,
+      "hemoglobin_gdl": 15.7,
+      "temperature_f": 97.5,
+      "weight_kg": 73.9,
+      "step_count": 8303
+    }
+  },
+  {
+    "faiss_row": 49,
+    "vital_reading_id": 155,
+    "patient_id": 55,
+    "source_case_id": null,
+    "recorded_at": "2026-06-24T14:52:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 79,
+      "oxygen_spo2_pct": 97.9,
+      "respiratory_rate_bpm": 18,
+      "sbp_mmhg": 107,
+      "dbp_mmhg": 79,
+      "glucose_mgdl": 96.8,
+      "cholesterol_mgdl": 158.5,
+      "hemoglobin_gdl": 14.5,
+      "temperature_f": 97.5,
+      "weight_kg": 30.3,
+      "step_count": 4841
+    }
+  },
+  {
+    "faiss_row": 50,
+    "vital_reading_id": 122,
+    "patient_id": 22,
+    "source_case_id": null,
+    "recorded_at": "2026-06-24T12:40:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 3,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 212,
+      "oxygen_spo2_pct": 95.6,
+      "respiratory_rate_bpm": 5,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 87.8,
+      "cholesterol_mgdl": 152.7,
+      "hemoglobin_gdl": 13.0,
+      "temperature_f": 98.0,
+      "weight_kg": 62.0,
+      "step_count": 3865
+    }
+  },
+  {
+    "faiss_row": 51,
+    "vital_reading_id": 149,
+    "patient_id": 49,
+    "source_case_id": null,
+    "recorded_at": "2026-06-24T09:45:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "31-45",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 95,
+      "oxygen_spo2_pct": 99.4,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 112,
+      "dbp_mmhg": 88,
+      "glucose_mgdl": 89.6,
+      "cholesterol_mgdl": 171.0,
+      "hemoglobin_gdl": 15.2,
+      "temperature_f": 98.5,
+      "weight_kg": 81.9,
+      "step_count": 5015
+    }
+  },
+  {
+    "faiss_row": 52,
+    "vital_reading_id": 156,
+    "patient_id": 56,
+    "source_case_id": null,
+    "recorded_at": "2026-06-24T08:49:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 94,
+      "oxygen_spo2_pct": 97.2,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 124,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 88.6,
+      "cholesterol_mgdl": 185.2,
+      "hemoglobin_gdl": 15.0,
+      "temperature_f": 98.7,
+      "weight_kg": 75.7,
+      "step_count": 2825
+    }
+  },
+  {
+    "faiss_row": 53,
+    "vital_reading_id": 148,
+    "patient_id": 48,
+    "source_case_id": null,
+    "recorded_at": "2026-06-23T20:34:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 90,
+      "oxygen_spo2_pct": 97.1,
+      "respiratory_rate_bpm": 27,
+      "sbp_mmhg": 121,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 88.7,
+      "cholesterol_mgdl": 148.0,
+      "hemoglobin_gdl": 14.1,
+      "temperature_f": 98.4,
+      "weight_kg": 40.0,
+      "step_count": 2832
+    }
+  },
+  {
+    "faiss_row": 54,
+    "vital_reading_id": 170,
+    "patient_id": 70,
+    "source_case_id": null,
+    "recorded_at": "2026-06-23T17:53:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 65,
+      "oxygen_spo2_pct": 97.9,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 107,
+      "dbp_mmhg": 81,
+      "glucose_mgdl": 76.6,
+      "cholesterol_mgdl": 182.8,
+      "hemoglobin_gdl": 15.5,
+      "temperature_f": 97.6,
+      "weight_kg": 50.4,
+      "step_count": 8947
+    }
+  },
+  {
+    "faiss_row": 55,
+    "vital_reading_id": 150,
+    "patient_id": 50,
+    "source_case_id": null,
+    "recorded_at": "2026-06-20T09:02:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 69,
+      "oxygen_spo2_pct": 95.7,
+      "respiratory_rate_bpm": 15,
+      "sbp_mmhg": 115,
+      "dbp_mmhg": 71,
+      "glucose_mgdl": 88.9,
+      "cholesterol_mgdl": 189.6,
+      "hemoglobin_gdl": 14.5,
+      "temperature_f": 97.6,
+      "weight_kg": 34.0,
+      "step_count": 1847
+    }
+  },
+  {
+    "faiss_row": 56,
+    "vital_reading_id": 141,
+    "patient_id": 41,
+    "source_case_id": null,
+    "recorded_at": "2026-06-20T08:58:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 28,
+      "oxygen_spo2_pct": 97.1,
+      "respiratory_rate_bpm": 31,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 91.6,
+      "cholesterol_mgdl": 151.7,
+      "hemoglobin_gdl": 13.5,
+      "temperature_f": 98.9,
+      "weight_kg": 91.3,
+      "step_count": 10803
+    }
+  },
+  {
+    "faiss_row": 57,
+    "vital_reading_id": 201,
+    "patient_id": 101,
+    "source_case_id": null,
+    "recorded_at": "2026-06-19T20:36:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "46-60",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 72,
+      "oxygen_spo2_pct": 95.8,
+      "respiratory_rate_bpm": 44,
+      "sbp_mmhg": 108,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 91.0,
+      "cholesterol_mgdl": 164.1,
+      "hemoglobin_gdl": 13.1,
+      "temperature_f": 98.1,
+      "weight_kg": 94.9,
+      "step_count": 4423
+    }
+  },
+  {
+    "faiss_row": 58,
+    "vital_reading_id": 126,
+    "patient_id": 26,
+    "source_case_id": null,
+    "recorded_at": "2026-06-18T09:54:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 67,
+      "oxygen_spo2_pct": 96.4,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 121,
+      "dbp_mmhg": 82,
+      "glucose_mgdl": 82.2,
+      "cholesterol_mgdl": 162.3,
+      "hemoglobin_gdl": 15.2,
+      "temperature_f": 97.7,
+      "weight_kg": 35.6,
+      "step_count": 497
+    }
+  },
+  {
+    "faiss_row": 59,
     "vital_reading_id": 67,
     "patient_id": 1233927394,
     "source_case_id": "d744dab2-01d4-4056-97e5-0de0584a4a2a",
@@ -525,7 +1500,232 @@
     }
   },
   {
-    "faiss_row": 21,
+    "faiss_row": 60,
+    "vital_reading_id": 180,
+    "patient_id": 80,
+    "source_case_id": null,
+    "recorded_at": "2026-06-17T15:36:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 85,
+      "oxygen_spo2_pct": 97.3,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 121,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 89.4,
+      "cholesterol_mgdl": 187.4,
+      "hemoglobin_gdl": 13.3,
+      "temperature_f": 98.4,
+      "weight_kg": 76.9,
+      "step_count": 6630
+    }
+  },
+  {
+    "faiss_row": 61,
+    "vital_reading_id": 162,
+    "patient_id": 62,
+    "source_case_id": null,
+    "recorded_at": "2026-06-17T14:20:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 84,
+      "oxygen_spo2_pct": 76.3,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 122,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 105.0,
+      "cholesterol_mgdl": 176.9,
+      "hemoglobin_gdl": 14.0,
+      "temperature_f": 97.9,
+      "weight_kg": 47.8,
+      "step_count": 7446
+    }
+  },
+  {
+    "faiss_row": 62,
+    "vital_reading_id": 164,
+    "patient_id": 64,
+    "source_case_id": null,
+    "recorded_at": "2026-06-16T23:57:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 80,
+      "oxygen_spo2_pct": 97.7,
+      "respiratory_rate_bpm": 15,
+      "sbp_mmhg": 116,
+      "dbp_mmhg": 90,
+      "glucose_mgdl": 104.0,
+      "cholesterol_mgdl": 147.9,
+      "hemoglobin_gdl": 12.6,
+      "temperature_f": 98.6,
+      "weight_kg": 65.1,
+      "step_count": 7586
+    }
+  },
+  {
+    "faiss_row": 63,
+    "vital_reading_id": 166,
+    "patient_id": 66,
+    "source_case_id": null,
+    "recorded_at": "2026-06-16T16:19:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "18-30",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 30,
+      "oxygen_spo2_pct": 96.9,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 121,
+      "dbp_mmhg": 74,
+      "glucose_mgdl": 77.2,
+      "cholesterol_mgdl": 171.3,
+      "hemoglobin_gdl": 16.5,
+      "temperature_f": 98.5,
+      "weight_kg": 94.8,
+      "step_count": 7822
+    }
+  },
+  {
+    "faiss_row": 64,
+    "vital_reading_id": 124,
+    "patient_id": 24,
+    "source_case_id": null,
+    "recorded_at": "2026-06-15T23:20:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "18-30",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 70,
+      "oxygen_spo2_pct": 95.6,
+      "respiratory_rate_bpm": 18,
+      "sbp_mmhg": 113,
+      "dbp_mmhg": 76,
+      "glucose_mgdl": 80.2,
+      "cholesterol_mgdl": 186.0,
+      "hemoglobin_gdl": 14.8,
+      "temperature_f": 98.5,
+      "weight_kg": 89.8,
+      "step_count": 1665
+    }
+  },
+  {
+    "faiss_row": 65,
+    "vital_reading_id": 123,
+    "patient_id": 23,
+    "source_case_id": null,
+    "recorded_at": "2026-06-15T22:03:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "18-30",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 85,
+      "oxygen_spo2_pct": 95.1,
+      "respiratory_rate_bpm": 19,
+      "sbp_mmhg": 119,
+      "dbp_mmhg": 81,
+      "glucose_mgdl": 75.6,
+      "cholesterol_mgdl": 156.6,
+      "hemoglobin_gdl": 15.0,
+      "temperature_f": 98.1,
+      "weight_kg": 49.2,
+      "step_count": 1253
+    }
+  },
+  {
+    "faiss_row": 66,
+    "vital_reading_id": 200,
+    "patient_id": 100,
+    "source_case_id": null,
+    "recorded_at": "2026-06-15T05:07:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 77,
+      "oxygen_spo2_pct": 97.8,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 115,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 100.8,
+      "cholesterol_mgdl": 149.0,
+      "hemoglobin_gdl": 14.3,
+      "temperature_f": 98.8,
+      "weight_kg": 52.8,
+      "step_count": 7392
+    }
+  },
+  {
+    "faiss_row": 67,
+    "vital_reading_id": 171,
+    "patient_id": 71,
+    "source_case_id": null,
+    "recorded_at": "2026-06-13T22:15:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "31-45",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 61,
+      "oxygen_spo2_pct": 98.8,
+      "respiratory_rate_bpm": 13,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 85.1,
+      "cholesterol_mgdl": 145.0,
+      "hemoglobin_gdl": 12.9,
+      "temperature_f": 98.6,
+      "weight_kg": 62.5,
+      "step_count": 3558
+    }
+  },
+  {
+    "faiss_row": 68,
+    "vital_reading_id": 172,
+    "patient_id": 72,
+    "source_case_id": null,
+    "recorded_at": "2026-06-13T18:33:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 44,
+      "oxygen_spo2_pct": 98.5,
+      "respiratory_rate_bpm": 19,
+      "sbp_mmhg": 114,
+      "dbp_mmhg": 79,
+      "glucose_mgdl": 101.1,
+      "cholesterol_mgdl": 179.5,
+      "hemoglobin_gdl": 12.6,
+      "temperature_f": 98.1,
+      "weight_kg": 73.7,
+      "step_count": 11745
+    }
+  },
+  {
+    "faiss_row": 69,
     "vital_reading_id": 94,
     "patient_id": 225067498,
     "source_case_id": "778e4812-4bb5-4c1c-ab3c-859acba9c5a8",
@@ -550,7 +1750,57 @@
     }
   },
   {
-    "faiss_row": 22,
+    "faiss_row": 70,
+    "vital_reading_id": 128,
+    "patient_id": 28,
+    "source_case_id": null,
+    "recorded_at": "2026-06-10T17:38:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "18-30",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 43,
+      "oxygen_spo2_pct": 98.0,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 124,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 99.2,
+      "cholesterol_mgdl": 142.3,
+      "hemoglobin_gdl": 13.2,
+      "temperature_f": 97.7,
+      "weight_kg": 93.3,
+      "step_count": 5589
+    }
+  },
+  {
+    "faiss_row": 71,
+    "vital_reading_id": 157,
+    "patient_id": 57,
+    "source_case_id": null,
+    "recorded_at": "2026-06-10T05:45:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 35,
+      "oxygen_spo2_pct": 96.8,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 117,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 79.3,
+      "cholesterol_mgdl": 152.4,
+      "hemoglobin_gdl": 15.4,
+      "temperature_f": 98.8,
+      "weight_kg": 77.5,
+      "step_count": 6587
+    }
+  },
+  {
+    "faiss_row": 72,
     "vital_reading_id": 96,
     "patient_id": 1747076707,
     "source_case_id": "a7acb74b-3072-420c-8fa0-edf949b1a7db",
@@ -575,7 +1825,32 @@
     }
   },
   {
-    "faiss_row": 23,
+    "faiss_row": 73,
+    "vital_reading_id": 143,
+    "patient_id": 43,
+    "source_case_id": null,
+    "recorded_at": "2026-06-09T00:53:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "46-60",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 77,
+      "oxygen_spo2_pct": 99.1,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 124,
+      "dbp_mmhg": 72,
+      "glucose_mgdl": 107.3,
+      "cholesterol_mgdl": 142.7,
+      "hemoglobin_gdl": 12.6,
+      "temperature_f": 98.3,
+      "weight_kg": 89.9,
+      "step_count": 7005
+    }
+  },
+  {
+    "faiss_row": 74,
     "vital_reading_id": 92,
     "patient_id": 1765284244,
     "source_case_id": "9620f4b3-1c2f-47c6-a17f-af0e0473f6bc",
@@ -600,7 +1875,157 @@
     }
   },
   {
-    "faiss_row": 24,
+    "faiss_row": 75,
+    "vital_reading_id": 192,
+    "patient_id": 92,
+    "source_case_id": null,
+    "recorded_at": "2026-06-08T15:43:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "46-60",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 70,
+      "oxygen_spo2_pct": 95.3,
+      "respiratory_rate_bpm": 7,
+      "sbp_mmhg": 124,
+      "dbp_mmhg": 81,
+      "glucose_mgdl": 109.2,
+      "cholesterol_mgdl": 181.6,
+      "hemoglobin_gdl": 14.9,
+      "temperature_f": 97.8,
+      "weight_kg": 79.4,
+      "step_count": 6363
+    }
+  },
+  {
+    "faiss_row": 76,
+    "vital_reading_id": 119,
+    "patient_id": 19,
+    "source_case_id": null,
+    "recorded_at": "2026-06-08T15:26:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "61-75",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 94,
+      "oxygen_spo2_pct": 77.6,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 109,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 94.2,
+      "cholesterol_mgdl": 141.1,
+      "hemoglobin_gdl": 15.7,
+      "temperature_f": 98.5,
+      "weight_kg": 83.2,
+      "step_count": 3657
+    }
+  },
+  {
+    "faiss_row": 77,
+    "vital_reading_id": 175,
+    "patient_id": 75,
+    "source_case_id": null,
+    "recorded_at": "2026-06-08T07:51:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "61-75",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 73,
+      "oxygen_spo2_pct": 96.4,
+      "respiratory_rate_bpm": 18,
+      "sbp_mmhg": 122,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 81.0,
+      "cholesterol_mgdl": 189.1,
+      "hemoglobin_gdl": 15.0,
+      "temperature_f": 98.9,
+      "weight_kg": 62.4,
+      "step_count": 2278
+    }
+  },
+  {
+    "faiss_row": 78,
+    "vital_reading_id": 176,
+    "patient_id": 76,
+    "source_case_id": null,
+    "recorded_at": "2026-06-08T04:27:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 83,
+      "oxygen_spo2_pct": 98.3,
+      "respiratory_rate_bpm": 35,
+      "sbp_mmhg": 119,
+      "dbp_mmhg": 77,
+      "glucose_mgdl": 99.1,
+      "cholesterol_mgdl": 152.9,
+      "hemoglobin_gdl": 13.4,
+      "temperature_f": 97.8,
+      "weight_kg": 93.7,
+      "step_count": 11720
+    }
+  },
+  {
+    "faiss_row": 79,
+    "vital_reading_id": 109,
+    "patient_id": 9,
+    "source_case_id": null,
+    "recorded_at": "2026-06-06T19:01:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 33,
+      "oxygen_spo2_pct": 95.9,
+      "respiratory_rate_bpm": 6,
+      "sbp_mmhg": 115,
+      "dbp_mmhg": 77,
+      "glucose_mgdl": 95.5,
+      "cholesterol_mgdl": 162.7,
+      "hemoglobin_gdl": 13.7,
+      "temperature_f": 98.6,
+      "weight_kg": 21.6,
+      "step_count": 7553
+    }
+  },
+  {
+    "faiss_row": 80,
+    "vital_reading_id": 113,
+    "patient_id": 13,
+    "source_case_id": null,
+    "recorded_at": "2026-06-06T04:57:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "18-30",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 73,
+      "oxygen_spo2_pct": 97.5,
+      "respiratory_rate_bpm": 7,
+      "sbp_mmhg": 206,
+      "dbp_mmhg": 79,
+      "glucose_mgdl": 97.9,
+      "cholesterol_mgdl": 177.0,
+      "hemoglobin_gdl": 14.3,
+      "temperature_f": 98.8,
+      "weight_kg": 53.1,
+      "step_count": 10592
+    }
+  },
+  {
+    "faiss_row": 81,
     "vital_reading_id": 41,
     "patient_id": 790868944,
     "source_case_id": "ab1eaa16-90ba-4c7f-87f7-f0ea03554f3f",
@@ -625,7 +2050,107 @@
     }
   },
   {
-    "faiss_row": 25,
+    "faiss_row": 82,
+    "vital_reading_id": 153,
+    "patient_id": 53,
+    "source_case_id": null,
+    "recorded_at": "2026-06-04T10:34:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 74,
+      "oxygen_spo2_pct": 98.6,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 78.2,
+      "cholesterol_mgdl": 148.2,
+      "hemoglobin_gdl": 15.3,
+      "temperature_f": 97.9,
+      "weight_kg": 44.8,
+      "step_count": 4841
+    }
+  },
+  {
+    "faiss_row": 83,
+    "vital_reading_id": 163,
+    "patient_id": 63,
+    "source_case_id": null,
+    "recorded_at": "2026-06-04T06:46:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "31-45",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 92,
+      "oxygen_spo2_pct": 78.5,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 106,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 80.2,
+      "cholesterol_mgdl": 170.8,
+      "hemoglobin_gdl": 14.2,
+      "temperature_f": 98.1,
+      "weight_kg": 50.3,
+      "step_count": 946
+    }
+  },
+  {
+    "faiss_row": 84,
+    "vital_reading_id": 158,
+    "patient_id": 58,
+    "source_case_id": null,
+    "recorded_at": "2026-06-03T21:09:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 74,
+      "oxygen_spo2_pct": 96.7,
+      "respiratory_rate_bpm": 19,
+      "sbp_mmhg": 160,
+      "dbp_mmhg": 70,
+      "glucose_mgdl": 75.1,
+      "cholesterol_mgdl": 189.3,
+      "hemoglobin_gdl": 14.4,
+      "temperature_f": 98.0,
+      "weight_kg": 29.3,
+      "step_count": 3142
+    }
+  },
+  {
+    "faiss_row": 85,
+    "vital_reading_id": 190,
+    "patient_id": 90,
+    "source_case_id": null,
+    "recorded_at": "2026-06-03T00:15:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 79,
+      "oxygen_spo2_pct": 95.4,
+      "respiratory_rate_bpm": 4,
+      "sbp_mmhg": 111,
+      "dbp_mmhg": 72,
+      "glucose_mgdl": 96.9,
+      "cholesterol_mgdl": 161.3,
+      "hemoglobin_gdl": 12.5,
+      "temperature_f": 98.4,
+      "weight_kg": 91.1,
+      "step_count": 491
+    }
+  },
+  {
+    "faiss_row": 86,
     "vital_reading_id": 7,
     "patient_id": 762961006,
     "source_case_id": "7e23ac01-4bc1-4b93-8b97-91f7f6282a1e",
@@ -650,7 +2175,82 @@
     }
   },
   {
-    "faiss_row": 26,
+    "faiss_row": 87,
+    "vital_reading_id": 177,
+    "patient_id": 77,
+    "source_case_id": null,
+    "recorded_at": "2026-05-31T09:58:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 66,
+      "oxygen_spo2_pct": 83.9,
+      "respiratory_rate_bpm": 15,
+      "sbp_mmhg": 113,
+      "dbp_mmhg": 81,
+      "glucose_mgdl": 109.8,
+      "cholesterol_mgdl": 148.2,
+      "hemoglobin_gdl": 15.1,
+      "temperature_f": 97.6,
+      "weight_kg": 23.3,
+      "step_count": 7325
+    }
+  },
+  {
+    "faiss_row": 88,
+    "vital_reading_id": 136,
+    "patient_id": 36,
+    "source_case_id": null,
+    "recorded_at": "2026-05-30T20:50:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "31-45",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 82,
+      "oxygen_spo2_pct": 89.5,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 120,
+      "dbp_mmhg": 70,
+      "glucose_mgdl": 106.9,
+      "cholesterol_mgdl": 167.5,
+      "hemoglobin_gdl": 13.2,
+      "temperature_f": 97.9,
+      "weight_kg": 72.9,
+      "step_count": 10895
+    }
+  },
+  {
+    "faiss_row": 89,
+    "vital_reading_id": 133,
+    "patient_id": 33,
+    "source_case_id": null,
+    "recorded_at": "2026-05-30T20:01:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 91,
+      "oxygen_spo2_pct": 97.2,
+      "respiratory_rate_bpm": 27,
+      "sbp_mmhg": 110,
+      "dbp_mmhg": 70,
+      "glucose_mgdl": 108.2,
+      "cholesterol_mgdl": 174.1,
+      "hemoglobin_gdl": 14.1,
+      "temperature_f": 98.5,
+      "weight_kg": 45.0,
+      "step_count": 6362
+    }
+  },
+  {
+    "faiss_row": 90,
     "vital_reading_id": 12,
     "patient_id": 1397274351,
     "source_case_id": "a5043c02-1f26-430b-b12c-a0664c3489d9",
@@ -675,7 +2275,7 @@
     }
   },
   {
-    "faiss_row": 27,
+    "faiss_row": 91,
     "vital_reading_id": 44,
     "patient_id": 1401784770,
     "source_case_id": "5b9bad1c-27fd-46c8-a5ac-f0098b6125a6",
@@ -700,7 +2300,7 @@
     }
   },
   {
-    "faiss_row": 28,
+    "faiss_row": 92,
     "vital_reading_id": 45,
     "patient_id": 1453347752,
     "source_case_id": "0bd9e307-0975-4765-9bf8-de891a0a60c7",
@@ -725,7 +2325,7 @@
     }
   },
   {
-    "faiss_row": 29,
+    "faiss_row": 93,
     "vital_reading_id": 20,
     "patient_id": 2038012076,
     "source_case_id": "ce2a1998-a8ba-474a-ab92-eb8b8e19d799",
@@ -750,7 +2350,32 @@
     }
   },
   {
-    "faiss_row": 30,
+    "faiss_row": 94,
+    "vital_reading_id": 111,
+    "patient_id": 11,
+    "source_case_id": null,
+    "recorded_at": "2026-05-29T06:43:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 28,
+      "oxygen_spo2_pct": 98.7,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 117,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 87.1,
+      "cholesterol_mgdl": 187.0,
+      "hemoglobin_gdl": 13.9,
+      "temperature_f": 98.3,
+      "weight_kg": 53.3,
+      "step_count": 4256
+    }
+  },
+  {
+    "faiss_row": 95,
     "vital_reading_id": 73,
     "patient_id": 834462088,
     "source_case_id": "8b261ceb-1a21-4451-8433-5847e7a03851",
@@ -775,7 +2400,7 @@
     }
   },
   {
-    "faiss_row": 31,
+    "faiss_row": 96,
     "vital_reading_id": 62,
     "patient_id": 1145579949,
     "source_case_id": "9b7de66d-8cf3-47d5-bb7d-6869bd91060d",
@@ -800,7 +2425,32 @@
     }
   },
   {
-    "faiss_row": 32,
+    "faiss_row": 97,
+    "vital_reading_id": 137,
+    "patient_id": 37,
+    "source_case_id": null,
+    "recorded_at": "2026-05-28T11:34:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "61-75",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 163,
+      "oxygen_spo2_pct": 95.9,
+      "respiratory_rate_bpm": 4,
+      "sbp_mmhg": 122,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 90.9,
+      "cholesterol_mgdl": 156.6,
+      "hemoglobin_gdl": 15.5,
+      "temperature_f": 98.0,
+      "weight_kg": 89.4,
+      "step_count": 5431
+    }
+  },
+  {
+    "faiss_row": 98,
     "vital_reading_id": 99,
     "patient_id": 1550079439,
     "source_case_id": "1c4bfd72-39bb-4e6b-8ae1-9a8d7d53fb73",
@@ -825,7 +2475,7 @@
     }
   },
   {
-    "faiss_row": 33,
+    "faiss_row": 99,
     "vital_reading_id": 88,
     "patient_id": 1903846850,
     "source_case_id": "35e4f25c-e7b8-4602-807f-cb64a2722405",
@@ -850,7 +2500,7 @@
     }
   },
   {
-    "faiss_row": 34,
+    "faiss_row": 100,
     "vital_reading_id": 9,
     "patient_id": 1476466737,
     "source_case_id": "901bd1a3-3188-495e-9b09-10225aef4550",
@@ -875,7 +2525,7 @@
     }
   },
   {
-    "faiss_row": 35,
+    "faiss_row": 101,
     "vital_reading_id": 54,
     "patient_id": 1482764982,
     "source_case_id": "2d021caa-9108-4f36-9a98-440ff6fe8865",
@@ -900,7 +2550,82 @@
     }
   },
   {
-    "faiss_row": 36,
+    "faiss_row": 102,
+    "vital_reading_id": 191,
+    "patient_id": 91,
+    "source_case_id": null,
+    "recorded_at": "2026-05-23T15:10:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 94,
+      "oxygen_spo2_pct": 98.8,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 115,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 108.2,
+      "cholesterol_mgdl": 176.4,
+      "hemoglobin_gdl": 14.4,
+      "temperature_f": 97.5,
+      "weight_kg": 68.8,
+      "step_count": 2112
+    }
+  },
+  {
+    "faiss_row": 103,
+    "vital_reading_id": 199,
+    "patient_id": 99,
+    "source_case_id": null,
+    "recorded_at": "2026-05-23T13:40:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 76,
+      "oxygen_spo2_pct": 99.1,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 110,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 77.7,
+      "cholesterol_mgdl": 170.9,
+      "hemoglobin_gdl": 14.0,
+      "temperature_f": 98.5,
+      "weight_kg": 76.4,
+      "step_count": 7527
+    }
+  },
+  {
+    "faiss_row": 104,
+    "vital_reading_id": 161,
+    "patient_id": 61,
+    "source_case_id": null,
+    "recorded_at": "2026-05-23T06:27:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 82,
+      "oxygen_spo2_pct": 96.1,
+      "respiratory_rate_bpm": 24,
+      "sbp_mmhg": 106,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 81.4,
+      "cholesterol_mgdl": 148.1,
+      "hemoglobin_gdl": 16.2,
+      "temperature_f": 98.4,
+      "weight_kg": 93.3,
+      "step_count": 4530
+    }
+  },
+  {
+    "faiss_row": 105,
     "vital_reading_id": 33,
     "patient_id": 1833135263,
     "source_case_id": "a982bd63-4015-4838-a246-4044dc4be00f",
@@ -925,7 +2650,7 @@
     }
   },
   {
-    "faiss_row": 37,
+    "faiss_row": 106,
     "vital_reading_id": 91,
     "patient_id": 1637838828,
     "source_case_id": "559b8d8e-f1fe-4ce1-99f3-bf1eb8e251ac",
@@ -950,7 +2675,32 @@
     }
   },
   {
-    "faiss_row": 38,
+    "faiss_row": 107,
+    "vital_reading_id": 145,
+    "patient_id": 45,
+    "source_case_id": null,
+    "recorded_at": "2026-05-20T23:20:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 80,
+      "oxygen_spo2_pct": 98.4,
+      "respiratory_rate_bpm": 18,
+      "sbp_mmhg": 116,
+      "dbp_mmhg": 82,
+      "glucose_mgdl": 103.8,
+      "cholesterol_mgdl": 181.1,
+      "hemoglobin_gdl": 14.2,
+      "temperature_f": 97.3,
+      "weight_kg": 61.2,
+      "step_count": 7957
+    }
+  },
+  {
+    "faiss_row": 108,
     "vital_reading_id": 78,
     "patient_id": 1903722051,
     "source_case_id": "772b1453-e090-4266-917a-bc5992e95950",
@@ -975,7 +2725,57 @@
     }
   },
   {
-    "faiss_row": 39,
+    "faiss_row": 109,
+    "vital_reading_id": 182,
+    "patient_id": 82,
+    "source_case_id": null,
+    "recorded_at": "2026-05-19T23:09:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "31-45",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 72,
+      "oxygen_spo2_pct": 97.9,
+      "respiratory_rate_bpm": 18,
+      "sbp_mmhg": 119,
+      "dbp_mmhg": 74,
+      "glucose_mgdl": 101.6,
+      "cholesterol_mgdl": 172.5,
+      "hemoglobin_gdl": 15.6,
+      "temperature_f": 98.0,
+      "weight_kg": 78.9,
+      "step_count": 3975
+    }
+  },
+  {
+    "faiss_row": 110,
+    "vital_reading_id": 160,
+    "patient_id": 60,
+    "source_case_id": null,
+    "recorded_at": "2026-05-19T17:23:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "18-30",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 94,
+      "oxygen_spo2_pct": 97.2,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 112,
+      "dbp_mmhg": 71,
+      "glucose_mgdl": 104.2,
+      "cholesterol_mgdl": 170.5,
+      "hemoglobin_gdl": 13.5,
+      "temperature_f": 97.8,
+      "weight_kg": 70.1,
+      "step_count": 10252
+    }
+  },
+  {
+    "faiss_row": 111,
     "vital_reading_id": 60,
     "patient_id": 1115460163,
     "source_case_id": "6c8b86a1-3c31-43d3-86f4-66165f7281b8",
@@ -1000,7 +2800,32 @@
     }
   },
   {
-    "faiss_row": 40,
+    "faiss_row": 112,
+    "vital_reading_id": 114,
+    "patient_id": 14,
+    "source_case_id": null,
+    "recorded_at": "2026-05-18T09:30:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 60,
+      "oxygen_spo2_pct": 95.7,
+      "respiratory_rate_bpm": 13,
+      "sbp_mmhg": 116,
+      "dbp_mmhg": 79,
+      "glucose_mgdl": 75.9,
+      "cholesterol_mgdl": 183.7,
+      "hemoglobin_gdl": 15.0,
+      "temperature_f": 97.5,
+      "weight_kg": 50.8,
+      "step_count": 4332
+    }
+  },
+  {
+    "faiss_row": 113,
     "vital_reading_id": 97,
     "patient_id": 1892555710,
     "source_case_id": "249147c6-b25e-480f-8236-9a3ffe5d88c9",
@@ -1025,7 +2850,7 @@
     }
   },
   {
-    "faiss_row": 41,
+    "faiss_row": 114,
     "vital_reading_id": 21,
     "patient_id": 1065213852,
     "source_case_id": "e371cb5f-52b9-4d11-a579-b4cf0e16e6af",
@@ -1050,7 +2875,7 @@
     }
   },
   {
-    "faiss_row": 42,
+    "faiss_row": 115,
     "vital_reading_id": 65,
     "patient_id": 1168994664,
     "source_case_id": "9c4406e5-d145-4bed-ae17-c68642487d6d",
@@ -1075,7 +2900,57 @@
     }
   },
   {
-    "faiss_row": 43,
+    "faiss_row": 116,
+    "vital_reading_id": 152,
+    "patient_id": 52,
+    "source_case_id": null,
+    "recorded_at": "2026-05-17T06:30:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "31-45",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 48,
+      "oxygen_spo2_pct": 96.7,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 106,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 110.0,
+      "cholesterol_mgdl": 141.9,
+      "hemoglobin_gdl": 15.4,
+      "temperature_f": 98.8,
+      "weight_kg": 55.2,
+      "step_count": 6900
+    }
+  },
+  {
+    "faiss_row": 117,
+    "vital_reading_id": 142,
+    "patient_id": 42,
+    "source_case_id": null,
+    "recorded_at": "2026-05-17T04:49:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "31-45",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 72,
+      "oxygen_spo2_pct": 96.9,
+      "respiratory_rate_bpm": 43,
+      "sbp_mmhg": 111,
+      "dbp_mmhg": 70,
+      "glucose_mgdl": 102.9,
+      "cholesterol_mgdl": 177.0,
+      "hemoglobin_gdl": 14.5,
+      "temperature_f": 97.6,
+      "weight_kg": 92.6,
+      "step_count": 3981
+    }
+  },
+  {
+    "faiss_row": 118,
     "vital_reading_id": 38,
     "patient_id": 163862397,
     "source_case_id": "31bc4da6-86ce-4482-a54b-0f301612b9db",
@@ -1100,7 +2975,7 @@
     }
   },
   {
-    "faiss_row": 44,
+    "faiss_row": 119,
     "vital_reading_id": 19,
     "patient_id": 1935103220,
     "source_case_id": "c0315e38-60b0-4e14-8858-285a5e5ada1f",
@@ -1125,7 +3000,7 @@
     }
   },
   {
-    "faiss_row": 45,
+    "faiss_row": 120,
     "vital_reading_id": 11,
     "patient_id": 1735015055,
     "source_case_id": "0ca68e19-832b-4eb7-92c8-49a5cff7fb99",
@@ -1150,7 +3025,7 @@
     }
   },
   {
-    "faiss_row": 46,
+    "faiss_row": 121,
     "vital_reading_id": 82,
     "patient_id": 1415540678,
     "source_case_id": "ed0ce136-9b88-49b9-b6b2-8eb8907221ab",
@@ -1175,7 +3050,7 @@
     }
   },
   {
-    "faiss_row": 47,
+    "faiss_row": 122,
     "vital_reading_id": 79,
     "patient_id": 1519543092,
     "source_case_id": "ad346892-4f18-435b-a3bc-427a6d158c34",
@@ -1200,7 +3075,7 @@
     }
   },
   {
-    "faiss_row": 48,
+    "faiss_row": 123,
     "vital_reading_id": 81,
     "patient_id": 228628004,
     "source_case_id": "922012a5-cec4-46b9-ab3e-9a9e6b11b0c9",
@@ -1225,7 +3100,7 @@
     }
   },
   {
-    "faiss_row": 49,
+    "faiss_row": 124,
     "vital_reading_id": 35,
     "patient_id": 1309917480,
     "source_case_id": "293b588e-ae7f-4219-b256-83fbe58eec52",
@@ -1250,7 +3125,32 @@
     }
   },
   {
-    "faiss_row": 50,
+    "faiss_row": 125,
+    "vital_reading_id": 165,
+    "patient_id": 65,
+    "source_case_id": null,
+    "recorded_at": "2026-05-14T04:19:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "18-30",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 28,
+      "oxygen_spo2_pct": 99.0,
+      "respiratory_rate_bpm": 5,
+      "sbp_mmhg": 124,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 100.7,
+      "cholesterol_mgdl": 152.4,
+      "hemoglobin_gdl": 16.1,
+      "temperature_f": 97.3,
+      "weight_kg": 65.7,
+      "step_count": 1918
+    }
+  },
+  {
+    "faiss_row": 126,
     "vital_reading_id": 8,
     "patient_id": 1719791204,
     "source_case_id": "25a53354-46e2-47fc-8bb6-b8910661c2ac",
@@ -1275,7 +3175,57 @@
     }
   },
   {
-    "faiss_row": 51,
+    "faiss_row": 127,
+    "vital_reading_id": 186,
+    "patient_id": 86,
+    "source_case_id": null,
+    "recorded_at": "2026-05-13T06:11:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 61,
+      "oxygen_spo2_pct": 95.2,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 108,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 91.9,
+      "cholesterol_mgdl": 177.9,
+      "hemoglobin_gdl": 13.1,
+      "temperature_f": 97.6,
+      "weight_kg": 62.1,
+      "step_count": 7009
+    }
+  },
+  {
+    "faiss_row": 128,
+    "vital_reading_id": 168,
+    "patient_id": 68,
+    "source_case_id": null,
+    "recorded_at": "2026-05-13T02:00:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 90,
+      "oxygen_spo2_pct": 95.9,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 115,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 105.8,
+      "cholesterol_mgdl": 156.4,
+      "hemoglobin_gdl": 13.5,
+      "temperature_f": 98.8,
+      "weight_kg": 68.6,
+      "step_count": 10533
+    }
+  },
+  {
+    "faiss_row": 129,
     "vital_reading_id": 27,
     "patient_id": 834920954,
     "source_case_id": "6506fa04-4bcc-4e12-bce9-c9fd6087458c",
@@ -1300,7 +3250,7 @@
     }
   },
   {
-    "faiss_row": 52,
+    "faiss_row": 130,
     "vital_reading_id": 59,
     "patient_id": 1059220595,
     "source_case_id": "f1b42ee4-278e-48c5-b36d-f4feac6be82f",
@@ -1325,7 +3275,7 @@
     }
   },
   {
-    "faiss_row": 53,
+    "faiss_row": 131,
     "vital_reading_id": 50,
     "patient_id": 2123171413,
     "source_case_id": "7c813f38-8dcf-4ae7-87bb-9d66d3cea61e",
@@ -1350,7 +3300,57 @@
     }
   },
   {
-    "faiss_row": 54,
+    "faiss_row": 132,
+    "vital_reading_id": 108,
+    "patient_id": 8,
+    "source_case_id": null,
+    "recorded_at": "2026-05-10T01:56:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 80,
+      "oxygen_spo2_pct": 96.8,
+      "respiratory_rate_bpm": 15,
+      "sbp_mmhg": 106,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 105.0,
+      "cholesterol_mgdl": 154.5,
+      "hemoglobin_gdl": 13.1,
+      "temperature_f": 97.4,
+      "weight_kg": 29.9,
+      "step_count": 5254
+    }
+  },
+  {
+    "faiss_row": 133,
+    "vital_reading_id": 185,
+    "patient_id": 85,
+    "source_case_id": null,
+    "recorded_at": "2026-05-09T22:30:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "18-30",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 83,
+      "oxygen_spo2_pct": 99.0,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 111,
+      "dbp_mmhg": 77,
+      "glucose_mgdl": 99.2,
+      "cholesterol_mgdl": 166.5,
+      "hemoglobin_gdl": 15.5,
+      "temperature_f": 98.0,
+      "weight_kg": 68.7,
+      "step_count": 2116
+    }
+  },
+  {
+    "faiss_row": 134,
     "vital_reading_id": 83,
     "patient_id": 1910856495,
     "source_case_id": "7c2935d5-79bf-4a63-b071-f3d348ba9b47",
@@ -1375,7 +3375,7 @@
     }
   },
   {
-    "faiss_row": 55,
+    "faiss_row": 135,
     "vital_reading_id": 6,
     "patient_id": 1150563070,
     "source_case_id": "3ed9ebaf-1161-4174-8e15-4fc6ec153022",
@@ -1400,7 +3400,32 @@
     }
   },
   {
-    "faiss_row": 56,
+    "faiss_row": 136,
+    "vital_reading_id": 181,
+    "patient_id": 81,
+    "source_case_id": null,
+    "recorded_at": "2026-05-09T00:46:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "75+",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 62,
+      "oxygen_spo2_pct": 95.3,
+      "respiratory_rate_bpm": 7,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 81,
+      "glucose_mgdl": 98.6,
+      "cholesterol_mgdl": 169.0,
+      "hemoglobin_gdl": 12.9,
+      "temperature_f": 97.7,
+      "weight_kg": 68.5,
+      "step_count": 2895
+    }
+  },
+  {
+    "faiss_row": 137,
     "vital_reading_id": 15,
     "patient_id": 1653717102,
     "source_case_id": "8e8b492f-2200-4014-8603-102f5a304e3c",
@@ -1425,7 +3450,7 @@
     }
   },
   {
-    "faiss_row": 57,
+    "faiss_row": 138,
     "vital_reading_id": 53,
     "patient_id": 1215588530,
     "source_case_id": "ddf0d781-f325-4980-8327-d6f08608d8b2",
@@ -1450,7 +3475,7 @@
     }
   },
   {
-    "faiss_row": 58,
+    "faiss_row": 139,
     "vital_reading_id": 14,
     "patient_id": 790330687,
     "source_case_id": "cc166757-f25c-47b7-8a10-f99c70d5305c",
@@ -1475,7 +3500,32 @@
     }
   },
   {
-    "faiss_row": 59,
+    "faiss_row": 140,
+    "vital_reading_id": 179,
+    "patient_id": 79,
+    "source_case_id": null,
+    "recorded_at": "2026-05-07T09:26:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 78,
+      "oxygen_spo2_pct": 98.0,
+      "respiratory_rate_bpm": 39,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 102.2,
+      "cholesterol_mgdl": 159.4,
+      "hemoglobin_gdl": 14.5,
+      "temperature_f": 99.0,
+      "weight_kg": 50.1,
+      "step_count": 11934
+    }
+  },
+  {
+    "faiss_row": 141,
     "vital_reading_id": 43,
     "patient_id": 786525880,
     "source_case_id": "415b4560-976b-4615-9f1f-30ec081bc981",
@@ -1500,7 +3550,7 @@
     }
   },
   {
-    "faiss_row": 60,
+    "faiss_row": 142,
     "vital_reading_id": 37,
     "patient_id": 1578528965,
     "source_case_id": "d457bf3a-7641-4468-b353-37cefbacf5a4",
@@ -1525,7 +3575,82 @@
     }
   },
   {
-    "faiss_row": 61,
+    "faiss_row": 143,
+    "vital_reading_id": 130,
+    "patient_id": 30,
+    "source_case_id": null,
+    "recorded_at": "2026-05-06T01:17:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "18-30",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 35,
+      "oxygen_spo2_pct": 84.4,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 124,
+      "dbp_mmhg": 76,
+      "glucose_mgdl": 101.8,
+      "cholesterol_mgdl": 176.0,
+      "hemoglobin_gdl": 14.5,
+      "temperature_f": 97.7,
+      "weight_kg": 86.3,
+      "step_count": 7232
+    }
+  },
+  {
+    "faiss_row": 144,
+    "vital_reading_id": 193,
+    "patient_id": 93,
+    "source_case_id": null,
+    "recorded_at": "2026-05-05T17:48:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 92,
+      "oxygen_spo2_pct": 97.6,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 117,
+      "dbp_mmhg": 77,
+      "glucose_mgdl": 93.9,
+      "cholesterol_mgdl": 166.8,
+      "hemoglobin_gdl": 13.9,
+      "temperature_f": 97.3,
+      "weight_kg": 68.8,
+      "step_count": 6723
+    }
+  },
+  {
+    "faiss_row": 145,
+    "vital_reading_id": 195,
+    "patient_id": 95,
+    "source_case_id": null,
+    "recorded_at": "2026-05-05T04:52:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 72,
+      "oxygen_spo2_pct": 97.3,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 108,
+      "dbp_mmhg": 70,
+      "glucose_mgdl": 82.2,
+      "cholesterol_mgdl": 183.5,
+      "hemoglobin_gdl": 14.8,
+      "temperature_f": 98.3,
+      "weight_kg": 92.3,
+      "step_count": 3699
+    }
+  },
+  {
+    "faiss_row": 146,
     "vital_reading_id": 22,
     "patient_id": 1293822632,
     "source_case_id": "32834041-6302-4275-a953-76fd5a5430c9",
@@ -1550,7 +3675,57 @@
     }
   },
   {
-    "faiss_row": 62,
+    "faiss_row": 147,
+    "vital_reading_id": 140,
+    "patient_id": 40,
+    "source_case_id": null,
+    "recorded_at": "2026-05-05T00:00:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "18-30",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 68,
+      "oxygen_spo2_pct": 99.1,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 109,
+      "dbp_mmhg": 80,
+      "glucose_mgdl": 83.8,
+      "cholesterol_mgdl": 171.8,
+      "hemoglobin_gdl": 15.3,
+      "temperature_f": 97.4,
+      "weight_kg": 58.0,
+      "step_count": 1352
+    }
+  },
+  {
+    "faiss_row": 148,
+    "vital_reading_id": 151,
+    "patient_id": 51,
+    "source_case_id": null,
+    "recorded_at": "2026-05-04T01:21:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 61,
+      "oxygen_spo2_pct": 96.3,
+      "respiratory_rate_bpm": 13,
+      "sbp_mmhg": 142,
+      "dbp_mmhg": 73,
+      "glucose_mgdl": 96.0,
+      "cholesterol_mgdl": 181.4,
+      "hemoglobin_gdl": 13.3,
+      "temperature_f": 97.3,
+      "weight_kg": 50.3,
+      "step_count": 7558
+    }
+  },
+  {
+    "faiss_row": 149,
     "vital_reading_id": 95,
     "patient_id": 1951885870,
     "source_case_id": "1b9b24d5-2add-478a-a9b6-7100989c4358",
@@ -1575,7 +3750,7 @@
     }
   },
   {
-    "faiss_row": 63,
+    "faiss_row": 150,
     "vital_reading_id": 47,
     "patient_id": 129300415,
     "source_case_id": "2c8f3653-874e-4431-8bbd-b80e6e86c43d",
@@ -1600,7 +3775,7 @@
     }
   },
   {
-    "faiss_row": 64,
+    "faiss_row": 151,
     "vital_reading_id": 39,
     "patient_id": 2063695050,
     "source_case_id": "908240e0-d3c9-4490-9c30-39d2ef69efd3",
@@ -1625,7 +3800,32 @@
     }
   },
   {
-    "faiss_row": 65,
+    "faiss_row": 152,
+    "vital_reading_id": 129,
+    "patient_id": 29,
+    "source_case_id": null,
+    "recorded_at": "2026-04-30T16:55:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 60,
+      "oxygen_spo2_pct": 96.7,
+      "respiratory_rate_bpm": 19,
+      "sbp_mmhg": 113,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 98.0,
+      "cholesterol_mgdl": 152.4,
+      "hemoglobin_gdl": 15.6,
+      "temperature_f": 97.4,
+      "weight_kg": 60.0,
+      "step_count": 1670
+    }
+  },
+  {
+    "faiss_row": 153,
     "vital_reading_id": 58,
     "patient_id": 98792985,
     "source_case_id": "588e3b33-8ebf-46e9-a0f2-60c0448fbf50",
@@ -1650,7 +3850,57 @@
     }
   },
   {
-    "faiss_row": 66,
+    "faiss_row": 154,
+    "vital_reading_id": 107,
+    "patient_id": 7,
+    "source_case_id": null,
+    "recorded_at": "2026-04-30T03:23:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 45,
+      "oxygen_spo2_pct": 96.8,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 107,
+      "dbp_mmhg": 78,
+      "glucose_mgdl": 78.3,
+      "cholesterol_mgdl": 169.1,
+      "hemoglobin_gdl": 16.1,
+      "temperature_f": 97.6,
+      "weight_kg": 52.9,
+      "step_count": 1344
+    }
+  },
+  {
+    "faiss_row": 155,
+    "vital_reading_id": 188,
+    "patient_id": 88,
+    "source_case_id": null,
+    "recorded_at": "2026-04-30T02:16:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "61-75",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 151,
+      "oxygen_spo2_pct": 95.6,
+      "respiratory_rate_bpm": 13,
+      "sbp_mmhg": 106,
+      "dbp_mmhg": 76,
+      "glucose_mgdl": 100.3,
+      "cholesterol_mgdl": 184.3,
+      "hemoglobin_gdl": 14.7,
+      "temperature_f": 97.3,
+      "weight_kg": 75.8,
+      "step_count": 7983
+    }
+  },
+  {
+    "faiss_row": 156,
     "vital_reading_id": 52,
     "patient_id": 966531209,
     "source_case_id": "dd523d22-76a2-445a-8896-6f1963543fcb",
@@ -1675,7 +3925,7 @@
     }
   },
   {
-    "faiss_row": 67,
+    "faiss_row": 157,
     "vital_reading_id": 61,
     "patient_id": 1688928512,
     "source_case_id": "79a94063-d8e6-43d9-a58b-ff1be8aff03c",
@@ -1700,7 +3950,82 @@
     }
   },
   {
-    "faiss_row": 68,
+    "faiss_row": 158,
+    "vital_reading_id": 117,
+    "patient_id": 17,
+    "source_case_id": null,
+    "recorded_at": "2026-04-27T12:09:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 2,
+    "age_group": "61-75",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 105,
+      "oxygen_spo2_pct": 95.9,
+      "respiratory_rate_bpm": 17,
+      "sbp_mmhg": 119,
+      "dbp_mmhg": 82,
+      "glucose_mgdl": 107.8,
+      "cholesterol_mgdl": 189.4,
+      "hemoglobin_gdl": 16.3,
+      "temperature_f": 97.9,
+      "weight_kg": 69.0,
+      "step_count": 7901
+    }
+  },
+  {
+    "faiss_row": 159,
+    "vital_reading_id": 189,
+    "patient_id": 89,
+    "source_case_id": null,
+    "recorded_at": "2026-04-26T19:30:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "0-15",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 204,
+      "oxygen_spo2_pct": 95.2,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 118,
+      "dbp_mmhg": 79,
+      "glucose_mgdl": 97.5,
+      "cholesterol_mgdl": 186.7,
+      "hemoglobin_gdl": 12.7,
+      "temperature_f": 98.2,
+      "weight_kg": 38.8,
+      "step_count": 11598
+    }
+  },
+  {
+    "faiss_row": 160,
+    "vital_reading_id": 134,
+    "patient_id": 34,
+    "source_case_id": null,
+    "recorded_at": "2026-04-26T14:20:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "31-45",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 85,
+      "oxygen_spo2_pct": 99.1,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 113,
+      "dbp_mmhg": 75,
+      "glucose_mgdl": 77.3,
+      "cholesterol_mgdl": 159.5,
+      "hemoglobin_gdl": 16.0,
+      "temperature_f": 97.3,
+      "weight_kg": 47.6,
+      "step_count": 7213
+    }
+  },
+  {
+    "faiss_row": 161,
     "vital_reading_id": 1,
     "patient_id": 1099688923,
     "source_case_id": "873d8697-7c91-495b-aadf-70c83f9bb018",
@@ -1725,7 +4050,7 @@
     }
   },
   {
-    "faiss_row": 69,
+    "faiss_row": 162,
     "vital_reading_id": 55,
     "patient_id": 1127239935,
     "source_case_id": "01aa8522-bb2c-4308-925b-c01724739b99",
@@ -1750,7 +4075,32 @@
     }
   },
   {
-    "faiss_row": 70,
+    "faiss_row": 163,
+    "vital_reading_id": 196,
+    "patient_id": 96,
+    "source_case_id": null,
+    "recorded_at": "2026-04-25T07:35:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 1,
+    "age_group": "31-45",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 210,
+      "oxygen_spo2_pct": 96.5,
+      "respiratory_rate_bpm": 14,
+      "sbp_mmhg": 117,
+      "dbp_mmhg": 71,
+      "glucose_mgdl": 76.0,
+      "cholesterol_mgdl": 141.7,
+      "hemoglobin_gdl": 14.0,
+      "temperature_f": 98.5,
+      "weight_kg": 77.0,
+      "step_count": 2164
+    }
+  },
+  {
+    "faiss_row": 164,
     "vital_reading_id": 31,
     "patient_id": 1939390082,
     "source_case_id": "e5125b98-7ec6-479d-8d54-42d9b5443d87",
@@ -1775,7 +4125,7 @@
     }
   },
   {
-    "faiss_row": 71,
+    "faiss_row": 165,
     "vital_reading_id": 3,
     "patient_id": 432967361,
     "source_case_id": "e6f2491f-6cc0-41e9-a7a5-c43fdfefb591",
@@ -1800,7 +4150,7 @@
     }
   },
   {
-    "faiss_row": 72,
+    "faiss_row": 166,
     "vital_reading_id": 46,
     "patient_id": 1862155455,
     "source_case_id": "9898a8e5-0bf6-420b-846c-154bf187c2c8",
@@ -1825,7 +4175,57 @@
     }
   },
   {
-    "faiss_row": 73,
+    "faiss_row": 167,
+    "vital_reading_id": 159,
+    "patient_id": 59,
+    "source_case_id": null,
+    "recorded_at": "2026-04-22T20:48:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 48,
+      "oxygen_spo2_pct": 98.0,
+      "respiratory_rate_bpm": 12,
+      "sbp_mmhg": 125,
+      "dbp_mmhg": 72,
+      "glucose_mgdl": 77.9,
+      "cholesterol_mgdl": 176.7,
+      "hemoglobin_gdl": 15.6,
+      "temperature_f": 98.1,
+      "weight_kg": 54.8,
+      "step_count": 6390
+    }
+  },
+  {
+    "faiss_row": 168,
+    "vital_reading_id": 146,
+    "patient_id": 46,
+    "source_case_id": null,
+    "recorded_at": "2026-04-22T13:01:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "61-75",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 69,
+      "oxygen_spo2_pct": 97.8,
+      "respiratory_rate_bpm": 18,
+      "sbp_mmhg": 106,
+      "dbp_mmhg": 85,
+      "glucose_mgdl": 76.2,
+      "cholesterol_mgdl": 143.1,
+      "hemoglobin_gdl": 16.2,
+      "temperature_f": 97.7,
+      "weight_kg": 58.1,
+      "step_count": 10122
+    }
+  },
+  {
+    "faiss_row": 169,
     "vital_reading_id": 13,
     "patient_id": 1770006985,
     "source_case_id": "fa7c3250-2199-4fc0-862f-aa8e02da031b",
@@ -1850,7 +4250,132 @@
     }
   },
   {
-    "faiss_row": 74,
+    "faiss_row": 170,
+    "vital_reading_id": 184,
+    "patient_id": 84,
+    "source_case_id": null,
+    "recorded_at": "2026-04-22T04:10:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "61-75",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 93,
+      "oxygen_spo2_pct": 98.0,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 124,
+      "dbp_mmhg": 71,
+      "glucose_mgdl": 95.2,
+      "cholesterol_mgdl": 182.7,
+      "hemoglobin_gdl": 13.2,
+      "temperature_f": 98.0,
+      "weight_kg": 75.5,
+      "step_count": 2701
+    }
+  },
+  {
+    "faiss_row": 171,
+    "vital_reading_id": 169,
+    "patient_id": 69,
+    "source_case_id": null,
+    "recorded_at": "2026-04-21T23:59:00+00:00",
+    "risk_label": "low",
+    "highest_severity": "none",
+    "alert_count": 0,
+    "age_group": "18-30",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 75,
+      "oxygen_spo2_pct": 98.3,
+      "respiratory_rate_bpm": 16,
+      "sbp_mmhg": 111,
+      "dbp_mmhg": 76,
+      "glucose_mgdl": 96.8,
+      "cholesterol_mgdl": 143.9,
+      "hemoglobin_gdl": 16.1,
+      "temperature_f": 97.5,
+      "weight_kg": 93.9,
+      "step_count": 640
+    }
+  },
+  {
+    "faiss_row": 172,
+    "vital_reading_id": 110,
+    "patient_id": 10,
+    "source_case_id": null,
+    "recorded_at": "2026-04-21T14:19:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "46-60",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 75,
+      "oxygen_spo2_pct": 99.3,
+      "respiratory_rate_bpm": 29,
+      "sbp_mmhg": 122,
+      "dbp_mmhg": 79,
+      "glucose_mgdl": 102.6,
+      "cholesterol_mgdl": 180.9,
+      "hemoglobin_gdl": 13.9,
+      "temperature_f": 97.8,
+      "weight_kg": 48.0,
+      "step_count": 1326
+    }
+  },
+  {
+    "faiss_row": 173,
+    "vital_reading_id": 132,
+    "patient_id": 32,
+    "source_case_id": null,
+    "recorded_at": "2026-04-20T12:46:00+00:00",
+    "risk_label": "medium",
+    "highest_severity": "warning",
+    "alert_count": 1,
+    "age_group": "75+",
+    "biological_sex": "female",
+    "vitals": {
+      "hr_bpm": 137,
+      "oxygen_spo2_pct": 98.7,
+      "respiratory_rate_bpm": 19,
+      "sbp_mmhg": 113,
+      "dbp_mmhg": 76,
+      "glucose_mgdl": 82.3,
+      "cholesterol_mgdl": 187.3,
+      "hemoglobin_gdl": 13.3,
+      "temperature_f": 98.2,
+      "weight_kg": 89.3,
+      "step_count": 4489
+    }
+  },
+  {
+    "faiss_row": 174,
+    "vital_reading_id": 138,
+    "patient_id": 38,
+    "source_case_id": null,
+    "recorded_at": "2026-04-20T08:23:00+00:00",
+    "risk_label": "high",
+    "highest_severity": "critical",
+    "alert_count": 2,
+    "age_group": "0-15",
+    "biological_sex": "male",
+    "vitals": {
+      "hr_bpm": 38,
+      "oxygen_spo2_pct": 96.7,
+      "respiratory_rate_bpm": 6,
+      "sbp_mmhg": 106,
+      "dbp_mmhg": 77,
+      "glucose_mgdl": 84.7,
+      "cholesterol_mgdl": 188.4,
+      "hemoglobin_gdl": 13.0,
+      "temperature_f": 98.1,
+      "weight_kg": 16.3,
+      "step_count": 10780
+    }
+  },
+  {
+    "faiss_row": 175,
     "vital_reading_id": 26,
     "patient_id": 1460337488,
     "source_case_id": "f87ece1b-0770-4462-b81c-eb260519a292",
@@ -1875,7 +4400,7 @@
     }
   },
   {
-    "faiss_row": 75,
+    "faiss_row": 176,
     "vital_reading_id": 48,
     "patient_id": 1897021344,
     "source_case_id": "4bda3ae5-3e94-4009-975b-b6eae937fa76",
@@ -1900,7 +4425,7 @@
     }
   },
   {
-    "faiss_row": 76,
+    "faiss_row": 177,
     "vital_reading_id": 51,
     "patient_id": 338428334,
     "source_case_id": "c90ca5ac-fa2a-4252-b7d4-5fea73750b1a",
@@ -1925,7 +4450,7 @@
     }
   },
   {
-    "faiss_row": 77,
+    "faiss_row": 178,
     "vital_reading_id": 2,
     "patient_id": 1688224772,
     "source_case_id": "38fc36eb-d27f-4a0d-8ff6-31ea32d50098",
@@ -1950,7 +4475,7 @@
     }
   },
   {
-    "faiss_row": 78,
+    "faiss_row": 179,
     "vital_reading_id": 30,
     "patient_id": 496735552,
     "source_case_id": "3030b009-daef-4477-8b2c-b8f419ff9128",
@@ -1975,7 +4500,7 @@
     }
   },
   {
-    "faiss_row": 79,
+    "faiss_row": 180,
     "vital_reading_id": 23,
     "patient_id": 1870164342,
     "source_case_id": "6193286a-6902-41b4-85d8-35f13325bb69",
@@ -2000,7 +4525,7 @@
     }
   },
   {
-    "faiss_row": 80,
+    "faiss_row": 181,
     "vital_reading_id": 16,
     "patient_id": 1725440666,
     "source_case_id": "fd297aed-c481-48a6-8fc1-a3e04c03e0c2",
@@ -2025,7 +4550,7 @@
     }
   },
   {
-    "faiss_row": 81,
+    "faiss_row": 182,
     "vital_reading_id": 10,
     "patient_id": 82194494,
     "source_case_id": "34e044ce-10da-47b0-be89-05b71d68df99",
@@ -2050,7 +4575,7 @@
     }
   },
   {
-    "faiss_row": 82,
+    "faiss_row": 183,
     "vital_reading_id": 4,
     "patient_id": 378744178,
     "source_case_id": "38d722a8-d615-4ef2-b554-d64a8cdb2fc8",
@@ -2075,7 +4600,7 @@
     }
   },
   {
-    "faiss_row": 83,
+    "faiss_row": 184,
     "vital_reading_id": 18,
     "patient_id": 491977008,
     "source_case_id": "11b5a231-c157-4d66-b408-596ca237ff2d",
@@ -2100,7 +4625,7 @@
     }
   },
   {
-    "faiss_row": 84,
+    "faiss_row": 185,
     "vital_reading_id": 5,
     "patient_id": 943666772,
     "source_case_id": "1ef2d8ba-95ca-48a2-b046-fba588f156a8",
@@ -2125,7 +4650,7 @@
     }
   },
   {
-    "faiss_row": 85,
+    "faiss_row": 186,
     "vital_reading_id": 42,
     "patient_id": 1478716263,
     "source_case_id": "beb98ec7-7327-4c29-821e-d32d117c1e20",
@@ -2150,7 +4675,7 @@
     }
   },
   {
-    "faiss_row": 86,
+    "faiss_row": 187,
     "vital_reading_id": 25,
     "patient_id": 640612429,
     "source_case_id": "045611e2-5a4a-441b-9fe7-39b05a86e56b",
@@ -2175,7 +4700,7 @@
     }
   },
   {
-    "faiss_row": 87,
+    "faiss_row": 188,
     "vital_reading_id": 34,
     "patient_id": 1405149715,
     "source_case_id": "50e9576b-5ad8-4db5-a7b1-08a291b2de98",
@@ -2200,7 +4725,7 @@
     }
   },
   {
-    "faiss_row": 88,
+    "faiss_row": 189,
     "vital_reading_id": 63,
     "patient_id": 1574226083,
     "source_case_id": "c55f36c1-0f5e-4014-bfe6-b81df594a200",
@@ -2225,7 +4750,7 @@
     }
   },
   {
-    "faiss_row": 89,
+    "faiss_row": 190,
     "vital_reading_id": 17,
     "patient_id": 1833117982,
     "source_case_id": "ca6b9cc3-0d72-4fd7-9723-7deab5d607c6",
@@ -2250,7 +4775,7 @@
     }
   },
   {
-    "faiss_row": 90,
+    "faiss_row": 191,
     "vital_reading_id": 28,
     "patient_id": 16010162,
     "source_case_id": "0ad11869-8127-4424-9748-24adf73e2e77",
@@ -2275,7 +4800,7 @@
     }
   },
   {
-    "faiss_row": 91,
+    "faiss_row": 192,
     "vital_reading_id": 56,
     "patient_id": 1285203829,
     "source_case_id": "1d04374c-aa75-46d7-89eb-0234a6cdcd47",
@@ -2300,7 +4825,7 @@
     }
   },
   {
-    "faiss_row": 92,
+    "faiss_row": 193,
     "vital_reading_id": 29,
     "patient_id": 692903122,
     "source_case_id": "539cb094-bd81-478e-8e7f-34f4f963d003",
@@ -2325,7 +4850,7 @@
     }
   },
   {
-    "faiss_row": 93,
+    "faiss_row": 194,
     "vital_reading_id": 49,
     "patient_id": 309920952,
     "source_case_id": "73ede22f-89fb-4916-8b45-9d4534919450",
@@ -2350,7 +4875,7 @@
     }
   },
   {
-    "faiss_row": 94,
+    "faiss_row": 195,
     "vital_reading_id": 64,
     "patient_id": 1801932190,
     "source_case_id": "5dad5d06-1e6e-4eac-8d24-451a69faa081",
@@ -2375,7 +4900,7 @@
     }
   },
   {
-    "faiss_row": 95,
+    "faiss_row": 196,
     "vital_reading_id": 57,
     "patient_id": 1230256542,
     "source_case_id": "6db08f9e-ef68-43ef-90af-56077cd000d3",
@@ -2400,7 +4925,7 @@
     }
   },
   {
-    "faiss_row": 96,
+    "faiss_row": 197,
     "vital_reading_id": 36,
     "patient_id": 2103748336,
     "source_case_id": "258bf4b2-0bc3-45b0-86f8-262194079e59",
@@ -2425,7 +4950,7 @@
     }
   },
   {
-    "faiss_row": 97,
+    "faiss_row": 198,
     "vital_reading_id": 40,
     "patient_id": 1444596842,
     "source_case_id": "2599e46c-7194-4aaf-8603-1064d6f45d7d",
@@ -2450,7 +4975,7 @@
     }
   },
   {
-    "faiss_row": 98,
+    "faiss_row": 199,
     "vital_reading_id": 24,
     "patient_id": 1761775047,
     "source_case_id": "7b98de6a-7073-423d-8ab0-0412b50e8951",
@@ -2475,7 +5000,7 @@
     }
   },
   {
-    "faiss_row": 99,
+    "faiss_row": 200,
     "vital_reading_id": 32,
     "patient_id": 1361543218,
     "source_case_id": "f8bb0051-8431-4794-afd2-a8fe1ae50d48",

@@ -12,6 +12,7 @@ import threading
 
 # Import Guardrails and RAG services
 from .phi_guardrail import get_phi_guardrail
+from apps.clin_gpt.services.report_context_service import ReportContextService
 from .rag_service import get_rag_service
 
 logger = logging.getLogger(__name__)
@@ -42,6 +43,155 @@ class OpenAIService:
             f"OpenAI Service initialized with Guardrails={self.guardrail.enabled}, "
             f"RAG={self.rag.enabled}, Timeout={self.timeout}s"
         )
+
+    def generate_vitals_report(self, report_context: dict) -> dict:
+        """
+        Generate a clinical report from wearable vitals pipeline output.
+
+        Parameters
+        ----------
+        report_context : dict
+            Output of ReportContextService.build_context() — contains
+            current_reading (raw vitals), alerts (Rule Engine), highest_severity,
+            ml_prediction (risk_score/risk_label/class_probabilities), and
+            similar_cases (FAISS neighbors with raw vitals + risk_label).
+
+        Returns
+        -------
+        dict — same shape as generate_clinical_analysis()'s return value.
+        """
+        # STEP 1: Input guardrails (defensive — this pipeline's data is
+        # structured vitals/demographics, not free-text PHI, but we run
+        # this for HIPAA-audit consistency with the rest of the system).
+        # NOTE: apply_input_guardrails was designed for the flat symptom
+        # schema; if it errors on this nested structure, we log and
+        # proceed with the original context rather than blocking a
+        # potentially urgent clinical report.
+        input_phi_detections = []
+        safe_context = report_context
+        try:
+            safe_context, input_phi_detections = self.guardrail.apply_input_guardrails(
+                report_context
+            )
+            if input_phi_detections:
+                logger.warning(
+                    f"Input Guardrails detected {len(input_phi_detections)} "
+                    f"entities in vitals report context"
+                )
+                self._log_phi_detections(input_phi_detections, 'input')
+        except Exception as e:
+            logger.warning(
+                f"Guardrail input scan failed on vitals context, proceeding "
+                f"unredacted (structured vitals data, low PHI risk): {e}"
+            )
+
+        # STEP 2: No RAG — this schema has no symptoms/history free text.
+        prompt = self._build_vitals_report_prompt(safe_context)
+
+        try:
+            # STEP 3: Call OpenAI API
+            system_prompt = (
+                "You are an expert medical AI assistant providing clinical decision "
+                "support for continuous wearable vital-sign monitoring. "
+                "You are given: the patient's current vitals, alerts already fired by "
+                "a deterministic Rule Engine (fixed clinical thresholds), a probabilistic "
+                "risk prediction from a machine learning model trained on historical cases, "
+                "and the most similar historical cases with their outcomes. "
+                "Synthesize ALL of this into a clear clinical summary. "
+                "The Rule Engine and ML model may occasionally disagree — if so, note it "
+                "explicitly and lean toward the more cautious interpretation. "
+                "Always include: summary, concerns, recommendations, and risk level. "
+                "Be precise, evidence-based, and cautious. "
+                "IMPORTANT: This is decision support only. A physician must review all recommendations."
+            )
+
+            response = openai.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.3,
+                max_tokens=1000,
+                response_format={"type": "json_object"},
+                timeout=self.timeout
+            )
+
+            result = json.loads(response.choices[0].message.content)
+
+            # STEP 4: Output guardrails (scan for PHI leaks in the generated text)
+            safe_result, output_phi_detections = self.guardrail.apply_output_guardrails(result)
+
+            if output_phi_detections:
+                logger.error(
+                    f"⚠️ OUTPUT GUARDRAIL ALERT: Detected {len(output_phi_detections)} "
+                    f"PHI leaks in vitals report AI response!"
+                )
+                self._log_phi_detections(output_phi_detections, 'output')
+
+            # STEP 5: Metadata (same wrapper shape as generate_clinical_analysis)
+            safe_result['model'] = self.model
+            safe_result['cached'] = False
+            safe_result['usage'] = {
+                'prompt_tokens': response.usage.prompt_tokens,
+                'completion_tokens': response.usage.completion_tokens,
+                'total_tokens': response.usage.total_tokens
+            }
+            safe_result['rag_enabled'] = False
+            safe_result['sources'] = []
+            safe_result['guardrails'] = {
+                'enabled': self.guardrail.enabled,
+                'input_phi_detected': len(input_phi_detections),
+                'output_phi_detected': len(output_phi_detections),
+                'phi_types_detected': list(set(
+                    d['type'] for d in input_phi_detections + output_phi_detections
+                ))
+            }
+
+            return safe_result
+
+        except Exception as e:
+            logger.error(f"OpenAI API Error (vitals report): {str(e)}")
+            import traceback
+            traceback.print_exc()
+
+            return {
+                'error': str(e),
+                'summary': 'Unable to generate AI analysis at this time.',
+                'concerns': [],
+                'recommendations': ['Please consult with a physician for manual assessment.'],
+                'risk_level': 'unknown',
+                'confidence': 'low',
+                'guardrails': {'enabled': self.guardrail.enabled},
+                'rag_enabled': False,
+                'sources': [],
+            }
+
+    def _build_vitals_report_prompt(self, context: dict) -> str:
+        """
+        Build the LLM prompt from ReportContextService's assembled context.
+        Reuses ReportContextService.to_prompt_text() as the single source
+        of truth for how raw values are formatted, then wraps it with the
+        JSON output instructions.
+        """
+        from apps.clin_gpt.services.report_context_service import ReportContextService
+
+        base_text = ReportContextService.to_prompt_text(context)
+
+        instructions = (
+            "\n\nProvide your analysis in the following JSON format:\n"
+            "{\n"
+            '  "summary": "Brief overview of patient status, referencing both the '
+            'Rule Engine alerts and the ML risk prediction",\n'
+            '  "concerns": ["List of clinical concerns based on abnormal values and '
+            'similar historical cases"],\n'
+            '  "recommendations": ["Specific actionable recommendations"],\n'
+            '  "risk_level": "low|moderate|high|critical",\n'
+            '  "confidence": "low|medium|high"\n'
+            "}"
+        )
+
+        return base_text + instructions
 
     def generate_clinical_analysis(self, patient_data: dict) -> dict:
         """

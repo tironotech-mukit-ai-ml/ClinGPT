@@ -364,12 +364,42 @@ class PHIGuardrail:
                 self._anonymizer = AnonymizerEngine()
                 self._nlp, self._ner_model_name = _load_nlp_model()
                 logger.info(
-                    "PHIGuardrail initialized — NER model: %s",
+                    "PHIGuardrail initialized — NER model: %s | allowed entities: %s",
                     self._ner_model_name or "none (regex-only mode)",
+                    self.entities if self.entities is not None else "ALL (no filter configured)",
                 )
             except Exception as exc:
                 logger.error("PHIGuardrail init failed: %s", exc)
                 self.enabled = False
+
+    # ── Entity filtering (NEW) ───────────────────────────────────────────────
+
+    def _filter_allowed(self, results: list[RecognizerResult]) -> list[RecognizerResult]:
+        """
+        Keep only detections whose entity_type is in settings.GUARDRAILS_REDACTION_ENTITIES.
+
+        If self.entities is None (setting not configured at all), no filtering
+        is applied — preserves prior behavior for projects that haven't set
+        GUARDRAILS_REDACTION_ENTITIES. Once the setting IS configured, it is
+        treated as an authoritative allowlist: any detected type not listed
+        (e.g. ORGANIZATION) passes through un-redacted rather than being
+        blanked out by default.
+        """
+        if self.entities is None:
+            return results
+
+        allowed = set(self.entities)
+        filtered = [r for r in results if r.entity_type in allowed]
+
+        skipped = len(results) - len(filtered)
+        if skipped:
+            skipped_types = sorted({r.entity_type for r in results if r.entity_type not in allowed})
+            logger.debug(
+                "PHI filter: skipped %d detection(s) not in GUARDRAILS_REDACTION_ENTITIES: %s",
+                skipped, skipped_types,
+            )
+
+        return filtered
 
     # ── Core redaction ────────────────────────────────────────────────────────
 
@@ -407,9 +437,12 @@ class PHIGuardrail:
             # Layer 3
             all_results = _build_presidio_results(regex_spans, ner_spans)
 
+            # NEW: filter against the configured allowlist before anything else
+            all_results = self._filter_allowed(all_results)
+
             # --- DEBUG TRACE: Check merged Presidio results ---
             logger.debug(
-                "PHI merged Presidio results: %d total | %s",
+                "PHI merged Presidio results (post-filter): %d total | %s",
                 len(all_results),
                 [(r.entity_type, text[r.start:r.end]) for r in all_results],
             )
@@ -467,6 +500,9 @@ class PHIGuardrail:
             ner_spans = _run_ner(text, self._nlp)
 
             all_results = _build_presidio_results(regex_spans, ner_spans)
+
+            # NEW: filter against the configured allowlist before anything else
+            all_results = self._filter_allowed(all_results)
 
             if not all_results:
                 return text, []

@@ -78,7 +78,15 @@ DATABASES = {
         'USER': os.getenv('DB_USER', ''),
         'PASSWORD': os.getenv('DB_PASSWORD', ''),
         'CONN_MAX_AGE': int(os.getenv('DB_CONN_MAX_AGE', '600')),  # Connection pooling (10 min)
-    }
+    },
+    'device_vitals': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'clingpt_demo',
+        'USER': 'root',
+        'PASSWORD': 'password123',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    },
 }
 
 # Password validation
@@ -191,7 +199,8 @@ GUARDRAILS_LOG_PHI_DETECTIONS = os.getenv('GUARDRAILS_LOG_PHI_DETECTIONS', 'True
 GUARDRAILS_REDACTION_ENTITIES = [
     'PERSON', 'PHONE_NUMBER', 'EMAIL_ADDRESS', 'LOCATION',
     'DATE_TIME', 'US_SSN', 'MEDICAL_LICENSE', 'US_DRIVER_LICENSE',
-    'IP_ADDRESS', 'IBAN_CODE', 'CREDIT_CARD', 'URL'
+    'IP_ADDRESS', 'IBAN_CODE', 'CREDIT_CARD', 'URL',
+    'MRN', 'NPI', 'ZIP_CODE',
 ]
 
 # RAG Configuration (Vector Database)

@@ -1,0 +1,102 @@
+{
+  "feature_order": [
+    "hr_bpm",
+    "oxygen_spo2_pct",
+    "respiratory_rate_bpm",
+    "sbp_mmhg",
+    "dbp_mmhg",
+    "glucose_mgdl",
+    "temperature_f",
+    "cholesterol_mgdl",
+    "hemoglobin_gdl",
+    "weight_kg",
+    "step_count",
+    "ecg",
+    "stethoscope",
+    "fall_detected",
+    "biological_sex",
+    "age_group"
+  ],
+  "faiss_aggregate_features": [
+    "avg_neighbor_risk",
+    "avg_neighbor_alert_count",
+    "most_common_severity",
+    "avg_similarity",
+    "closest_similarity"
+  ],
+  "total_input_dims": 21,
+  "label_to_int": {
+    "low": 0,
+    "medium": 1,
+    "high": 2
+  },
+  "int_to_label": {
+    "0": "low",
+    "1": "medium",
+    "2": "high"
+  },
+  "label_to_score": {
+    "low": 0.0,
+    "medium": 0.5,
+    "high": 1.0
+  },
+  "training_rows": 201,
+  "class_distribution": {
+    "low": 69,
+    "medium": 67,
+    "high": 65
+  },
+  "held_out_test_report": {
+    "low": {
+      "precision": 0.9230769230769231,
+      "recall": 0.8571428571428571,
+      "f1-score": 0.8888888888888888,
+      "support": 14.0
+    },
+    "medium": {
+      "precision": 0.75,
+      "recall": 0.6428571428571429,
+      "f1-score": 0.6923076923076923,
+      "support": 14.0
+    },
+    "high": {
+      "precision": 0.6875,
+      "recall": 0.8461538461538461,
+      "f1-score": 0.7586206896551724,
+      "support": 13.0
+    },
+    "accuracy": 0.7804878048780488,
+    "macro avg": {
+      "precision": 0.7868589743589745,
+      "recall": 0.782051282051282,
+      "f1-score": 0.7799390902839178,
+      "support": 41.0
+    },
+    "weighted avg": {
+      "precision": 0.7892823639774859,
+      "recall": 0.7804878048780488,
+      "f1-score": 0.7804590512748628,
+      "support": 41.0
+    }
+  },
+  "held_out_confusion_matrix": [
+    [
+      12,
+      1,
+      1
+    ],
+    [
+      1,
+      9,
+      4
+    ],
+    [
+      0,
+      2,
+      11
+    ]
+  ],
+  "cv_accuracy_mean": 0.8460975609756097,
+  "cv_accuracy_std": 0.05197268536255712,
+  "n_faiss_neighbors": 5
+}
