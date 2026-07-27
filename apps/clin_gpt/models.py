@@ -134,3 +134,20 @@ class VitalReading(models.Model):
 
     def __str__(self):
         return f"Reading #{self.pk} for Patient #{self.patient_id} @ {self.recorded_at}"
+
+
+
+class DeviceToken(models.Model):
+    """
+    Stores mobile device FCM tokens for push notifications.
+    Registered by the mobile app once per device.
+    """
+    token = models.CharField(max_length=255, unique=True)
+    label = models.CharField(max_length=100, blank=True, help_text="Optional name, e.g. 'demo phone'")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "device_tokens"
+
+    def __str__(self):
+        return f"DeviceToken {self.token[:12]}... ({self.label or 'unlabeled'})"

@@ -37,3 +37,4 @@ gunicorn
 # Testing
 pytest
 pytest-django
+firebase-admin

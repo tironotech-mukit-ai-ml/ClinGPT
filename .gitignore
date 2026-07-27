@@ -66,8 +66,15 @@ logs/
 
 # Database migrations (optional - keep migrations/ but ignore cache)
 */migrations/__pycache__/
-
+firebase-service-account.json
 # Deployment necessary files
 .env.production
 Dockerfile.production
 scripts/init_readonly_user.sql
+<<<<<<< HEAD
+=======
+# Local test and Firebase credentials
+body.json
+firebase-service-account.json
+e-service-account.json
+>>>>>>> ea4f428 (Update ClinGPT pipeline, LLM reports and notifications)

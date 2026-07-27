@@ -597,6 +597,22 @@ class PHIGuardrail:
                             d["field"] = f"output.{key}[]"
                             d["is_output_leak"] = True
                             all_detections.append(d)
+                    elif isinstance(item, dict):
+                        # e.g. differential_diagnoses: [{"diagnosis": ..., "description": ...}]
+                        # Scan every string value inside the dict, leave non-strings
+                        # (numeric probability, etc.) untouched.
+                        safe_item = {}
+                        for sub_key, sub_value in item.items():
+                            if isinstance(sub_value, str):
+                                safe_text, detections = self.redact_phi_output(sub_value)
+                                safe_item[sub_key] = safe_text
+                                for d in detections:
+                                    d["field"] = f"output.{key}[].{sub_key}"
+                                    d["is_output_leak"] = True
+                                    all_detections.append(d)
+                            else:
+                                safe_item[sub_key] = sub_value
+                        safe_list.append(safe_item)
                     else:
                         safe_list.append(item)
                 safe_response[key] = safe_list

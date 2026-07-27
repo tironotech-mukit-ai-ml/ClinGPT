@@ -68,6 +68,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+
+
+
 # Database
 DATABASES = {
     'default': {
@@ -77,8 +80,9 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', ''),
         'USER': os.getenv('DB_USER', ''),
         'PASSWORD': os.getenv('DB_PASSWORD', ''),
-        'CONN_MAX_AGE': int(os.getenv('DB_CONN_MAX_AGE', '600')),  # Connection pooling (10 min)
+        'CONN_MAX_AGE': int(os.getenv('DB_CONN_MAX_AGE', '600')),
     },
+
     'device_vitals': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'clingpt_demo',
@@ -86,6 +90,15 @@ DATABASES = {
         'PASSWORD': 'password123',
         'HOST': '127.0.0.1',
         'PORT': '3306',
+    },
+
+    'inteam_db': {
+        'ENGINE': os.getenv('LARAVEL_DB_ENGINE', 'django.db.backends.mysql'),
+        'NAME': os.getenv('LARAVEL_DB_DATABASE'),
+        'USER': os.getenv('LARAVEL_DB_USERNAME'),
+        'PASSWORD': os.getenv('LARAVEL_DB_PASSWORD'),
+        'HOST': os.getenv('LARAVEL_DB_HOST'),
+        'PORT': os.getenv('LARAVEL_DB_PORT'),
     },
 }
 

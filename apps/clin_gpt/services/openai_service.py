@@ -268,7 +268,8 @@ class OpenAIService:
                 )
 
             system_prompt += (
-                "Always include: summary, concerns, recommendations, and risk level. "
+                "Always include: summary, concerns, differential diagnoses (with probability "
+                "and description for each), recommendations, and risk level. "
                 "Be precise, evidence-based, and cautious. "
                 "IMPORTANT: This is decision support only. A physician must review all recommendations."
             )
@@ -344,8 +345,11 @@ class OpenAIService:
             return {
                 'error': str(e),
                 'summary': 'Unable to generate AI analysis at this time.',
+                'concerns': [],
+                'differential_diagnoses': [],
                 'recommendations': ['Please consult with a physician for manual assessment.'],
                 'risk_level': 'unknown',
+                'confidence': 'low',
                 'guardrails': {'enabled': self.guardrail.enabled},
                 'rag_enabled': False
             }
@@ -399,10 +403,23 @@ class OpenAIService:
             "{\n"
             '  "summary": "Brief overview of patient status",\n'
             '  "concerns": ["List of clinical concerns based on abnormal values"],\n'
+            '  "differential_diagnoses": [\n'
+            '    {\n'
+            '      "diagnosis": "Name of the candidate condition",\n'
+            '      "probability": 0.0,\n'
+            '      "description": "Brief clinical reasoning for this candidate, '
+            'referencing the specific vitals/symptoms that support or argue against it"\n'
+            '    }\n'
+            '  ],\n'
             '  "recommendations": ["Specific actionable recommendations"],\n'
             '  "risk_level": "low|moderate|high|critical",\n'
             '  "confidence": "low|medium|high"\n'
-            "}"
+            "}\n\n"
+            "For differential_diagnoses: list 2-5 candidate conditions ordered by "
+            "probability (highest first). probability values should be reasonable "
+            "estimates between 0.0 and 1.0 reflecting your confidence given the "
+            "presented vitals and symptoms — they do not need to sum to 1.0, since "
+            "multiple conditions may coexist or be independently possible."
         )
 
         return "\n".join(prompt_parts)
@@ -480,17 +497,28 @@ class OpenAIService:
             "Based on the clinical guidelines above and the patient case, provide:",
             "1. Clinical summary",
             "2. Concerns based on abnormal values and guidelines",
-            "3. Evidence-based recommendations referencing the guidelines",
-            "4. Risk level assessment",
+            "3. Differential diagnoses ranked by probability, referencing the guidelines",
+            "4. Evidence-based recommendations referencing the guidelines",
+            "5. Risk level assessment",
             "",
             "Respond in JSON format:",
             "{",
             '  "summary": "Brief overview of patient status",',
             '  "concerns": ["List of clinical concerns"],',
+            '  "differential_diagnoses": [',
+            '    {',
+            '      "diagnosis": "Name of the candidate condition",',
+            '      "probability": 0.0,',
+            '      "description": "Clinical reasoning, referencing specific guidelines where relevant"',
+            '    }',
+            '  ],',
             '  "recommendations": ["Specific actionable recommendations with guideline references"],',
             '  "risk_level": "low|moderate|high|critical",',
             '  "confidence": "low|medium|high"',
-            "}"
+            "}",
+            "",
+            "List 2-5 differential diagnoses ordered by probability (highest first). "
+            "probability is a value between 0.0 and 1.0.",
         ])
 
         return "\n".join(prompt_parts)
