@@ -84,12 +84,12 @@ DATABASES = {
     },
 
     'device_vitals': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'clingpt_demo',
-        'USER': 'root',
-        'PASSWORD': 'password123',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': os.getenv('VITALS_DB_ENGINE', 'django.db.backends.mysql'),
+        'NAME': os.getenv('VITALS_DB_NAME'),
+        'USER': os.getenv('VITALS_DB_USER'),
+        'PASSWORD': os.getenv('VITALS_DB_PASSWORD'),
+        'HOST': os.getenv('VITALS_DB_HOST', '127.0.0.1'),
+        'PORT': os.getenv('VITALS_DB_PORT', '3306'),
     },
 
     'inteam_db': {
