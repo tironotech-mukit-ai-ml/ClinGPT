@@ -14,7 +14,9 @@ import threading
 from .phi_guardrail import get_phi_guardrail
 from apps.clin_gpt.services.report_context_service import ReportContextService
 from .rag_service import get_rag_service
-
+from apps.clin_gpt.services.validation_service import ValidationService
+from apps.clin_gpt.services.feature_normalization_service import FeatureNormalizationService
+from apps.clin_gpt.services.faiss_retrieval_service import FAISSRetrievalService
 logger = logging.getLogger(__name__)
 
 # Module-level singleton instance and lock
@@ -193,6 +195,93 @@ class OpenAIService:
 
         return base_text + instructions
 
+
+
+
+    def _map_to_vitals_payload(self, patient_data: dict) -> dict:
+        """
+        Map /analyze/ endpoint's patient_data fields into the raw payload
+        shape expected by ValidationService (same shape used by the
+        wearable-device pipeline in poll_device_vitals.py).
+        """
+        def age_to_group(age):
+            try:
+                age = int(age)
+            except (TypeError, ValueError):
+                return None
+            if age <= 15:
+                return "0-15"
+            elif age <= 30:
+                return "18-30"
+            elif age <= 45:
+                return "31-45"
+            elif age <= 60:
+                return "46-60"
+            elif age <= 75:
+                return "61-75"
+            else:
+                return "75+"
+
+        gender = patient_data.get("gender")
+        biological_sex = gender.lower() if isinstance(gender, str) else None
+        if biological_sex not in ("male", "female", "other"):
+            biological_sex = None
+
+        raw_payload = {
+            "hr_bpm":               patient_data.get("heart_rate"),
+            "oxygen_spo2_pct":      patient_data.get("spo2"),
+            "glucose_mgdl":         patient_data.get("glucose"),
+            "cholesterol_mgdl":     patient_data.get("cholesterol"),
+            "respiratory_rate_bpm": patient_data.get("respiration_rate"),
+            "temperature_f":        patient_data.get("temperature"),
+            "sbp_mmhg":             patient_data.get("blood_pressure_systolic"),
+            "dbp_mmhg":             patient_data.get("blood_pressure_diastolic"),
+            "demographics": {
+                "age_group":      age_to_group(patient_data.get("age")),
+                "biological_sex": biological_sex,
+            },
+        }
+        return raw_payload
+
+    def _retrieve_similar_cases(self, patient_data: dict, k: int = 5) -> list:
+        """
+        Retrieve the k most similar historical patient cases via FAISS,
+        for inclusion alongside clinical guidelines in the RAG prompt.
+
+        Returns a list of dicts, or [] if retrieval isn't possible
+        (missing required fields, FAISS index not built, etc.) — this
+        must never raise, since it's a supplementary signal, not a
+        blocker for the main analysis.
+        """
+        try:
+            raw_payload = self._map_to_vitals_payload(patient_data)
+
+            validation_result = ValidationService.validate(raw_payload)
+            if not validation_result["valid"]:
+                logger.info(
+                    "Similar-case retrieval skipped - validation failed: %s",
+                    validation_result["errors"]
+                )
+                return []
+
+            clean = validation_result["data"]
+            norm = FeatureNormalizationService.normalize(clean)
+
+            neighbors = FAISSRetrievalService.search(norm["vector"], k=k)
+
+            logger.info(
+                "FAISS retrieved %d similar historical case(s), quality_score=%.2f",
+                len(neighbors), validation_result["quality_score"]
+            )
+            return neighbors
+
+        except FileNotFoundError as e:
+            logger.warning("FAISS index not available: %s", e)
+            return []
+        except Exception as e:
+            logger.error("Similar-case retrieval error: %s", e)
+            return []
+
     def generate_clinical_analysis(self, patient_data: dict) -> dict:
         """
         Generate clinical analysis using GPT-4 with Guardrails and RAG
@@ -248,9 +337,12 @@ class OpenAIService:
         if relevant_guidelines:
             logger.info(f"RAG retrieved {len(relevant_guidelines)} relevant guidelines")
 
-        # STEP 3: Build enhanced prompt with guidelines
-        if relevant_guidelines and self.rag.enabled:
-            prompt = self._build_rag_prompt(safe_patient_data, relevant_guidelines)
+        # STEP 2b: Retrieve similar historical cases (FAISS)
+        similar_cases = self._retrieve_similar_cases(safe_patient_data)
+
+        # STEP 3: Build enhanced prompt with guidelines and/or similar cases
+        if (relevant_guidelines and self.rag.enabled) or similar_cases:
+            prompt = self._build_rag_prompt(safe_patient_data, relevant_guidelines, similar_cases)
         else:
             prompt = self._build_clinical_prompt(safe_patient_data)
 
@@ -424,25 +516,54 @@ class OpenAIService:
 
         return "\n".join(prompt_parts)
 
-    def _build_rag_prompt(self, data: dict, guidelines: list) -> str:
+    def _build_rag_prompt(self, data: dict, guidelines: list, similar_cases: list = None) -> str:
         """
-        Build enhanced prompt with retrieved clinical guidelines
+        Build enhanced prompt with retrieved clinical guidelines and/or
+        similar historical cases (FAISS nearest-neighbor retrieval).
         """
-        prompt_parts = [
-            "=" * 60,
-            "RELEVANT CLINICAL GUIDELINES",
-            "=" * 60,
-            ""
-        ]
+        similar_cases = similar_cases or []
+        prompt_parts = []
 
-        # Add retrieved guidelines
-        for i, guideline in enumerate(guidelines, 1):
-            prompt_parts.append(f"\n[Guideline {i}]")
-            prompt_parts.append(f"Source: {guideline['source']}")
-            if guideline.get('year'):
-                prompt_parts.append(f"Year: {guideline['year']}")
-            prompt_parts.append(f"Relevance: {guideline['relevance_score']:.0%}")
-            prompt_parts.append(f"\n{guideline['content']}\n")
+        if guidelines:
+            prompt_parts.extend([
+                "=" * 60,
+                "RELEVANT CLINICAL GUIDELINES",
+                "=" * 60,
+                ""
+            ])
+
+            for i, guideline in enumerate(guidelines, 1):
+                prompt_parts.append(f"\n[Guideline {i}]")
+                prompt_parts.append(f"Source: {guideline['source']}")
+                if guideline.get('year'):
+                    prompt_parts.append(f"Year: {guideline['year']}")
+                prompt_parts.append(f"Relevance: {guideline['relevance_score']:.0%}")
+                prompt_parts.append(f"\n{guideline['content']}\n")
+
+        if similar_cases:
+            prompt_parts.extend([
+                "",
+                "=" * 60,
+                "SIMILAR HISTORICAL CASES (for pattern context only — NOT clinical guidance)",
+                "=" * 60,
+                "",
+                "The following are the most similar prior patient cases based on vital-sign",
+                "pattern similarity, retrieved from a historical case database. These are NOT",
+                "authoritative sources and do not represent guideline-based evidence. Use them",
+                "only as supplementary context on how similar vital-sign patterns have been",
+                "labeled previously, not as a basis for diagnosis or treatment.",
+                ""
+            ])
+
+            for i, case in enumerate(similar_cases, 1):
+                prompt_parts.append(f"\n[Similar Case {i}] (similarity distance: {case.get('distance', 'n/a')})")
+                if case.get('risk_label'):
+                    prompt_parts.append(f"Historical risk label: {case['risk_label']}")
+                if case.get('age_group'):
+                    prompt_parts.append(f"Age group: {case['age_group']}")
+                vitals = case.get('vitals')
+                if vitals:
+                    prompt_parts.append(f"Vitals: {vitals}")
 
         prompt_parts.extend([
             "",
