@@ -111,8 +111,8 @@ class OpenAIService:
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.3,
-                max_tokens=1000,
+                max_completion_tokens=4000,
+                reasoning_effort="low",
                 response_format={"type": "json_object"},
                 timeout=self.timeout
             )
@@ -280,8 +280,8 @@ class OpenAIService:
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.3,  # Lower temperature for medical accuracy
-                max_tokens=1000,
+                max_completion_tokens=4000,
+                reasoning_effort="low",
                 response_format={"type": "json_object"},
                 timeout=self.timeout  # Add timeout to prevent hanging
             )

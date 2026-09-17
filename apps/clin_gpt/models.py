@@ -6,7 +6,7 @@ Feeds: ValidationService -> RuleEngineService -> FeatureNormalizationService
 """
 
 from django.db import models
-
+from pgvector.django import VectorField
 
 class Patient(models.Model):
 
@@ -151,3 +151,65 @@ class DeviceToken(models.Model):
 
     def __str__(self):
         return f"DeviceToken {self.token[:12]}... ({self.label or 'unlabeled'})"
+
+
+class ClinicalGuideline(models.Model):
+    title = models.CharField(max_length=500, help_text="Title or summary of the clinical guideline")
+    content = models.TextField(help_text="Full text content of the clinical guideline")
+    source = models.CharField(max_length=255, db_index=True, help_text="Source organization (e.g., 'AHA', 'ACC', 'WHO', 'UpToDate')")
+    category = models.CharField(max_length=100, db_index=True, help_text="Medical category (e.g., 'cardiology', 'diabetes', 'hypertension')")
+    subcategory = models.CharField(max_length=100, blank=True, null=True, help_text="More specific subcategory")
+    embedding = VectorField(dimensions=384, help_text="Vector embedding for semantic similarity search")
+    year = models.IntegerField(blank=True, null=True, help_text="Publication year")
+    url = models.URLField(blank=True, null=True, help_text="URL to original source")
+    keywords = models.JSONField(default=list, blank=True, help_text="List of keywords for filtering")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    usage_count = models.IntegerField(default=0, help_text="Number of times this guideline was retrieved")
+    last_used_at = models.DateTimeField(blank=True, null=True, help_text="Last time this guideline was retrieved")
+
+    class Meta:
+        db_table = "clinical_guidelines"
+        verbose_name = "Clinical Guideline"
+        verbose_name_plural = "Clinical Guidelines"
+        ordering = ["-created_at"]
+        indexes = [
+            models.Index(fields=["category", "source"]),
+            models.Index(fields=["-created_at"]),
+            models.Index(fields=["-usage_count"]),
+        ]
+
+    def __str__(self):
+        return f"{self.title} ({self.source})"
+
+    def increment_usage(self):
+        from django.utils import timezone
+        self.usage_count += 1
+        self.last_used_at = timezone.now()
+        self.save(update_fields=['usage_count', 'last_used_at'])
+
+
+class PHIDetectionLog(models.Model):
+    timestamp = models.DateTimeField(auto_now_add=True, db_index=True)
+    entity_type = models.CharField(max_length=50, help_text="Type of PHI detected (e.g., 'PERSON', 'PHONE_NUMBER')")
+    field_name = models.CharField(max_length=100, help_text="Field where PHI was detected (e.g., 'symptoms', 'medical_history')")
+    is_output_leak = models.BooleanField(default=False, help_text="Whether PHI was detected in AI output (concerning!)")
+    confidence_score = models.FloatField(help_text="Confidence score of detection (0-1)")
+    text_length = models.IntegerField(help_text="Length of text that was scanned")
+    position_start = models.IntegerField(help_text="Start position of detected entity")
+    position_end = models.IntegerField(help_text="End position of detected entity")
+    session_id = models.CharField(max_length=100, blank=True, null=True, help_text="Session or request ID for grouping detections")
+
+    class Meta:
+        db_table = "phi_detection_logs"
+        verbose_name = "PHI Detection Log"
+        verbose_name_plural = "PHI Detection Logs"
+        ordering = ["-timestamp"]
+        indexes = [
+            models.Index(fields=["-timestamp"]),
+            models.Index(fields=["entity_type"]),
+            models.Index(fields=["is_output_leak"]),
+        ]
+
+    def __str__(self):
+        return f"{self.entity_type} @ {self.timestamp} ({'output' if self.is_output_leak else 'input'})"

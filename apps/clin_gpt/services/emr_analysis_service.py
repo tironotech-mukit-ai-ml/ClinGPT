@@ -118,8 +118,7 @@ class EmrAnalysisService(OpenAIService):
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.3,  # Lower temperature for medical accuracy
-                max_tokens=1500,  # More tokens for comprehensive EMR analysis
+                max_completion_tokens=1500,  # More tokens for comprehensive EMR analysis
                 response_format={"type": "json_object"},
                 timeout=self.timeout
             )

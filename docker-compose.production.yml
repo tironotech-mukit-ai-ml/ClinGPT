@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   # PostgreSQL with pgvector extension
@@ -62,7 +61,7 @@ services:
 
   # Django AI Service
   django:
-    image: ghcr.io/md-ryhan-uddin/inteam-ai-service:${IMAGE_TAG}
+    image: inteam-ai-service:latest
     container_name: inteam-ai-django
     restart: unless-stopped
     env_file:

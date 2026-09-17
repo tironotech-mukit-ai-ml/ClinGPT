@@ -250,6 +250,7 @@ def _run_ner(text: str, nlp) -> list[_NerSpan]:
     raw_entities = [(ent.text, ent.label_) for ent in doc.ents]
 
     # Common medical/legal abbreviations incorrectly tagged as ORG
+
     MEDICAL_ABBREVIATIONS = {
         "SSN",
         "DOB",
@@ -263,6 +264,24 @@ def _run_ner(text: str, nlp) -> list[_NerSpan]:
         "OB",
     }
 
+        # Common clinical/symptom terms incorrectly tagged as PERSON, LOCATION, or GPE
+    # when they appear as the first word of an isolated sentence fragment
+    # (spaCy leans on sentence context; a lone capitalized medical term at
+    # position 0 looks structurally like a proper noun). Case-insensitive.
+    CLINICAL_TERM_FALSE_POSITIVES = {
+        "dyspnea", "location", "non-cardiac", "shortness of breath",
+        "heart failure", "chest pain", "pulmonary embolism",
+        "gastroesophageal", "musculoskeletal", "orthopnea", "diaphoresis",
+        "nausea", "tachycardia", "bradycardia", "hypoxemia", "hypoxia",
+        "hypertension", "hypotension", "hyperkalemia", "hypoglycemia",
+        "hyperglycemia", "edema", "syncope", "palpitations", "angina",
+    }
+
+    CLINICAL_TERM_FALSE_POSITIVES_NORMALIZED = {
+        term.replace("-", "").replace(" ", "")
+        for term in CLINICAL_TERM_FALSE_POSITIVES
+    }
+
     for ent in doc.ents:
 
         # Skip false-positive ORG abbreviations
@@ -272,6 +291,18 @@ def _run_ner(text: str, nlp) -> list[_NerSpan]:
                 ent.text
             )
             continue
+
+            # Skip false-positive PERSON/LOCATION/GPE clinical terms
+        normalized = ent.text.strip().lower().replace("-", "").replace(" ", "")
+
+        if ent.label_ in ("PERSON", "LOCATION", "GPE", "LOC") and \
+                normalized in CLINICAL_TERM_FALSE_POSITIVES_NORMALIZED:
+            logger.debug(
+                "Skipping false-positive %s clinical term '%s'",
+                ent.label_, ent.text
+            )
+            continue
+
 
         canonical = _NER_LABEL_MAP.get(ent.label_)
 
