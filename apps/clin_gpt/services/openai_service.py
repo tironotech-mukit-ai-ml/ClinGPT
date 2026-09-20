@@ -416,6 +416,22 @@ class OpenAIService:
             else:
                 safe_result['sources'] = []
 
+            # Add similar historical cases if retrieved (FAISS pattern-similarity
+            # context, NOT clinical guidance — see _build_rag_prompt framing)
+            if similar_cases:
+                safe_result['similar_cases'] = [
+                    {
+                        'risk_label': c.get('risk_label'),
+                        'age_group': c.get('age_group'),
+                        'biological_sex': c.get('biological_sex'),
+                        'similarity_distance': round(c['distance'], 4) if c.get('distance') is not None else None,
+                    }
+                    for c in similar_cases
+                ]
+            else:
+                safe_result['similar_cases'] = []
+            
+
             # Add guardrails stats
             safe_result['guardrails'] = {
                 'enabled': self.guardrail.enabled,
