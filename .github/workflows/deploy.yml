@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   REGISTRY: ghcr.io
@@ -199,32 +199,15 @@ jobs:
             echo "Updating IMAGE_TAG in .env.production"
             sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=${IMAGE_SHA}/" .env.production
 
-            echo "Stopping all existing containers (including old django-app1 project)"
+            echo "Stopping existing containers"
             docker compose -f docker-compose.production.yml down 2>/dev/null || true
-            docker stop inteam-ai-django inteam-ai-postgres inteam-ai-redis 2>/dev/null || true
-            docker rm -f inteam-ai-django inteam-ai-postgres inteam-ai-redis 2>/dev/null || true
 
-            echo "Starting database services only"
-            docker compose -f docker-compose.production.yml up -d postgres redis
+            echo "Tagging pulled image as inteam-ai-service:latest for docker-compose.production.yml"
+            docker tag "${IMAGE_REPO}:${IMAGE_SHA}" "inteam-ai-service:latest"
 
-            echo "Waiting for databases to be ready..."
-            sleep 15
-
-            echo "Starting Django container directly with GHCR image (no compose build)"
-            docker run -d \
-              --name inteam-ai-django \
-              --restart unless-stopped \
-              --env-file .env.production \
-              -e PYTHONUNBUFFERED=1 \
-              -e DJANGO_SETTINGS_MODULE=config.settings \
-              -v "$(pwd)/staticfiles:/app/staticfiles:Z" \
-              -v "$(pwd)/media:/app/media:Z" \
-              -v "$(pwd)/logs:/app/logs:Z" \
-              -p 127.0.0.1:8001:8001 \
-              --network django-app1_django_ai_network \
-              --add-host host.docker.internal:host-gateway \
-              "${IMAGE_REPO}:${IMAGE_SHA}" \
-              sh -c "python manage.py migrate --noinput && python manage.py collectstatic --noinput --clear && gunicorn config.wsgi:application --bind 0.0.0.0:8001 --workers 3 --worker-class gthread --threads 2 --timeout 120 --graceful-timeout 30 --max-requests 1000 --max-requests-jitter 100 --access-logfile - --error-logfile - --log-level info"
+            echo "Starting all services via docker compose (respects health-check dependencies)"
+            docker compose -f docker-compose.production.yml up -d
+             
 
             echo "Waiting for Django to become healthy..."
             for i in {1..12}; do                            # ✅ retry up to ~60s
