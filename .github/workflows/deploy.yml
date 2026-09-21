@@ -106,7 +106,7 @@ jobs:
     name: Build and Push Docker Image
     needs: test  # Wait for tests to pass before building
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     
     permissions:
       contents: read
@@ -156,7 +156,7 @@ jobs:
     name: Deploy to Production
     needs: build-and-push
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     concurrency:
       group: deploy-production
       cancel-in-progress: true
